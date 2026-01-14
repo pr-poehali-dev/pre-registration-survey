@@ -6,19 +6,21 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
-import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
-    serviceType: '',
-    preferredTime: '',
-    experience: '',
-    goals: '',
-    additionalInfo: ''
+    niche: '',
+    timeInNiche: '',
+    salesStatus: '',
+    productType: '',
+    channelLink: '',
+    salesDifficulties: '',
+    trackingGoals: '',
+    trackingFormat: '',
+    readyToStart: ''
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -44,12 +46,15 @@ const Index = () => {
 
         setFormData({
           name: '',
-          phone: '',
-          serviceType: '',
-          preferredTime: '',
-          experience: '',
-          goals: '',
-          additionalInfo: ''
+          niche: '',
+          timeInNiche: '',
+          salesStatus: '',
+          productType: '',
+          channelLink: '',
+          salesDifficulties: '',
+          trackingGoals: '',
+          trackingFormat: '',
+          readyToStart: ''
         });
       } else {
         throw new Error(data.error || 'Ошибка отправки');
@@ -86,68 +91,59 @@ const Index = () => {
           </CardHeader>
           <CardContent className="pt-6">
             <form onSubmit={handleSubmit} className="space-y-8">
-              <div className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="text-base font-medium">
-                    Ваше имя
-                  </Label>
-                  <Input
-                    id="name"
-                    placeholder="Введите ваше имя"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
-                    className="h-12"
-                  />
-                </div>
+              <div className="space-y-2">
+                <Label htmlFor="name" className="text-base font-medium">
+                  Ваше имя
+                </Label>
+                <Input
+                  id="name"
+                  placeholder="Введите ваше имя"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  required
+                  className="h-12 border-2 border-[#9A1E15] focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
+                />
+              </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="phone" className="text-base font-medium">
-                    Телефон
-                  </Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    placeholder="+7 (999) 123-45-67"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    required
-                    className="h-12"
-                  />
-                </div>
+              <div className="space-y-2">
+                <Label htmlFor="niche" className="text-base font-medium">
+                  Какая у вас ниша?
+                </Label>
+                <Input
+                  id="niche"
+                  placeholder="Например: психология, коучинг, маркетинг, услуги по дизайну и т.д."
+                  value={formData.niche}
+                  onChange={(e) => setFormData({ ...formData, niche: e.target.value })}
+                  required
+                  className="h-12 border-2 border-[#9A1E15] focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
+                />
               </div>
 
               <div className="space-y-3">
                 <Label className="text-base font-medium">
-                  Какая услуга вас интересует?
+                  Сколько времени вы в нише?
                 </Label>
                 <RadioGroup
-                  value={formData.serviceType}
-                  onValueChange={(value) => setFormData({ ...formData, serviceType: value })}
+                  value={formData.timeInNiche}
+                  onValueChange={(value) => setFormData({ ...formData, timeInNiche: value })}
                   required
                 >
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-yellow-50 transition-all cursor-pointer">
-                    <RadioGroupItem value="consultation" id="consultation" />
-                    <Label htmlFor="consultation" className="cursor-pointer flex-1 text-base">
-                      Консультация
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                    <RadioGroupItem value="less-than-1-year" id="less-than-1-year" />
+                    <Label htmlFor="less-than-1-year" className="cursor-pointer flex-1 text-base">
+                      До 1 года
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-yellow-50 transition-all cursor-pointer">
-                    <RadioGroupItem value="training" id="training" />
-                    <Label htmlFor="training" className="cursor-pointer flex-1 text-base">
-                      Тренировка
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                    <RadioGroupItem value="1-2-years" id="1-2-years" />
+                    <Label htmlFor="1-2-years" className="cursor-pointer flex-1 text-base">
+                      1-2 года
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-yellow-50 transition-all cursor-pointer">
-                    <RadioGroupItem value="program" id="program" />
-                    <Label htmlFor="program" className="cursor-pointer flex-1 text-base">
-                      Программа на месяц
-                    </Label>
-                  </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-yellow-50 transition-all cursor-pointer">
-                    <RadioGroupItem value="other" id="other" />
-                    <Label htmlFor="other" className="cursor-pointer flex-1 text-base">
-                      Другое
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                    <RadioGroupItem value="more-than-2-years" id="more-than-2-years" />
+                    <Label htmlFor="more-than-2-years" className="cursor-pointer flex-1 text-base">
+                      Более 2х лет
                     </Label>
                   </div>
                 </RadioGroup>
@@ -155,102 +151,173 @@ const Index = () => {
 
               <div className="space-y-3">
                 <Label className="text-base font-medium">
-                  Удобное время для связи
+                  Как у вас сейчас обстоят дела с продажами?
                 </Label>
                 <RadioGroup
-                  value={formData.preferredTime}
-                  onValueChange={(value) => setFormData({ ...formData, preferredTime: value })}
+                  value={formData.salesStatus}
+                  onValueChange={(value) => setFormData({ ...formData, salesStatus: value })}
                   required
                 >
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-amber-50 transition-all cursor-pointer">
-                    <RadioGroupItem value="morning" id="morning" />
-                    <Label htmlFor="morning" className="cursor-pointer flex-1 text-base">
-                      Утро (9:00 - 12:00)
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                    <RadioGroupItem value="no-sales" id="no-sales" />
+                    <Label htmlFor="no-sales" className="cursor-pointer flex-1 text-base">
+                      Нет продаж совсем
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-amber-50 transition-all cursor-pointer">
-                    <RadioGroupItem value="day" id="day" />
-                    <Label htmlFor="day" className="cursor-pointer flex-1 text-base">
-                      День (12:00 - 17:00)
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                    <RadioGroupItem value="rare-sales" id="rare-sales" />
+                    <Label htmlFor="rare-sales" className="cursor-pointer flex-1 text-base">
+                      Редкие продажи по сарафану
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-amber-50 transition-all cursor-pointer">
-                    <RadioGroupItem value="evening" id="evening" />
-                    <Label htmlFor="evening" className="cursor-pointer flex-1 text-base">
-                      Вечер (17:00 - 20:00)
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                    <RadioGroupItem value="inconsistent" id="inconsistent" />
+                    <Label htmlFor="inconsistent" className="cursor-pointer flex-1 text-base">
+                      То густо, то пусто
+                    </Label>
+                  </div>
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                    <RadioGroupItem value="want-to-scale" id="want-to-scale" />
+                    <Label htmlFor="want-to-scale" className="cursor-pointer flex-1 text-base">
+                      Нормально, хочу масштабировать
+                    </Label>
+                  </div>
+                </RadioGroup>
+              </div>
+
+              <div className="space-y-3">
+                <Label className="text-base font-medium">
+                  Какой продукт вы продаете?
+                </Label>
+                <RadioGroup
+                  value={formData.productType}
+                  onValueChange={(value) => setFormData({ ...formData, productType: value })}
+                  required
+                >
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                    <RadioGroupItem value="no-product" id="no-product" />
+                    <Label htmlFor="no-product" className="cursor-pointer flex-1 text-base">
+                      Нет продукта
+                    </Label>
+                  </div>
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                    <RadioGroupItem value="consultations" id="consultations" />
+                    <Label htmlFor="consultations" className="cursor-pointer flex-1 text-base">
+                      Консультации (сессии)
+                    </Label>
+                  </div>
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                    <RadioGroupItem value="group-programs" id="group-programs" />
+                    <Label htmlFor="group-programs" className="cursor-pointer flex-1 text-base">
+                      Групповые программы
+                    </Label>
+                  </div>
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                    <RadioGroupItem value="individual-work" id="individual-work" />
+                    <Label htmlFor="individual-work" className="cursor-pointer flex-1 text-base">
+                      Индивидуальная работа (наставничество, сопровождение)
                     </Label>
                   </div>
                 </RadioGroup>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="experience" className="text-base font-medium">
-                  Расскажите о вашем опыте
+                <Label htmlFor="channelLink" className="text-base font-medium">
+                  Ссылка на ваш канал
                 </Label>
-                <Textarea
-                  id="experience"
-                  placeholder="Например: занимался спортом год назад, сейчас нет физической активности..."
-                  value={formData.experience}
-                  onChange={(e) => setFormData({ ...formData, experience: e.target.value })}
+                <Input
+                  id="channelLink"
+                  type="url"
+                  placeholder="https://t.me/millionskorny"
+                  value={formData.channelLink}
+                  onChange={(e) => setFormData({ ...formData, channelLink: e.target.value })}
                   required
-                  className="min-h-[100px] resize-none"
+                  className="h-12 border-2 border-[#9A1E15] focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="goals" className="text-base font-medium">
-                  Какие цели вы хотите достичь?
+                <Label htmlFor="salesDifficulties" className="text-base font-medium">
+                  Какие сейчас у вас сложности с продажами?
                 </Label>
                 <Textarea
-                  id="goals"
-                  placeholder="Например: похудеть на 5 кг, набрать мышечную массу, улучшить выносливость..."
-                  value={formData.goals}
-                  onChange={(e) => setFormData({ ...formData, goals: e.target.value })}
+                  id="salesDifficulties"
+                  placeholder="Нет заявок, не покупают на диагностиках и т.д."
+                  value={formData.salesDifficulties}
+                  onChange={(e) => setFormData({ ...formData, salesDifficulties: e.target.value })}
                   required
-                  className="min-h-[100px] resize-none"
+                  className="min-h-[100px] resize-none border-2 border-[#9A1E15] focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="additionalInfo" className="text-base font-medium">
-                  Дополнительная информация
-                  <span className="text-sm text-gray-500 ml-2">(необязательно)</span>
+                <Label htmlFor="trackingGoals" className="text-base font-medium">
+                  Какие задачи хотите решить на трекинге?
                 </Label>
                 <Textarea
-                  id="additionalInfo"
-                  placeholder="Укажите любую дополнительную информацию, которую считаете важной..."
-                  value={formData.additionalInfo}
-                  onChange={(e) => setFormData({ ...formData, additionalInfo: e.target.value })}
-                  className="min-h-[100px] resize-none"
+                  id="trackingGoals"
+                  placeholder="Опишите ваши задачи..."
+                  value={formData.trackingGoals}
+                  onChange={(e) => setFormData({ ...formData, trackingGoals: e.target.value })}
+                  required
+                  className="min-h-[100px] resize-none border-2 border-[#9A1E15] focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
+                />
+              </div>
+
+              <div className="space-y-3">
+                <Label className="text-base font-medium">
+                  Какой формат трекинга вам больше подходит?
+                </Label>
+                <RadioGroup
+                  value={formData.trackingFormat}
+                  onValueChange={(value) => setFormData({ ...formData, trackingFormat: value })}
+                  required
+                >
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                    <RadioGroupItem value="test-drive" id="test-drive" />
+                    <Label htmlFor="test-drive" className="cursor-pointer flex-1 text-base">
+                      Тест-драйв
+                    </Label>
+                  </div>
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                    <RadioGroupItem value="group-format" id="group-format" />
+                    <Label htmlFor="group-format" className="cursor-pointer flex-1 text-base">
+                      Групповой формат
+                    </Label>
+                  </div>
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                    <RadioGroupItem value="individual" id="individual" />
+                    <Label htmlFor="individual" className="cursor-pointer flex-1 text-base">
+                      Индивидуальная работа
+                    </Label>
+                  </div>
+                </RadioGroup>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="readyToStart" className="text-base font-medium">
+                  Готовы ли вы в ближайшие 2-3 недели решить свои задачи по продажам?
+                </Label>
+                <Input
+                  id="readyToStart"
+                  placeholder="Да / Нет"
+                  value={formData.readyToStart}
+                  onChange={(e) => setFormData({ ...formData, readyToStart: e.target.value })}
+                  required
+                  className="h-12 border-2 border-[#9A1E15] focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
                 />
               </div>
 
               <Button
                 type="submit"
-                size="lg"
                 disabled={isSubmitting}
-                className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
+                className="w-full h-14 text-lg font-semibold bg-[#9A1E15] hover:bg-[#7A1811] text-white animate-pulse-subtle"
               >
-                {isSubmitting ? (
-                  <>
-                    <Icon name="Loader2" className="mr-2 h-5 w-5 animate-spin" />
-                    Отправка...
-                  </>
-                ) : (
-                  <>
-                    <Icon name="Send" className="mr-2 h-5 w-5" />
-                    Отправить заявку
-                  </>
-                )}
+                {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
               </Button>
             </form>
           </CardContent>
         </Card>
-
-        <div className="mt-8 text-center text-sm text-gray-500 animate-fade-in">
-          <Icon name="Lock" className="inline-block h-4 w-4 mr-1" />
-          Ваши данные защищены и не передаются третьим лицам
-        </div>
       </div>
     </div>
   );
