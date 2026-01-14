@@ -74,8 +74,8 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-50 py-12 px-4">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-8 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-4">
-            Анкета предзаписи
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-[#9A1E15] mb-4">
+            Анкета предзаписи на Трекинг
           </h1>
           <p className="text-lg text-gray-600">
             Заполните форму, и мы свяжемся с вами для уточнения деталей
@@ -92,7 +92,7 @@ const Index = () => {
           <CardContent className="pt-6">
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="space-y-2">
-                <Label htmlFor="name" className="text-base font-medium">
+                <Label htmlFor="name" className="text-base font-bold">
                   Ваше имя
                 </Label>
                 <Input
@@ -101,7 +101,7 @@ const Index = () => {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
-                  className="h-12 border-2 border-[#9A1E15] focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
+                  className="h-12 border border-[#9A1E15]/40 focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
                 />
               </div>
 
@@ -115,12 +115,12 @@ const Index = () => {
                   value={formData.niche}
                   onChange={(e) => setFormData({ ...formData, niche: e.target.value })}
                   required
-                  className="h-12 border-2 border-[#9A1E15] focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
+                  className="h-12 border border-[#9A1E15]/40 focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
                 />
               </div>
 
               <div className="space-y-3">
-                <Label className="text-base font-medium">
+                <Label className="text-base font-bold">
                   Сколько времени вы в нише?
                 </Label>
                 <RadioGroup
@@ -128,19 +128,19 @@ const Index = () => {
                   onValueChange={(value) => setFormData({ ...formData, timeInNiche: value })}
                   required
                 >
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border border-[#9A1E15]/40 hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
                     <RadioGroupItem value="less-than-1-year" id="less-than-1-year" />
                     <Label htmlFor="less-than-1-year" className="cursor-pointer flex-1 text-base">
                       До 1 года
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border border-[#9A1E15]/40 hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
                     <RadioGroupItem value="1-2-years" id="1-2-years" />
                     <Label htmlFor="1-2-years" className="cursor-pointer flex-1 text-base">
                       1-2 года
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border border-[#9A1E15]/40 hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
                     <RadioGroupItem value="more-than-2-years" id="more-than-2-years" />
                     <Label htmlFor="more-than-2-years" className="cursor-pointer flex-1 text-base">
                       Более 2х лет
@@ -150,7 +150,7 @@ const Index = () => {
               </div>
 
               <div className="space-y-3">
-                <Label className="text-base font-medium">
+                <Label className="text-base font-bold">
                   Как у вас сейчас обстоят дела с продажами?
                 </Label>
                 <RadioGroup
@@ -158,25 +158,25 @@ const Index = () => {
                   onValueChange={(value) => setFormData({ ...formData, salesStatus: value })}
                   required
                 >
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border border-[#9A1E15]/40 hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
                     <RadioGroupItem value="no-sales" id="no-sales" />
                     <Label htmlFor="no-sales" className="cursor-pointer flex-1 text-base">
                       Нет продаж совсем
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border border-[#9A1E15]/40 hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
                     <RadioGroupItem value="rare-sales" id="rare-sales" />
                     <Label htmlFor="rare-sales" className="cursor-pointer flex-1 text-base">
                       Редкие продажи по сарафану
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border border-[#9A1E15]/40 hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
                     <RadioGroupItem value="inconsistent" id="inconsistent" />
                     <Label htmlFor="inconsistent" className="cursor-pointer flex-1 text-base">
                       То густо, то пусто
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border border-[#9A1E15]/40 hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
                     <RadioGroupItem value="want-to-scale" id="want-to-scale" />
                     <Label htmlFor="want-to-scale" className="cursor-pointer flex-1 text-base">
                       Нормально, хочу масштабировать
@@ -186,7 +186,7 @@ const Index = () => {
               </div>
 
               <div className="space-y-3">
-                <Label className="text-base font-medium">
+                <Label className="text-base font-bold">
                   Какой продукт вы продаете?
                 </Label>
                 <RadioGroup
@@ -194,25 +194,25 @@ const Index = () => {
                   onValueChange={(value) => setFormData({ ...formData, productType: value })}
                   required
                 >
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border border-[#9A1E15]/40 hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
                     <RadioGroupItem value="no-product" id="no-product" />
                     <Label htmlFor="no-product" className="cursor-pointer flex-1 text-base">
                       Нет продукта
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border border-[#9A1E15]/40 hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
                     <RadioGroupItem value="consultations" id="consultations" />
                     <Label htmlFor="consultations" className="cursor-pointer flex-1 text-base">
                       Консультации (сессии)
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border border-[#9A1E15]/40 hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
                     <RadioGroupItem value="group-programs" id="group-programs" />
                     <Label htmlFor="group-programs" className="cursor-pointer flex-1 text-base">
                       Групповые программы
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border border-[#9A1E15]/40 hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
                     <RadioGroupItem value="individual-work" id="individual-work" />
                     <Label htmlFor="individual-work" className="cursor-pointer flex-1 text-base">
                       Индивидуальная работа (наставничество, сопровождение)
@@ -232,7 +232,7 @@ const Index = () => {
                   value={formData.channelLink}
                   onChange={(e) => setFormData({ ...formData, channelLink: e.target.value })}
                   required
-                  className="h-12 border-2 border-[#9A1E15] focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
+                  className="h-12 border border-[#9A1E15]/40 focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
                 />
               </div>
 
@@ -246,7 +246,7 @@ const Index = () => {
                   value={formData.salesDifficulties}
                   onChange={(e) => setFormData({ ...formData, salesDifficulties: e.target.value })}
                   required
-                  className="min-h-[100px] resize-none border-2 border-[#9A1E15] focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
+                  className="min-h-[100px] resize-none border border-[#9A1E15]/40 focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
                 />
               </div>
 
@@ -260,12 +260,12 @@ const Index = () => {
                   value={formData.trackingGoals}
                   onChange={(e) => setFormData({ ...formData, trackingGoals: e.target.value })}
                   required
-                  className="min-h-[100px] resize-none border-2 border-[#9A1E15] focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
+                  className="min-h-[100px] resize-none border border-[#9A1E15]/40 focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
                 />
               </div>
 
               <div className="space-y-3">
-                <Label className="text-base font-medium">
+                <Label className="text-base font-bold">
                   Какой формат трекинга вам больше подходит?
                 </Label>
                 <RadioGroup
@@ -273,19 +273,19 @@ const Index = () => {
                   onValueChange={(value) => setFormData({ ...formData, trackingFormat: value })}
                   required
                 >
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border border-[#9A1E15]/40 hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
                     <RadioGroupItem value="test-drive" id="test-drive" />
                     <Label htmlFor="test-drive" className="cursor-pointer flex-1 text-base">
                       Тест-драйв
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border border-[#9A1E15]/40 hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
                     <RadioGroupItem value="group-format" id="group-format" />
                     <Label htmlFor="group-format" className="cursor-pointer flex-1 text-base">
                       Групповой формат
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-[#9A1E15] hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border border-[#9A1E15]/40 hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
                     <RadioGroupItem value="individual" id="individual" />
                     <Label htmlFor="individual" className="cursor-pointer flex-1 text-base">
                       Индивидуальная работа
@@ -304,7 +304,7 @@ const Index = () => {
                   value={formData.readyToStart}
                   onChange={(e) => setFormData({ ...formData, readyToStart: e.target.value })}
                   required
-                  className="h-12 border-2 border-[#9A1E15] focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
+                  className="h-12 border border-[#9A1E15]/40 focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
                 />
               </div>
 
