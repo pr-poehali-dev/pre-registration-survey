@@ -60,7 +60,7 @@ const ThankYou = () => {
             <Button
               asChild
               size="lg"
-              className="w-full md:w-auto px-8 py-6 text-lg bg-[#9A1E15] hover:bg-[#7A1610] transition-all transform hover:scale-105"
+              className="w-full md:w-auto px-8 py-6 text-lg bg-[#9A1E15] hover:bg-[#7A1610] transition-all transform hover:scale-105 animate-pulse-subtle"
             >
               <a 
                 href="https://t.me/+QAl59cl2QetiZmIy" 
