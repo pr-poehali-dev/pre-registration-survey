@@ -12,6 +12,7 @@ const Index = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
+    telegramUsername: '',
     niche: '',
     timeInNiche: '',
     salesStatus: '',
@@ -46,6 +47,7 @@ const Index = () => {
 
         setFormData({
           name: '',
+          telegramUsername: '',
           niche: '',
           timeInNiche: '',
           salesStatus: '',
@@ -106,7 +108,21 @@ const Index = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="niche" className="text-base font-medium">
+                <Label htmlFor="telegramUsername" className="text-base font-bold">
+                  Ваш никнейм в Телеграм
+                </Label>
+                <Input
+                  id="telegramUsername"
+                  placeholder="Например @svetlana_skorni"
+                  value={formData.telegramUsername}
+                  onChange={(e) => setFormData({ ...formData, telegramUsername: e.target.value })}
+                  required
+                  className="h-12 border border-[#9A1E15]/40 focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="niche" className="text-base font-bold">
                   Какая у вас ниша?
                 </Label>
                 <Input
@@ -222,7 +238,7 @@ const Index = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="channelLink" className="text-base font-medium">
+                <Label htmlFor="channelLink" className="text-base font-bold">
                   Ссылка на ваш канал
                 </Label>
                 <Input
@@ -237,7 +253,7 @@ const Index = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="salesDifficulties" className="text-base font-medium">
+                <Label htmlFor="salesDifficulties" className="text-base font-bold">
                   Какие сейчас у вас сложности с продажами?
                 </Label>
                 <Textarea
@@ -251,7 +267,7 @@ const Index = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="trackingGoals" className="text-base font-medium">
+                <Label htmlFor="trackingGoals" className="text-base font-bold">
                   Какие задачи хотите решить на трекинге?
                 </Label>
                 <Textarea
@@ -295,7 +311,7 @@ const Index = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="readyToStart" className="text-base font-medium">
+                <Label htmlFor="readyToStart" className="text-base font-bold">
                   Готовы ли вы в ближайшие 2-3 недели решить свои задачи по продажам?
                 </Label>
                 <Input
