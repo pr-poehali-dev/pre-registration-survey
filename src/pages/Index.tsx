@@ -26,6 +26,17 @@ const Index = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Валидация никнейма Telegram
+    if (!formData.telegramUsername.startsWith('@')) {
+      toast({
+        title: "Ошибка валидации",
+        description: "Никнейм в Телеграм должен начинаться с символа @",
+        variant: "destructive"
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -117,6 +128,8 @@ const Index = () => {
                   value={formData.telegramUsername}
                   onChange={(e) => setFormData({ ...formData, telegramUsername: e.target.value })}
                   required
+                  pattern="@[a-zA-Z0-9_]{5,32}"
+                  title="Никнейм должен начинаться с @ и содержать от 5 до 32 символов (буквы, цифры, подчеркивание)"
                   className="h-12 border border-[#9A1E15]/40 focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
                 />
               </div>
