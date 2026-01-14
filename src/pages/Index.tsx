@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
@@ -9,6 +10,7 @@ import { useToast } from '@/hooks/use-toast';
 
 const Index = () => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -51,24 +53,7 @@ const Index = () => {
       const data = await response.json();
 
       if (response.ok && data.success) {
-        toast({
-          title: "Заявка отправлена!",
-          description: "Мы свяжемся с вами в ближайшее время.",
-        });
-
-        setFormData({
-          name: '',
-          telegramUsername: '',
-          niche: '',
-          timeInNiche: '',
-          salesStatus: '',
-          productType: '',
-          channelLink: '',
-          salesDifficulties: '',
-          trackingGoals: '',
-          trackingFormat: '',
-          readyToStart: ''
-        });
+        navigate('/thank-you');
       } else {
         throw new Error(data.error || 'Ошибка отправки');
       }
