@@ -1,0 +1,30 @@
+{
+  "tests": [
+    {
+      "name": "Submit form with valid data",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Иван Петров",
+        "phone": "+7 (999) 123-45-67",
+        "serviceType": "training",
+        "preferredTime": "morning",
+        "experience": "Занимался год назад",
+        "goals": "Похудеть на 5 кг",
+        "additionalInfo": "Нет противопоказаний"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true,
+        "message": "string"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Handle OPTIONS request",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    }
+  ]
+}
