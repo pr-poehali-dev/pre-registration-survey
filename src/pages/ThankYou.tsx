@@ -55,7 +55,7 @@ const ThankYou = () => {
               Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время для уточнения деталей.
             </p>
             <p className="text-base text-gray-600">
-              А пока присоединяйтесь к нашему телеграм-каналу, где мы делимся полезными материалами о продажах и трекинге!
+              Бонусные материалы ждут вас в закрытом Телеграм-канале. Нажимайте на кнопку ниже:
             </p>
             <Button
               asChild
@@ -66,10 +66,10 @@ const ThankYou = () => {
                 href="https://t.me/+QAl59cl2QetiZmIy" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-3"
+                className="flex items-center gap-3 text-white"
               >
                 <Icon name="Send" size={24} />
-                Перейти в Telegram-канал
+                Забрать бонусы
               </a>
             </Button>
           </CardContent>
