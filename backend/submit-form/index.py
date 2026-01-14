@@ -82,37 +82,37 @@ def handler(event: dict, context) -> dict:
         
         message = f"""<b>Новая заявка на Трекинг!</b>
 
-Ваше имя
+<b>Ваше имя</b>
 {name}
 
-Ваш никнейм в Телеграм
+<b>Ваш никнейм в Телеграм</b>
 {telegram_username}
 
-Какая у вас ниша?
+<b>Какая у вас ниша?</b>
 {niche}
 
-Сколько времени вы в нише?
+<b>Сколько времени вы в нише?</b>
 {time_in_niche_names.get(time_in_niche, time_in_niche)}
 
-Как у вас сейчас обстоят дела с продажами?
+<b>Как у вас сейчас обстоят дела с продажами?</b>
 {sales_status_names.get(sales_status, sales_status)}
 
-Что вы продаете?
+<b>Что вы продаете?</b>
 {product_type_names.get(product_type, product_type)}
 
-Ссылка на ваш канал или соцсеть
+<b>Ссылка на ваш канал или соцсеть</b>
 {channel_link}
 
-С какими сложностями вы сталкиваетесь в продажах?
+<b>С какими сложностями вы сталкиваетесь в продажах?</b>
 {sales_difficulties}
 
-Какие цели вы хотите достичь с помощью трекинга?
+<b>Какие цели вы хотите достичь с помощью трекинга?</b>
 {tracking_goals}
 
-В каком формате вы готовы заниматься?
+<b>В каком формате вы готовы заниматься?</b>
 {tracking_format_names.get(tracking_format, tracking_format)}
 
-Готовы ли вы начать уже сейчас?
+<b>Готовы ли вы начать уже сейчас?</b>
 {ready_to_start_names.get(ready_to_start, ready_to_start)}"""
         
         bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
