@@ -66,7 +66,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-50 py-12 px-4">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-8 animate-fade-in">
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-4">
@@ -78,7 +78,7 @@ const Index = () => {
         </div>
 
         <Card className="shadow-xl border-0 animate-scale-in">
-          <CardHeader className="space-y-1 bg-gradient-to-r from-purple-100 to-pink-100 rounded-t-lg">
+          <CardHeader className="space-y-1 bg-gradient-to-r from-yellow-100 to-amber-100 rounded-t-lg">
             <CardTitle className="text-2xl font-heading">Ваши данные</CardTitle>
             <CardDescription>
               Все поля обязательны для заполнения
@@ -126,25 +126,25 @@ const Index = () => {
                   onValueChange={(value) => setFormData({ ...formData, serviceType: value })}
                   required
                 >
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-purple-50 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-yellow-50 transition-all cursor-pointer">
                     <RadioGroupItem value="consultation" id="consultation" />
                     <Label htmlFor="consultation" className="cursor-pointer flex-1 text-base">
                       Консультация
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-purple-50 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-yellow-50 transition-all cursor-pointer">
                     <RadioGroupItem value="training" id="training" />
                     <Label htmlFor="training" className="cursor-pointer flex-1 text-base">
                       Тренировка
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-purple-50 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-yellow-50 transition-all cursor-pointer">
                     <RadioGroupItem value="program" id="program" />
                     <Label htmlFor="program" className="cursor-pointer flex-1 text-base">
                       Программа на месяц
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-purple-50 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-yellow-50 transition-all cursor-pointer">
                     <RadioGroupItem value="other" id="other" />
                     <Label htmlFor="other" className="cursor-pointer flex-1 text-base">
                       Другое
@@ -162,19 +162,19 @@ const Index = () => {
                   onValueChange={(value) => setFormData({ ...formData, preferredTime: value })}
                   required
                 >
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-pink-50 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-amber-50 transition-all cursor-pointer">
                     <RadioGroupItem value="morning" id="morning" />
                     <Label htmlFor="morning" className="cursor-pointer flex-1 text-base">
                       Утро (9:00 - 12:00)
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-pink-50 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-amber-50 transition-all cursor-pointer">
                     <RadioGroupItem value="day" id="day" />
                     <Label htmlFor="day" className="cursor-pointer flex-1 text-base">
                       День (12:00 - 17:00)
                     </Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-pink-50 transition-all cursor-pointer">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-amber-50 transition-all cursor-pointer">
                     <RadioGroupItem value="evening" id="evening" />
                     <Label htmlFor="evening" className="cursor-pointer flex-1 text-base">
                       Вечер (17:00 - 20:00)
