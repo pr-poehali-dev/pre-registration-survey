@@ -36,45 +36,84 @@ def handler(event: dict, context) -> dict:
         body = json.loads(event.get('body', '{}'))
         
         name = body.get('name', '')
-        phone = body.get('phone', '')
-        service_type = body.get('serviceType', '')
-        preferred_time = body.get('preferredTime', '')
-        experience = body.get('experience', '')
-        goals = body.get('goals', '')
-        additional_info = body.get('additionalInfo', '')
+        telegram_username = body.get('telegramUsername', '')
+        niche = body.get('niche', '')
+        time_in_niche = body.get('timeInNiche', '')
+        sales_status = body.get('salesStatus', '')
+        product_type = body.get('productType', '')
+        channel_link = body.get('channelLink', '')
+        sales_difficulties = body.get('salesDifficulties', '')
+        tracking_goals = body.get('trackingGoals', '')
+        tracking_format = body.get('trackingFormat', '')
+        ready_to_start = body.get('readyToStart', '')
         
-        service_names = {
-            'consultation': 'Консультация',
-            'training': 'Тренировка',
-            'program': 'Программа на месяц',
+        time_in_niche_names = {
+            'less-than-1-year': 'До 1 года',
+            '1-2-years': '1-2 года',
+            'more-than-2-years': 'Более 2х лет'
+        }
+        
+        sales_status_names = {
+            'no-sales': 'Нет продаж совсем',
+            'rare-sales': 'Редкие продажи по сарафану',
+            'inconsistent': 'То густо, то пусто',
+            'want-to-scale': 'Хочу масштабироваться'
+        }
+        
+        product_type_names = {
+            'courses': 'Курсы',
+            'mentorship': 'Наставничество',
+            'consultations': 'Консультации',
+            'products': 'Продукты',
+            'services': 'Услуги',
             'other': 'Другое'
         }
         
-        time_names = {
-            'morning': 'Утро (9:00 - 12:00)',
-            'day': 'День (12:00 - 17:00)',
-            'evening': 'Вечер (17:00 - 20:00)'
+        tracking_format_names = {
+            'online-only': 'Только онлайн',
+            'with-offline-meetings': 'С оффлайн встречами'
         }
         
-        service_label = service_names.get(service_type, service_type)
-        time_label = time_names.get(preferred_time, preferred_time)
+        ready_to_start_names = {
+            'yes': 'Да',
+            'not-sure': 'Не уверен(а)',
+            'later': 'Позже'
+        }
         
-        message = f"""🆕 Новая заявка на предзапись!
+        message = f"""<b>Новая заявка на Трекинг!</b>
 
-👤 Имя: {name}
-📱 Телефон: {phone}
+Ваше имя
+{name}
 
-💼 Услуга: {service_label}
-⏰ Удобное время: {time_label}
+Ваш никнейм в Телеграм
+{telegram_username}
 
-📝 Опыт:
-{experience}
+Какая у вас ниша?
+{niche}
 
-🎯 Цели:
-{goals}"""
-        
-        if additional_info:
-            message += f"\n\n💬 Дополнительно:\n{additional_info}"
+Сколько времени вы в нише?
+{time_in_niche_names.get(time_in_niche, time_in_niche)}
+
+Как у вас сейчас обстоят дела с продажами?
+{sales_status_names.get(sales_status, sales_status)}
+
+Что вы продаете?
+{product_type_names.get(product_type, product_type)}
+
+Ссылка на ваш канал или соцсеть
+{channel_link}
+
+С какими сложностями вы сталкиваетесь в продажах?
+{sales_difficulties}
+
+Какие цели вы хотите достичь с помощью трекинга?
+{tracking_goals}
+
+В каком формате вы готовы заниматься?
+{tracking_format_names.get(tracking_format, tracking_format)}
+
+Готовы ли вы начать уже сейчас?
+{ready_to_start_names.get(ready_to_start, ready_to_start)}"""
         
         bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
         chat_id = os.environ.get('TELEGRAM_CHAT_ID')
