@@ -100,7 +100,7 @@ def handler(event: dict, context) -> dict:
 <b>Ссылка на канал:</b>
 {channel_link}
 
-<b>Сложности с продажами:</b>
+<b>С какими проблемами сталкиваетесь в продажах / трафике / контенте:</b>
 {sales_difficulties}
 
 <b>Какие задачи хотите решить на трекинге:</b>
@@ -109,7 +109,7 @@ def handler(event: dict, context) -> dict:
 <b>Какой формат трекинга больше подходит:</b>
 {tracking_format_names.get(tracking_format, tracking_format)}
 
-<b>Готовы ли в ближайшие 2-3 недели решить свои задачи?</b>
+<b>Готов(-а) ли в ближайшие 2 недели зайти в работу:</b>
 {ready_to_start}"""
         
         bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
