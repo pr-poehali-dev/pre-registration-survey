@@ -76,9 +76,25 @@ const Index = () => {
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-[#9A1E15] mb-4">
             Анкета предзаписи на Трекинг
           </h1>
-          <p className="text-lg text-gray-600">
-            Заполните форму, и мы свяжемся с вами для уточнения деталей
-          </p>
+          <div className="text-left max-w-2xl mx-auto bg-white/80 p-6 rounded-lg shadow-sm">
+            <p className="text-lg font-semibold text-[#9A1E15] mb-3">
+              Сразу после заполнения формы вам будут доступны бонусы:
+            </p>
+            <ul className="space-y-2 text-base text-gray-700">
+              <li className="flex items-start">
+                <span className="text-[#9A1E15] mr-2">—</span>
+                <span>Видео урок "Как запустить продажи консультаций и мини-продуктов за 30 минут"</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-[#9A1E15] mr-2">—</span>
+                <span>Структура воронки продаж, которая принесла мне и моим клиентам более 10 млн рублей за 2024-2025 и продолжает работать в 2026</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-[#9A1E15] mr-2">—</span>
+                <span>Возможность попасть на большую стратегическую сессию по продажам в 2026</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <Card className="shadow-xl border-0 animate-scale-in">
