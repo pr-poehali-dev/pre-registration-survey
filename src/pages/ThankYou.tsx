@@ -52,18 +52,34 @@ const ThankYou = () => {
           </CardHeader>
           <CardContent className="pt-8 pb-10 space-y-6">
             <p className="text-lg text-gray-700 leading-relaxed">
-              Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время для уточнения деталей.
+              Ваша заявка успешно отправлена. Я свяжусь с вами в ближайшее время для уточнения деталей.
             </p>
-            <p className="text-base text-gray-600">
-              Бонусные материалы ждут вас в закрытом Телеграм-канале. Нажимайте на кнопку ниже:
-            </p>
+            <div className="bg-yellow-50 border-2 border-[#9A1E15] rounded-lg p-6 text-left">
+              <p className="text-base font-semibold text-[#9A1E15] mb-3">
+                А прямо сейчас нажимайте на кнопку ниже и забирайте БОНУСЫ за заполнение анкеты:
+              </p>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-[#9A1E15] mr-2 font-bold">—</span>
+                  <span>Видео урок "Как запустить продажи консультаций и мини-продуктов за 30 минут"</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#9A1E15] mr-2 font-bold">—</span>
+                  <span>Структура воронки продаж, которая принесла мне и моим клиентам более 10 млн рублей за 2024-2025 и продолжает работать в 2026</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#9A1E15] mr-2 font-bold">—</span>
+                  <span>Возможность попасть на большую стратегическую сессию по продажам 2026</span>
+                </li>
+              </ul>
+            </div>
             <Button
               asChild
               size="lg"
               className="w-full md:w-auto px-8 py-6 text-lg bg-[#9A1E15] hover:bg-[#7A1610] transition-all transform hover:scale-105 animate-pulse-subtle"
             >
               <a 
-                href="https://t.me/+QAl59cl2QetiZmIy" 
+                href="https://t.me/klienty_telegramya_bot?start=b_KhHJZcfUBc" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-white"
