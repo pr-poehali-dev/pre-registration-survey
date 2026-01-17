@@ -253,11 +253,11 @@ const Index = () => {
 
               <div className="space-y-2">
                 <Label htmlFor="salesDifficulties" className="text-base font-bold">
-                  Какие сейчас у вас сложности с продажами?
+                  С какими проблемами вы сталкиваетесь сейчас в продажах / трафике/ контенте и ведении блога? С чем бы хотели разобраться сейчас?
                 </Label>
                 <Textarea
                   id="salesDifficulties"
-                  placeholder="Нет заявок, не покупают на диагностиках и т.д."
+                  placeholder="Сформулируйте своими словами."
                   value={formData.salesDifficulties}
                   onChange={(e) => setFormData({ ...formData, salesDifficulties: e.target.value })}
                   required
@@ -321,7 +321,7 @@ const Index = () => {
                   <div className="flex items-center space-x-3 p-4 rounded-lg border border-[#9A1E15]/40 hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
                     <RadioGroupItem value="group-format" id="group-format" />
                     <Label htmlFor="group-format" className="cursor-pointer flex-1 text-base">
-                      Групповой формат
+                      Групповой формат (от 49.900 рублей за 3 месяца)
                     </Label>
                   </div>
                   <div className="flex items-center space-x-3 p-4 rounded-lg border border-[#9A1E15]/40 hover:bg-[#9A1E15]/10 transition-all cursor-pointer">
@@ -335,7 +335,7 @@ const Index = () => {
 
               <div className="space-y-2">
                 <Label htmlFor="readyToStart" className="text-base font-bold">
-                  Готовы ли вы в ближайшие 2-3 недели решить свои задачи по продажам?
+                  Готов(-а) ли в ближайшие 2 недели зайти в работу, чтобы решить все свои актуальные сложности по продажам и трафику, и вырасти в деньгах уже в следующем месяце?
                 </Label>
                 <Input
                   id="readyToStart"
