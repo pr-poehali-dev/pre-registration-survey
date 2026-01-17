@@ -43,7 +43,7 @@ def handler(event: dict, context) -> dict:
         product_type = body.get('productType', '')
         channel_link = body.get('channelLink', '')
         sales_difficulties = body.get('salesDifficulties', '')
-        tracking_goals = body.get('trackingGoals', '')
+        tracking_goals = body.get('trackingGoals', [])
         tracking_format = body.get('trackingFormat', '')
         ready_to_start = body.get('readyToStart', '')
         
@@ -70,15 +70,12 @@ def handler(event: dict, context) -> dict:
         }
         
         tracking_format_names = {
-            'online-only': 'Только онлайн',
-            'with-offline-meetings': 'С оффлайн встречами'
+            'test-drive': 'Тест-драйв',
+            'group-format': 'Групповой формат',
+            'individual': 'Индивидуальная работа'
         }
         
-        ready_to_start_names = {
-            'yes': 'Да',
-            'not-sure': 'Не уверен(а)',
-            'later': 'Позже'
-        }
+        tracking_goals_text = '\n'.join([f'— {goal}' for goal in tracking_goals]) if tracking_goals else 'Не указано'
         
         message = f"""🔥 <b>Новая заявка на Трекинг!</b>
 
@@ -107,13 +104,13 @@ def handler(event: dict, context) -> dict:
 {sales_difficulties}
 
 <b>Какие задачи хотите решить на трекинге:</b>
-{tracking_goals}
+{tracking_goals_text}
 
 <b>Какой формат трекинга больше подходит:</b>
 {tracking_format_names.get(tracking_format, tracking_format)}
 
 <b>Готовы ли в ближайшие 2-3 недели решить свои задачи?</b>
-{ready_to_start_names.get(ready_to_start, ready_to_start)}"""
+{ready_to_start}"""
         
         bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
         chat_id = os.environ.get('TELEGRAM_CHAT_ID')

@@ -6,6 +6,7 @@ import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
+import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
 
 const Index = () => {
@@ -21,7 +22,7 @@ const Index = () => {
     productType: '',
     channelLink: '',
     salesDifficulties: '',
-    trackingGoals: '',
+    trackingGoals: [] as string[],
     trackingFormat: '',
     readyToStart: ''
   });
@@ -264,18 +265,42 @@ const Index = () => {
                 />
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="trackingGoals" className="text-base font-bold">
-                  Какие задачи хотите решить на трекинге?
+              <div className="space-y-3">
+                <Label className="text-base font-bold">
+                  Какие задачи хотите решить на трекинге? (выберите несколько)
                 </Label>
-                <Textarea
-                  id="trackingGoals"
-                  placeholder="Опишите ваши задачи..."
-                  value={formData.trackingGoals}
-                  onChange={(e) => setFormData({ ...formData, trackingGoals: e.target.value })}
-                  required
-                  className="min-h-[100px] resize-none border border-[#9A1E15]/40 focus:border-[#9A1E15] focus:ring-[#9A1E15] hover:bg-[#9A1E15]/5 transition-all"
-                />
+                <div className="space-y-3">
+                  {[
+                    'Запустить продажи с нуля',
+                    'Продавать проще и быстрее',
+                    'Привлечь новую аудиторию',
+                    'Переупаковать / создать сильный продукт',
+                    'Уйти от хаоса и продаж наугад',
+                    'Научиться создавать контент',
+                    'Внедрить в работу нейросети',
+                    'Научиться создавать автоворонки',
+                    'Найти рабочие связки по трафику и проверенных подрядчиков',
+                    'Разобраться с новыми законами и налогами'
+                  ].map((goal) => (
+                    <div key={goal} className="flex items-start space-x-3 p-4 rounded-lg border border-[#9A1E15]/40 hover:bg-[#9A1E15]/10 transition-all">
+                      <Checkbox
+                        id={goal}
+                        checked={formData.trackingGoals.includes(goal)}
+                        onCheckedChange={(checked) => {
+                          if (checked) {
+                            setFormData({ ...formData, trackingGoals: [...formData.trackingGoals, goal] });
+                          } else {
+                            setFormData({ ...formData, trackingGoals: formData.trackingGoals.filter(g => g !== goal) });
+                          }
+                        }}
+                        className="mt-0.5 h-5 w-5 border-[#9A1E15] data-[state=checked]:bg-[#9A1E15] data-[state=checked]:border-[#9A1E15]"
+                      />
+                      <Label htmlFor={goal} className="cursor-pointer flex-1 text-base leading-relaxed">
+                        {goal}
+                      </Label>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               <div className="space-y-3">
