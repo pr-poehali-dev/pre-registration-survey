@@ -61,12 +61,10 @@ def handler(event: dict, context) -> dict:
         }
         
         product_type_names = {
-            'courses': 'Курсы',
-            'mentorship': 'Наставничество',
-            'consultations': 'Консультации',
-            'products': 'Продукты',
-            'services': 'Услуги',
-            'other': 'Другое'
+            'no-product': 'Нет продукта',
+            'consultations': 'Консультации (сессии)',
+            'group-programs': 'Групповые программы',
+            'individual-work': 'Индивидуальная работа (наставничество, сопровождение)'
         }
         
         tracking_format_names = {
