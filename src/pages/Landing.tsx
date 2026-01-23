@@ -82,12 +82,50 @@ const Landing = () => {
           </h2>
 
           <div className="space-y-6">
-            <Card className="border-0 shadow-lg bg-white">
+            <Card className="border-0 shadow-lg bg-white overflow-visible">
               <CardContent className="p-8">
-                <h3 className="text-xl font-bold text-[#9A1E15] mb-3">База знаний</h3>
-                <p className="text-gray-700">
-                  ключевое, что позволяет всем без исключения двигаться к результату в своем темпе, без поиска дополнительных решений.
-                </p>
+                <div className="flex flex-col md:flex-row gap-8 items-center">
+                  <div className="md:w-1/2">
+                    <h3 className="text-xl font-bold text-[#9A1E15] mb-3">База знаний</h3>
+                    <p className="text-gray-700">
+                      ключевое, что позволяет всем без исключения двигаться к результату в своем темпе, без поиска дополнительных решений.
+                    </p>
+                  </div>
+                  <div className="md:w-1/2 relative h-64 md:h-80">
+                    <div className="absolute top-0 left-0 w-32 md:w-40 z-20" style={{transform: 'perspective(800px) rotateY(-12deg) rotateZ(-8deg) translateZ(20px)', filter: 'drop-shadow(12px 12px 20px rgba(0,0,0,0.25))'}}>
+                      <img 
+                        src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/2e99e48b-f13a-44d3-a936-7fe014201da8.jpg"
+                        alt="База знаний - разделы"
+                        className="w-full h-auto"
+                        style={{borderRadius: '30%'}}
+                      />
+                    </div>
+                    <div className="absolute top-8 right-4 w-36 md:w-44 z-30" style={{transform: 'perspective(800px) rotateY(8deg) rotateZ(5deg) translateZ(30px)', filter: 'drop-shadow(15px 15px 25px rgba(0,0,0,0.3))'}}>
+                      <img 
+                        src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/545674e7-c468-4162-9d72-5d04da773669.jpg"
+                        alt="Продажи - мастер-класс"
+                        className="w-full h-auto"
+                        style={{borderRadius: '30%'}}
+                      />
+                    </div>
+                    <div className="absolute bottom-4 left-16 w-28 md:w-36 z-10" style={{transform: 'perspective(800px) rotateY(-5deg) rotateZ(3deg) translateZ(10px)', filter: 'drop-shadow(10px 10px 18px rgba(0,0,0,0.2))'}}>
+                      <img 
+                        src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/1a07d9fb-0c0d-4d0f-9945-01a8115f251a.jpg"
+                        alt="Трафик - примеры"
+                        className="w-full h-auto"
+                        style={{borderRadius: '30%'}}
+                      />
+                    </div>
+                    <div className="absolute bottom-8 right-8 w-32 md:w-40 z-15" style={{transform: 'perspective(800px) rotateY(10deg) rotateZ(-4deg) translateZ(15px)', filter: 'drop-shadow(12px 12px 22px rgba(0,0,0,0.25))'}}>
+                      <img 
+                        src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/00cfc8cb-7f76-4f63-ac7b-d9765dfe91df.jpg"
+                        alt="Воронки - навигация"
+                        className="w-full h-auto"
+                        style={{borderRadius: '30%'}}
+                      />
+                    </div>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
