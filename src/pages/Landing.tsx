@@ -106,15 +106,15 @@ const Landing = () => {
                       А я, мой опыт и моя команда будем вам в этом помогать.
                     </p>
                   </div>
-                  <div className="md:w-2/5 flex-shrink-0 -mt-8 md:mt-0 md:-mr-12">
+                  <div className="md:w-2/5 flex-shrink-0 -mt-8 md:mt-0 md:-mr-4">
                     <div className="relative" style={{transform: 'perspective(1200px) rotateY(-8deg) translateZ(30px)', filter: 'drop-shadow(25px 25px 50px rgba(0,0,0,0.35))'}}>
                       <img 
                         src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/3daf4adc-09dc-47cf-83f2-b8ec44259f81.png"
                         alt="Светлана Скорнякова"
                         className="w-full h-auto rounded-lg"
                       />
-                      <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white rounded-lg px-4 py-2 shadow-xl whitespace-nowrap" style={{transform: 'translateX(-50%) perspective(1200px) rotateY(-8deg)'}}>
-                        <p className="text-sm font-semibold text-gray-800">Светлана Скорнякова</p>
+                      <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-white rounded-lg px-8 py-3 shadow-xl whitespace-nowrap z-10" style={{transform: 'translateX(-50%) perspective(1200px) rotateY(-8deg)', minWidth: '85%'}}>
+                        <p className="text-base font-semibold text-gray-800">Светлана Скорнякова</p>
                       </div>
                     </div>
                   </div>
