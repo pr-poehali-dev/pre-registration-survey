@@ -39,7 +39,7 @@ const Landing = () => {
           </p>
 
           <div className="relative inline-block">
-            <div className="absolute inset-0 rounded-lg border-2 border-[#9A1E15] animate-pulse" style={{margin: '-4px'}}></div>
+            <div className="absolute inset-0 rounded-lg border-2 border-[#9A1E15]" style={{margin: '-4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'}}></div>
             <Button
               onClick={() => navigate('/form')}
               size="lg"
@@ -89,9 +89,9 @@ const Landing = () => {
               <CardContent className="p-8">
                 <div className="flex flex-col md:flex-row gap-8 items-center">
                   <div className="md:w-1/2">
-                    <h3 className="text-xl font-bold text-[#9A1E15] mb-3">База знаний</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold text-[#9A1E15] mb-3">База знаний</h3>
                     <p className="text-gray-700">
-                      ключевое, что позволяет всем без исключения двигаться к результату в своем темпе, без поиска дополнительных решений.
+                      Это ключевое, что позволяет всем без исключения двигаться к результату в своем темпе, без поиска дополнительных решений.
                     </p>
                   </div>
                   <div className="md:w-1/2 flex justify-center items-center p-4">
@@ -111,7 +111,7 @@ const Landing = () => {
               <CardContent className="p-8">
                 <div className="flex flex-col md:flex-row gap-8 items-center">
                   <div className="md:w-3/5">
-                    <h3 className="text-xl font-bold text-[#9A1E15] mb-3">12 больших разборов со мной</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold text-[#9A1E15] mb-3">12 больших разборов со мной</h3>
                     <p className="text-gray-700">
                       Определяем ЦЕЛЕВЫЕ ДЕЙСТВИЯ, которые приносят заявки, клиентов и деньги.
                     </p>
@@ -140,7 +140,7 @@ const Landing = () => {
 
             <Card className="border-0 shadow-lg bg-white">
               <CardContent className="p-8">
-                <h3 className="text-xl font-bold text-[#9A1E15] mb-4 text-center">
+                <h3 className="text-2xl md:text-3xl font-bold text-[#9A1E15] mb-4 text-center">
                   4 встречи с мощными экспертами по самым актуальным вопросам:
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
