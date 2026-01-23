@@ -184,7 +184,7 @@ const Landing = () => {
 
             <Card className="border-2 border-[#9A1E15] shadow-xl bg-gradient-to-br from-yellow-50 to-amber-50">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-[#9A1E15] mb-4">
+                <h3 className="text-2xl font-bold text-[#9A1E15] mb-4 text-center">
                   САМОЕ ЦЕННОЕ:<br/>
                   ИНДИВИДУАЛЬНЫЙ ТРЕК (ПУТЬ) ДЛЯ КАЖДОГО УЧАСТНИКА
                 </h3>
