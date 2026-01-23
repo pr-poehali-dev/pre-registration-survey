@@ -91,10 +91,10 @@ const Landing = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg bg-white">
+            <Card className="border-0 shadow-lg bg-white overflow-visible">
               <CardContent className="p-8">
-                <div className="flex flex-col md:flex-row gap-8 items-start">
-                  <div className="md:w-2/3">
+                <div className="flex flex-col md:flex-row gap-8 items-center">
+                  <div className="md:w-3/5">
                     <h3 className="text-xl font-bold text-[#9A1E15] mb-3">12 больших разборов со мной</h3>
                     <p className="text-gray-700">
                       Определяем ЦЕЛЕВЫЕ ДЕЙСТВИЯ, которые приносят заявки, клиентов и деньги.
@@ -106,15 +106,14 @@ const Landing = () => {
                       А я, мой опыт и моя команда будем вам в этом помогать.
                     </p>
                   </div>
-                  <div className="md:w-1/3 flex-shrink-0">
-                    <div className="relative">
+                  <div className="md:w-2/5 flex-shrink-0 -mt-8 md:mt-0 md:-mr-12">
+                    <div className="relative" style={{transform: 'perspective(1200px) rotateY(-8deg) translateZ(30px)', filter: 'drop-shadow(25px 25px 50px rgba(0,0,0,0.35))'}}>
                       <img 
                         src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/3daf4adc-09dc-47cf-83f2-b8ec44259f81.png"
                         alt="Светлана Скорнякова"
-                        className="w-full h-auto rounded-lg shadow-2xl"
-                        style={{transform: 'perspective(1000px) rotateY(-5deg)', boxShadow: '15px 15px 30px rgba(0,0,0,0.3)'}}
+                        className="w-full h-auto rounded-lg"
                       />
-                      <div className="mt-3 bg-white rounded-lg p-3 text-center shadow-md">
+                      <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white rounded-lg px-4 py-2 shadow-xl whitespace-nowrap" style={{transform: 'translateX(-50%) perspective(1200px) rotateY(-8deg)'}}>
                         <p className="text-sm font-semibold text-gray-800">Светлана Скорнякова</p>
                       </div>
                     </div>
