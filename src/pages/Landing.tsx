@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
@@ -5,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Landing = () => {
   const navigate = useNavigate();
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const tasks = [
     'переупаковать или создать продукт',
@@ -253,56 +255,56 @@ const Landing = () => {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6 mb-10">
-            <div className="overflow-hidden">
+            <div className="overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" onClick={() => setSelectedImage('https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/93438950-9a3a-472c-89df-e4b4e4c553ac.png')}>
               <img 
                 src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/93438950-9a3a-472c-89df-e4b4e4c553ac.png"
                 alt="Ольга Квартальнова - Брейн-тренер"
                 className="w-full h-auto"
               />
             </div>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" onClick={() => setSelectedImage('https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/048949a5-dbaf-4eb0-8b09-29382ba139ac.png')}>
               <img 
                 src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/048949a5-dbaf-4eb0-8b09-29382ba139ac.png"
                 alt="Ольга Мар - Специалист по трафику"
                 className="w-full h-auto"
               />
             </div>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" onClick={() => setSelectedImage('https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/703c3a7c-b15f-46a5-a12b-5e37ee2b8159.png')}>
               <img 
                 src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/703c3a7c-b15f-46a5-a12b-5e37ee2b8159.png"
                 alt="Ольга Никонова - Психолог"
                 className="w-full h-auto"
               />
             </div>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" onClick={() => setSelectedImage('https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/104089d4-0ec6-41e4-b3b5-2b44f9e25b65.png')}>
               <img 
                 src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/104089d4-0ec6-41e4-b3b5-2b44f9e25b65.png"
                 alt="Наталья Смирнова - Коуч"
                 className="w-full h-auto"
               />
             </div>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" onClick={() => setSelectedImage('https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/974cf5a1-3d99-4910-bfba-d1fdc2a901b1.png')}>
               <img 
                 src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/974cf5a1-3d99-4910-bfba-d1fdc2a901b1.png"
                 alt="Мария Алейникова - Эксперт по продажам"
                 className="w-full h-auto"
               />
             </div>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" onClick={() => setSelectedImage('https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/8f401afa-540d-4b28-a126-85acc491a15c.png')}>
               <img 
                 src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/8f401afa-540d-4b28-a126-85acc491a15c.png"
                 alt="Зульфия - Наставник для экспертов"
                 className="w-full h-auto"
               />
             </div>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" onClick={() => setSelectedImage('https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/0321d580-e0a1-47e5-b169-daeca31432e7.png')}>
               <img 
                 src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/0321d580-e0a1-47e5-b169-daeca31432e7.png"
                 alt="Светлана Даниленко - Нумеролог"
                 className="w-full h-auto"
               />
             </div>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" onClick={() => setSelectedImage('https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/e9ee2b4e-34a3-4544-914f-3227e24f6dbc.png')}>
               <img 
                 src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/e9ee2b4e-34a3-4544-914f-3227e24f6dbc.png"
                 alt="Марина Головко - Наставник для МЛМ"
@@ -378,6 +380,27 @@ const Landing = () => {
           </Card>
         </div>
       </div>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 animate-fade-in"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button 
+            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
+            onClick={() => setSelectedImage(null)}
+          >
+            <Icon name="X" size={32} />
+          </button>
+          <img 
+            src={selectedImage}
+            alt="Увеличенное изображение"
+            className="max-w-full max-h-full object-contain rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 };
