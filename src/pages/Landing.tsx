@@ -225,26 +225,61 @@ const Landing = () => {
             РЕЗУЛЬТАТЫ ТЕХ, КТО УЖЕ ПРОХОДИЛ ТРЕКИНГ:
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-6 mb-10">
+            <div className="overflow-hidden">
               <img 
                 src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/b921572a-1905-4160-ac67-d561090b5199.png"
                 alt="Ольга Никонова - Психолог"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto"
               />
             </div>
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="overflow-hidden">
               <img 
                 src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/38d795a9-aa13-4feb-96f8-298bffc9a16a.png"
                 alt="Светлана Даниленко - Нумеролог"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto"
               />
             </div>
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="overflow-hidden">
               <img 
                 src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/9bafd7c8-845d-4398-9a8a-05ed136b20e7.png"
                 alt="Зульфия - Наставник для экспертов"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/882342d4-02aa-42d3-94b1-2ba2f13172ed.png"
+                alt="Марина Головко - Наставник для МЛМ"
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/8c3c9e1b-cdd4-46f7-b2fc-b48b99ded003.png"
+                alt="Мария Алейникова - Эксперт по продажам"
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/1982d67f-10d3-436e-b023-ce3d0c9a3991.png"
+                alt="Наталья Смирнова - Коуч"
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/f0cc14ff-c0ea-4b02-95e2-ce6e376131bc.png"
+                alt="Ольга Квартальнова - Брейн-тренер"
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/320681a6-7d63-4bed-ae7b-60436113f2cf.png"
+                alt="Ольга Мар - Специалист по трафику"
+                className="w-full h-auto"
               />
             </div>
           </div>
