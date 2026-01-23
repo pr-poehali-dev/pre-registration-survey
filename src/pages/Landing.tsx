@@ -22,7 +22,7 @@ const Landing = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-100 via-orange-100 to-amber-100">
+    <div className="min-h-screen" style={{backgroundColor: '#EAEAEB'}}>
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
@@ -30,7 +30,7 @@ const Landing = () => {
             90-дневный трекинг продаж для экспертов и предпринимателей
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto font-bold">
             Кто устал слышать, что 2026 — сложный период и надо как-то адаптироваться.
           </p>
 
@@ -57,15 +57,15 @@ const Landing = () => {
           
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="border-2 border-[#9A1E15] bg-white">
-              <CardContent className="p-6">
-                <p className="text-base text-gray-700 font-medium">
+              <CardContent className="p-6 flex items-center justify-center">
+                <p className="text-xl text-gray-700 font-medium text-center">
                   где брать клиентов (как стабильно получать заявки на свои продукты и услуги)
                 </p>
               </CardContent>
             </Card>
             <Card className="border-2 border-[#9A1E15] bg-white">
-              <CardContent className="p-6">
-                <p className="text-base text-gray-700 font-medium">
+              <CardContent className="p-6 flex items-center justify-center">
+                <p className="text-xl text-gray-700 font-medium text-center">
                   как продавать тем, кто оставил заявку
                 </p>
               </CardContent>
@@ -93,21 +93,27 @@ const Landing = () => {
 
             <Card className="border-0 shadow-lg bg-white">
               <CardContent className="p-8">
-                <h3 className="text-xl font-bold text-[#9A1E15] mb-3">12 больших разборов со мной</h3>
-                <p className="text-gray-700">
-                  Определяем ЦЕЛЕВЫЕ ДЕЙСТВИЯ, которые приносят заявки, клиентов и деньги.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg bg-white">
-              <CardContent className="p-8">
-                <p className="text-gray-700 text-lg mb-4">
-                  За 90 дней на трекинге вы полностью модернизируете и настроите свои продажи под свои финансовые цели.
-                </p>
-                <p className="text-gray-700 font-medium">
-                  А я, мой опыт и моя команда будем вам в этом помогать.
-                </p>
+                <div className="flex flex-col md:flex-row gap-6 items-center">
+                  <div className="md:w-1/3 flex-shrink-0">
+                    <img 
+                      src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/3daf4adc-09dc-47cf-83f2-b8ec44259f81.png"
+                      alt="Светлана Скорнякова"
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+                  <div className="md:w-2/3">
+                    <h3 className="text-xl font-bold text-[#9A1E15] mb-3">12 больших разборов со мной</h3>
+                    <p className="text-gray-700 mb-4">
+                      Определяем ЦЕЛЕВЫЕ ДЕЙСТВИЯ, которые приносят заявки, клиентов и деньги.
+                    </p>
+                    <p className="text-gray-700 text-lg mb-4">
+                      За 90 дней на трекинге вы полностью модернизируете и настроите свои продажи под свои финансовые цели.
+                    </p>
+                    <p className="text-gray-700 font-medium">
+                      А я, мой опыт и моя команда будем вам в этом помогать.
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
@@ -301,37 +307,48 @@ const Landing = () => {
         <div className="max-w-4xl mx-auto">
           <Card className="border-2 border-[#9A1E15] shadow-2xl bg-gradient-to-br from-white to-yellow-50">
             <CardContent className="p-8 md:p-10">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#9A1E15] text-center mb-6">
-                БОНУСЫ
-              </h2>
-              
-              <p className="text-lg font-semibold text-[#9A1E15] mb-4 text-center">
-                Сразу после анкеты вы получите:
-              </p>
+              <div className="flex flex-col md:flex-row gap-8 items-center">
+                <div className="md:w-1/3 flex-shrink-0">
+                  <img 
+                    src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/35ce0eb0-978c-4695-ac93-00e5aff696e6.jpg"
+                    alt="Подарки"
+                    className="w-full h-auto"
+                  />
+                </div>
+                <div className="md:w-2/3">
+                  <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#9A1E15] text-center mb-6">
+                    БОНУСЫ
+                  </h2>
+                  
+                  <p className="text-lg font-semibold text-[#9A1E15] mb-4 text-center">
+                    Сразу после анкеты вы получите:
+                  </p>
 
-              <ul className="space-y-3 text-gray-700 mb-8">
-                <li className="flex items-start gap-3">
-                  <span className="text-[#9A1E15] font-bold flex-shrink-0">—</span>
-                  <span>видеоурок «Как запустить продажи консультаций и мини-продуктов за 30 минут»</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#9A1E15] font-bold flex-shrink-0">—</span>
-                  <span>структуру воронки продаж, которая принесла мне и моим клиентам более 10 млн ₽ за 2024–2025 и продолжает работать в 2026</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#9A1E15] font-bold flex-shrink-0">—</span>
-                  <span>возможность попасть на большую стратегическую сессию по продажам 2026</span>
-                </li>
-              </ul>
+                  <ul className="space-y-3 text-gray-700 mb-8">
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#9A1E15] font-bold flex-shrink-0">1.</span>
+                      <span>видеоурок «Как запустить продажи консультаций и мини-продуктов за 30 минут»</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#9A1E15] font-bold flex-shrink-0">2.</span>
+                      <span>структуру воронки продаж, которая принесла мне и моим клиентам более 10 млн ₽ за 2024–2025 и продолжает работать в 2026</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#9A1E15] font-bold flex-shrink-0">3.</span>
+                      <span>возможность попасть на большую стратегическую сессию по продажам 2026</span>
+                    </li>
+                  </ul>
 
-              <div className="text-center">
-                <Button
-                  onClick={() => navigate('/form')}
-                  size="lg"
-                  className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 animate-pulse shadow-xl"
-                >
-                  ЗАПОЛНИТЬ АНКЕТУ
-                </Button>
+                  <div className="text-center">
+                    <Button
+                      onClick={() => navigate('/form')}
+                      size="lg"
+                      className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 animate-pulse shadow-xl"
+                    >
+                      ЗАПОЛНИТЬ АНКЕТУ
+                    </Button>
+                  </div>
+                </div>
               </div>
             </CardContent>
           </Card>
