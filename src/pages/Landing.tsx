@@ -39,7 +39,7 @@ const Landing = () => {
           </p>
 
           <div className="relative inline-block">
-            <div className="absolute inset-0 rounded-lg border-2 border-[#9A1E15]" style={{margin: '-4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'}}></div>
+            <div className="absolute inset-0 rounded-lg border-2 border-[#F5C83A]" style={{margin: '-4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'}}></div>
             <Button
               onClick={() => navigate('/form')}
               size="lg"
@@ -88,20 +88,20 @@ const Landing = () => {
             <Card className="border-0 shadow-lg bg-white overflow-visible">
               <CardContent className="p-8">
                 <div className="flex flex-col md:flex-row gap-8 items-center">
-                  <div className="md:w-1/2">
-                    <h3 className="text-2xl md:text-3xl font-bold text-[#9A1E15] mb-3">База знаний</h3>
-                    <p className="text-gray-700">
-                      Это ключевое, что позволяет всем без исключения двигаться к результату в своем темпе, без поиска дополнительных решений.
-                    </p>
-                  </div>
-                  <div className="md:w-1/2 flex justify-center items-center p-4">
-                    <div className="w-2/3" style={{transform: 'perspective(1000px) rotateY(-5deg) rotateX(2deg)', filter: 'drop-shadow(8px 8px 20px rgba(0,0,0,0.25))'}}>
+                  <div className="md:w-1/2 flex justify-center items-center p-4 order-2 md:order-1">
+                    <div className="w-2/3" style={{transform: 'perspective(1000px) rotateY(5deg) rotateX(2deg)', filter: 'drop-shadow(-8px 8px 20px rgba(0,0,0,0.25))'}}>
                       <img 
                         src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/2d8619e2-ef40-4025-a471-5d91ea3ab982.png"
                         alt="База знаний"
                         className="w-full h-auto rounded-lg"
                       />
                     </div>
+                  </div>
+                  <div className="md:w-1/2 order-1 md:order-2">
+                    <h3 className="text-2xl md:text-3xl font-bold text-[#9A1E15] mb-3">База знаний</h3>
+                    <p className="text-gray-700">
+                      Это ключевое, что позволяет всем без исключения двигаться к результату в своем темпе, без поиска дополнительных решений.
+                    </p>
                   </div>
                 </div>
               </CardContent>
