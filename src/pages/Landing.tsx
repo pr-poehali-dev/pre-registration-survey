@@ -228,57 +228,29 @@ const Landing = () => {
           <div className="grid md:grid-cols-2 gap-6 mb-10">
             <div className="overflow-hidden">
               <img 
-                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/b921572a-1905-4160-ac67-d561090b5199.png"
-                alt="Ольга Никонова - Психолог"
-                className="w-full h-auto"
-              />
-            </div>
-            <div className="overflow-hidden">
-              <img 
-                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/38d795a9-aa13-4feb-96f8-298bffc9a16a.png"
-                alt="Светлана Даниленко - Нумеролог"
-                className="w-full h-auto"
-              />
-            </div>
-            <div className="overflow-hidden">
-              <img 
-                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/9bafd7c8-845d-4398-9a8a-05ed136b20e7.png"
-                alt="Зульфия - Наставник для экспертов"
-                className="w-full h-auto"
-              />
-            </div>
-            <div className="overflow-hidden">
-              <img 
-                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/882342d4-02aa-42d3-94b1-2ba2f13172ed.png"
-                alt="Марина Головко - Наставник для МЛМ"
-                className="w-full h-auto"
-              />
-            </div>
-            <div className="overflow-hidden">
-              <img 
-                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/8c3c9e1b-cdd4-46f7-b2fc-b48b99ded003.png"
+                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/974cf5a1-3d99-4910-bfba-d1fdc2a901b1.png"
                 alt="Мария Алейникова - Эксперт по продажам"
                 className="w-full h-auto"
               />
             </div>
             <div className="overflow-hidden">
               <img 
-                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/1982d67f-10d3-436e-b023-ce3d0c9a3991.png"
-                alt="Наталья Смирнова - Коуч"
+                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/8f401afa-540d-4b28-a126-85acc491a15c.png"
+                alt="Зульфия - Наставник для экспертов"
                 className="w-full h-auto"
               />
             </div>
             <div className="overflow-hidden">
               <img 
-                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/f0cc14ff-c0ea-4b02-95e2-ce6e376131bc.png"
-                alt="Ольга Квартальнова - Брейн-тренер"
+                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/0321d580-e0a1-47e5-b169-daeca31432e7.png"
+                alt="Светлана Даниленко - Нумеролог"
                 className="w-full h-auto"
               />
             </div>
             <div className="overflow-hidden">
               <img 
-                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/320681a6-7d63-4bed-ae7b-60436113f2cf.png"
-                alt="Ольга Мар - Специалист по трафику"
+                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/e9ee2b4e-34a3-4544-914f-3227e24f6dbc.png"
+                alt="Марина Головко - Наставник для МЛМ"
                 className="w-full h-auto"
               />
             </div>
