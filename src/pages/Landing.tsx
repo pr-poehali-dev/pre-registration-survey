@@ -24,7 +24,7 @@ const Landing = () => {
   return (
     <div className="min-h-screen" style={{backgroundColor: '#EAEAEB'}}>
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-12 md:py-20">
+      <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-[#9A1E15] leading-tight">
             90-дневный трекинг продаж для экспертов и предпринимателей
@@ -49,7 +49,7 @@ const Landing = () => {
       </div>
 
       {/* Global Tasks */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-heading font-bold text-[#9A1E15] text-center mb-8">
             Глобально, в рамках трекинга мы решаем 2 ключевые задачи:
@@ -59,7 +59,7 @@ const Landing = () => {
             <Card className="border-2 border-[#9A1E15] bg-white">
               <CardContent className="p-6 flex items-center justify-center">
                 <p className="text-xl text-gray-700 font-medium text-center">
-                  где брать клиентов (как стабильно получать заявки на свои продукты и услуги)
+                  как стабильно получать заявки на свои продукты и услуги
                 </p>
               </CardContent>
             </Card>
@@ -75,7 +75,7 @@ const Landing = () => {
       </div>
 
       {/* How It Works */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#9A1E15] text-center mb-10">
             КАК ВСЕ ПРОИСХОДИТ:
@@ -93,25 +93,31 @@ const Landing = () => {
 
             <Card className="border-0 shadow-lg bg-white">
               <CardContent className="p-8">
-                <div className="flex flex-col md:flex-row gap-6 items-center">
-                  <div className="md:w-1/3 flex-shrink-0">
-                    <img 
-                      src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/3daf4adc-09dc-47cf-83f2-b8ec44259f81.png"
-                      alt="Светлана Скорнякова"
-                      className="w-full h-auto rounded-lg"
-                    />
-                  </div>
+                <div className="flex flex-col md:flex-row gap-8 items-start">
                   <div className="md:w-2/3">
                     <h3 className="text-xl font-bold text-[#9A1E15] mb-3">12 больших разборов со мной</h3>
-                    <p className="text-gray-700 mb-4">
+                    <p className="text-gray-700">
                       Определяем ЦЕЛЕВЫЕ ДЕЙСТВИЯ, которые приносят заявки, клиентов и деньги.
                     </p>
-                    <p className="text-gray-700 text-lg mb-4">
+                    <p className="text-gray-700 mt-3">
                       За 90 дней на трекинге вы полностью модернизируете и настроите свои продажи под свои финансовые цели.
                     </p>
-                    <p className="text-gray-700 font-medium">
+                    <p className="text-gray-700 mt-3">
                       А я, мой опыт и моя команда будем вам в этом помогать.
                     </p>
+                  </div>
+                  <div className="md:w-1/3 flex-shrink-0">
+                    <div className="relative">
+                      <img 
+                        src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/3daf4adc-09dc-47cf-83f2-b8ec44259f81.png"
+                        alt="Светлана Скорнякова"
+                        className="w-full h-auto rounded-lg shadow-2xl"
+                        style={{transform: 'perspective(1000px) rotateY(-5deg)', boxShadow: '15px 15px 30px rgba(0,0,0,0.3)'}}
+                      />
+                      <div className="mt-3 bg-white rounded-lg p-3 text-center shadow-md">
+                        <p className="text-sm font-semibold text-gray-800">Светлана Скорнякова</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -156,7 +162,7 @@ const Landing = () => {
       </div>
 
       {/* Results */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-heading font-bold text-[#9A1E15] text-center mb-8">
             Результат на трекинге у экспертов выглядит так:
@@ -165,27 +171,27 @@ const Landing = () => {
           <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
             <ul className="space-y-3 text-gray-700">
               <li className="flex items-start gap-3">
-                <span className="text-[#9A1E15] font-bold flex-shrink-0">—</span>
+                <span className="text-[#9A1E15] text-2xl flex-shrink-0 leading-none">•</span>
                 <span>упаковали свою экспертность в продукт, создали продуктовую линейку и построили путь своего клиента</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#9A1E15] font-bold flex-shrink-0">—</span>
+                <span className="text-[#9A1E15] text-2xl flex-shrink-0 leading-none">•</span>
                 <span>запустили продажи через блог: сделали первые шаги и настроили поток заявок на консультации, научили на них продавать свой продукт</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#9A1E15] font-bold flex-shrink-0">—</span>
+                <span className="text-[#9A1E15] text-2xl flex-shrink-0 leading-none">•</span>
                 <span>собрали и запустили лид-магнитную воронку и настроили регулярный поток заявок</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#9A1E15] font-bold flex-shrink-0">—</span>
+                <span className="text-[#9A1E15] text-2xl flex-shrink-0 leading-none">•</span>
                 <span>подключили самые эффективные источники трафика с минимальным бюджетом или вообще без вложений</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#9A1E15] font-bold flex-shrink-0">—</span>
+                <span className="text-[#9A1E15] text-2xl flex-shrink-0 leading-none">•</span>
                 <span>разобрались с автоворонками, чтобы начать получать оплаты каждый день</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#9A1E15] font-bold flex-shrink-0">—</span>
+                <span className="text-[#9A1E15] text-2xl flex-shrink-0 leading-none">•</span>
                 <span>внедрили готовые решения для увеличения продаж: написание текстов, исследование аудитории, сайты, презентации, вебинары, прогревы, ИИ-ассистенты и помощники</span>
               </li>
             </ul>
@@ -204,7 +210,7 @@ const Landing = () => {
       </div>
 
       {/* Tasks Grid */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-heading font-bold text-[#9A1E15] text-center mb-8">
             Какие задачи мы решаем на Трекинге:
@@ -225,7 +231,7 @@ const Landing = () => {
       </div>
 
       {/* Case Studies */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#9A1E15] text-center mb-12">
             РЕЗУЛЬТАТЫ ТЕХ, КТО УЖЕ ПРОХОДИЛ ТРЕКИНГ:
@@ -303,18 +309,11 @@ const Landing = () => {
       </div>
 
       {/* Bonuses */}
-      <div className="container mx-auto px-4 py-12 pb-20">
+      <div className="container mx-auto px-4 py-6 pb-12">
         <div className="max-w-4xl mx-auto">
           <Card className="border-2 border-[#9A1E15] shadow-2xl bg-gradient-to-br from-white to-yellow-50">
             <CardContent className="p-8 md:p-10">
               <div className="flex flex-col md:flex-row gap-8 items-center">
-                <div className="md:w-1/3 flex-shrink-0">
-                  <img 
-                    src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/35ce0eb0-978c-4695-ac93-00e5aff696e6.jpg"
-                    alt="Подарки"
-                    className="w-full h-auto"
-                  />
-                </div>
                 <div className="md:w-2/3">
                   <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#9A1E15] text-center mb-6">
                     БОНУСЫ
@@ -347,6 +346,16 @@ const Landing = () => {
                     >
                       ЗАПОЛНИТЬ АНКЕТУ
                     </Button>
+                  </div>
+                </div>
+                <div className="md:w-1/3 flex-shrink-0">
+                  <div className="relative">
+                    <img 
+                      src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/6eba5e4e-13c4-4e53-b8ad-1b5f62466eb5.png"
+                      alt="Подарки"
+                      className="w-full h-auto"
+                      style={{transform: 'perspective(1000px) rotateY(8deg) rotateX(-3deg) translateZ(20px)', filter: 'drop-shadow(20px 20px 40px rgba(0,0,0,0.3))'}}
+                    />
                   </div>
                 </div>
               </div>
