@@ -218,20 +218,38 @@ const Landing = () => {
         </div>
       </div>
 
-      {/* Case Studies Placeholder */}
+      {/* Case Studies */}
       <div className="container mx-auto px-4 py-12">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#9A1E15] text-center mb-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#9A1E15] text-center mb-12">
             РЕЗУЛЬТАТЫ ТЕХ, КТО УЖЕ ПРОХОДИЛ ТРЕКИНГ:
           </h2>
 
-          <div className="bg-white rounded-lg shadow-lg p-12 text-center">
-            <p className="text-gray-500 text-lg">
-              тут будут картинки с кейсами
-            </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/b921572a-1905-4160-ac67-d561090b5199.png"
+                alt="Ольга Никонова - Психолог"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/38d795a9-aa13-4feb-96f8-298bffc9a16a.png"
+                alt="Светлана Даниленко - Нумеролог"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/9bafd7c8-845d-4398-9a8a-05ed136b20e7.png"
+                alt="Зульфия - Наставник для экспертов"
+                className="w-full h-auto object-cover"
+              />
+            </div>
           </div>
 
-          <div className="text-center mt-8">
+          <div className="text-center">
             <Button
               onClick={() => navigate('/form')}
               size="lg"
