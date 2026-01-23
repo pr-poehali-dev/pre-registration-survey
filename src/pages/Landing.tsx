@@ -38,13 +38,16 @@ const Landing = () => {
             Если вы хотите запустить / увеличить продажи своих услуг, вырасти в деньгах и вам нужно понимание конкретных действий и что именно надо менять.
           </p>
 
-          <Button
-            onClick={() => navigate('/form')}
-            size="lg"
-            className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 animate-pulse shadow-xl mt-6"
-          >
-            ЗАПОЛНЯЙТЕ АНКЕТУ ПРЕДЗАПИСИ
-          </Button>
+          <div className="relative inline-block">
+            <div className="absolute inset-0 rounded-lg border-2 border-[#9A1E15] animate-pulse" style={{margin: '-4px'}}></div>
+            <Button
+              onClick={() => navigate('/form')}
+              size="lg"
+              className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 shadow-xl relative z-10"
+            >
+              ЗАПОЛНЯЙТЕ АНКЕТУ ПРЕДЗАПИСИ
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -92,7 +95,7 @@ const Landing = () => {
                     </p>
                   </div>
                   <div className="md:w-1/2 flex justify-center items-center p-4">
-                    <div style={{transform: 'perspective(1000px) rotateY(-5deg) rotateX(2deg)', filter: 'drop-shadow(12px 12px 25px rgba(0,0,0,0.15))'}}>
+                    <div className="w-2/3" style={{transform: 'perspective(1000px) rotateY(-5deg) rotateX(2deg)', filter: 'drop-shadow(8px 8px 20px rgba(0,0,0,0.25))'}}>
                       <img 
                         src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/2d8619e2-ef40-4025-a471-5d91ea3ab982.png"
                         alt="База знаний"
@@ -137,7 +140,7 @@ const Landing = () => {
 
             <Card className="border-0 shadow-lg bg-white">
               <CardContent className="p-8">
-                <h3 className="text-xl font-bold text-[#9A1E15] mb-4">
+                <h3 className="text-xl font-bold text-[#9A1E15] mb-4 text-center">
                   4 встречи с мощными экспертами по самым актуальным вопросам:
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
