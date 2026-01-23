@@ -6,77 +6,67 @@ import { useNavigate } from 'react-router-dom';
 const Landing = () => {
   const navigate = useNavigate();
 
+  const tasks = [
+    'переупаковать или создать продукт',
+    'научиться доносить ценность своей работы',
+    'запустить или увеличить продажи',
+    'уйти от хаоса и продаж наугад',
+    'привлечь новую аудиторию',
+    'научиться создавать контент',
+    'автоматизировать процессы',
+    'делать стабильные продажи',
+    'внедрить в работу нейросети',
+    'разобраться и внедрить автоворонки',
+    'найти рабочие связки по трафику',
+    'выстроить свою работу на ближайшие 6-12 мес'
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-50">
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-16 md:py-24">
-        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-[#9A1E15] leading-tight">
-            Трекинг продаж в Telegram
+      <div className="container mx-auto px-4 py-12 md:py-20">
+        <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-[#9A1E15] leading-tight">
+            90-дневный трекинг продаж для экспертов и предпринимателей
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            Персональное сопровождение для увеличения ваших продаж. 
-            Проверенные стратегии, которые принесли клиентам более 10 млн рублей.
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+            Кто устал слышать, что 2026 — сложный период и надо как-то адаптироваться.
+          </p>
+
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+            Если вы хотите запустить / увеличить продажи своих услуг, вырасти в деньгах и вам нужно понимание конкретных действий и что именно надо менять.
           </p>
 
           <Button
             onClick={() => navigate('/form')}
             size="lg"
-            className="px-12 py-8 text-xl bg-[#9A1E15] hover:bg-[#7A1610] transition-all transform hover:scale-105 animate-pulse-subtle shadow-xl"
+            className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] transition-all transform hover:scale-105 animate-pulse-subtle shadow-xl mt-6"
           >
-            Записаться на трекинг
-            <Icon name="ArrowRight" size={24} className="ml-2" />
+            ЗАПОЛНЯЙТЕ АНКЕТУ ПРЕДЗАПИСИ
           </Button>
         </div>
       </div>
 
-      {/* Benefits Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#9A1E15] text-center mb-12">
-            Что вы получите
+      {/* Global Tasks */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-[#9A1E15] text-center mb-8">
+            Глобально, в рамках трекинга мы решаем 2 ключевые задачи:
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
-              <CardContent className="p-8 text-center space-y-4">
-                <div className="w-16 h-16 bg-[#9A1E15] rounded-full flex items-center justify-center mx-auto">
-                  <Icon name="Target" size={32} className="text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-[#9A1E15]">
-                  Персональная стратегия
-                </h3>
-                <p className="text-gray-600">
-                  Индивидуальный план продаж, адаптированный под вашу нишу и цели
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="border-2 border-[#9A1E15] bg-white">
+              <CardContent className="p-6">
+                <p className="text-base text-gray-700 font-medium">
+                  где брать клиентов (как стабильно получать заявки на свои продукты и услуги)
                 </p>
               </CardContent>
             </Card>
-
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
-              <CardContent className="p-8 text-center space-y-4">
-                <div className="w-16 h-16 bg-[#9A1E15] rounded-full flex items-center justify-center mx-auto">
-                  <Icon name="Users" size={32} className="text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-[#9A1E15]">
-                  Еженедельная поддержка
-                </h3>
-                <p className="text-gray-600">
-                  Регулярная обратная связь и корректировка действий для достижения результата
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
-              <CardContent className="p-8 text-center space-y-4">
-                <div className="w-16 h-16 bg-[#9A1E15] rounded-full flex items-center justify-center mx-auto">
-                  <Icon name="TrendingUp" size={32} className="text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-[#9A1E15]">
-                  Рост продаж
-                </h3>
-                <p className="text-gray-600">
-                  Проверенные техники и инструменты для увеличения конверсии и прибыли
+            <Card className="border-2 border-[#9A1E15] bg-white">
+              <CardContent className="p-6">
+                <p className="text-base text-gray-700 font-medium">
+                  как продавать тем, кто оставил заявку
                 </p>
               </CardContent>
             </Card>
@@ -84,70 +74,214 @@ const Landing = () => {
         </div>
       </div>
 
-      {/* Bonuses Section */}
-      <div className="container mx-auto px-4 py-16">
+      {/* How It Works */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#9A1E15] text-center mb-10">
+            КАК ВСЕ ПРОИСХОДИТ:
+          </h2>
+
+          <div className="space-y-6">
+            <Card className="border-0 shadow-lg bg-white">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-bold text-[#9A1E15] mb-3">база знаний</h3>
+                <p className="text-gray-700">
+                  ключевое, что позволяет всем без исключения двигаться к результату в своем темпе, без поиска дополнительных решений.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg bg-white">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-bold text-[#9A1E15] mb-3">12 больших разборов со мной</h3>
+                <p className="text-gray-700">
+                  Определяем ЦЕЛЕВЫЕ ДЕЙСТВИЯ, которые приносят заявки, клиентов и деньги.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg bg-white">
+              <CardContent className="p-8">
+                <p className="text-gray-700 text-lg mb-4">
+                  За 90 дней на трекинге вы полностью модернизируете и настроите свои продажи под свои финансовые цели.
+                </p>
+                <p className="text-gray-700 font-medium">
+                  А я, мой опыт и моя команда будем вам в этом помогать.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg bg-white">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-bold text-[#9A1E15] mb-4">
+                  4 встречи с мощными экспертами по самым актуальным вопросам:
+                </h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#9A1E15]">•</span> юрист
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#9A1E15]">•</span> бухгалтер для онлайн экспертов
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#9A1E15]">•</span> продажи в переписке
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#9A1E15]">•</span> нейросети
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-[#9A1E15] shadow-xl bg-gradient-to-br from-yellow-50 to-amber-50">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-[#9A1E15] mb-4">
+                  САМОЕ ЦЕННОЕ<br/>
+                  ИНДИВИДУАЛЬНЫЙ ТРЕК (ПУТЬ) ДЛЯ КАЖДОГО УЧАСТНИКА
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Под ваш продукт и уникальность строим стратегию, которая реализуется на трекинге нашими с вами совместными усилиями. 
+                  Это ваш персональный маршрут, построенный исключительно под вас, ваш опыт, экспертность, вашу нишу и продукт
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+
+      {/* Results */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-[#9A1E15] text-center mb-8">
+            Результат на трекинге у экспертов выглядит так:
+          </h2>
+
+          <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
+            <ul className="space-y-3 text-gray-700">
+              <li className="flex items-start gap-3">
+                <span className="text-[#9A1E15] font-bold flex-shrink-0">—</span>
+                <span>упаковали свою экспертность в продукт, создали продуктовую линейку и построили путь своего клиента</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#9A1E15] font-bold flex-shrink-0">—</span>
+                <span>запустили продажи через блог: сделали первые шаги и настроили поток заявок на консультации, научили на них продавать свой продукт</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#9A1E15] font-bold flex-shrink-0">—</span>
+                <span>собрали и запустили лид-магнитную воронку и настроили регулярный поток заявок</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#9A1E15] font-bold flex-shrink-0">—</span>
+                <span>подключили самые эффективные источники трафика с минимальным бюджетом или вообще без вложений</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#9A1E15] font-bold flex-shrink-0">—</span>
+                <span>разобрались с автоворонками, чтобы начать получать оплаты каждый день</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#9A1E15] font-bold flex-shrink-0">—</span>
+                <span>внедрили готовые решения для увеличения продаж: написание текстов, исследование аудитории, сайты, презентации, вебинары, прогревы, ИИ-ассистенты и помощники</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="text-center mt-8">
+            <Button
+              onClick={() => navigate('/form')}
+              size="lg"
+              className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] transition-all transform hover:scale-105 shadow-xl"
+            >
+              ЗАПОЛНИТЬ АНКЕТУ
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Tasks Grid */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-[#9A1E15] text-center mb-8">
+            Какие задачи мы решаем на Трекинге:
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-4">
+            {tasks.map((task, index) => (
+              <Card key={index} className="border-2 border-[#9A1E15]/30 bg-white hover:border-[#9A1E15] transition-all">
+                <CardContent className="p-5">
+                  <p className="text-sm text-gray-700 font-medium text-center">
+                    {task}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Case Studies Placeholder */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#9A1E15] text-center mb-8">
+            РЕЗУЛЬТАТЫ ТЕХ, КТО УЖЕ ПРОХОДИЛ ТРЕКИНГ:
+          </h2>
+
+          <div className="bg-white rounded-lg shadow-lg p-12 text-center">
+            <p className="text-gray-500 text-lg">
+              тут будут картинки с кейсами
+            </p>
+          </div>
+
+          <div className="text-center mt-8">
+            <Button
+              onClick={() => navigate('/form')}
+              size="lg"
+              className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] transition-all transform hover:scale-105 shadow-xl"
+            >
+              ОСТАВИТЬ ЗАЯВКУ
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Bonuses */}
+      <div className="container mx-auto px-4 py-12 pb-20">
         <div className="max-w-4xl mx-auto">
           <Card className="border-2 border-[#9A1E15] shadow-2xl bg-gradient-to-br from-white to-yellow-50">
-            <CardContent className="p-8 md:p-12 space-y-6">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#9A1E15] text-center mb-8">
-                Бонусы при предзаписи
+            <CardContent className="p-8 md:p-10">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#9A1E15] text-center mb-6">
+                БОНУСЫ
               </h2>
               
-              <div className="space-y-4 text-lg">
-                <div className="flex items-start gap-4 p-4 bg-white rounded-lg">
-                  <Icon name="Gift" size={24} className="text-[#9A1E15] flex-shrink-0 mt-1" />
-                  <p className="text-gray-700">
-                    Видео урок "Как запустить продажи консультаций и мини-продуктов за 30 минут"
-                  </p>
-                </div>
-                
-                <div className="flex items-start gap-4 p-4 bg-white rounded-lg">
-                  <Icon name="Gift" size={24} className="text-[#9A1E15] flex-shrink-0 mt-1" />
-                  <p className="text-gray-700">
-                    Структура воронки продаж, которая принесла мне и моим клиентам более 10 млн рублей за 2024-2025 и продолжает работать в 2026
-                  </p>
-                </div>
-                
-                <div className="flex items-start gap-4 p-4 bg-white rounded-lg">
-                  <Icon name="Gift" size={24} className="text-[#9A1E15] flex-shrink-0 mt-1" />
-                  <p className="text-gray-700">
-                    Возможность попасть на большую стратегическую сессию по продажам 2026
-                  </p>
-                </div>
-              </div>
+              <p className="text-lg font-semibold text-[#9A1E15] mb-4 text-center">
+                Сразу после анкеты вы получите:
+              </p>
 
-              <div className="text-center pt-6">
+              <ul className="space-y-3 text-gray-700 mb-8">
+                <li className="flex items-start gap-3">
+                  <span className="text-[#9A1E15] font-bold flex-shrink-0">—</span>
+                  <span>видеоурок «Как запустить продажи консультаций и мини-продуктов за 30 минут»</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#9A1E15] font-bold flex-shrink-0">—</span>
+                  <span>структуру воронки продаж, которая принесла мне и моим клиентам более 10 млн ₽ за 2024–2025 и продолжает работать в 2026</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#9A1E15] font-bold flex-shrink-0">—</span>
+                  <span>возможность попасть на большую стратегическую сессию по продажам 2026</span>
+                </li>
+              </ul>
+
+              <div className="text-center">
                 <Button
                   onClick={() => navigate('/form')}
                   size="lg"
-                  className="px-12 py-8 text-xl bg-[#9A1E15] hover:bg-[#7A1610] transition-all transform hover:scale-105 shadow-xl"
+                  className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] transition-all transform hover:scale-105 shadow-xl"
                 >
-                  Заполнить анкету и получить бонусы
-                  <Icon name="ArrowRight" size={24} className="ml-2" />
+                  ЗАПОЛНИТЬ АНКЕТУ
                 </Button>
               </div>
             </CardContent>
           </Card>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="container mx-auto px-4 py-16 pb-24">
-        <div className="max-w-3xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#9A1E15]">
-            Готовы начать?
-          </h2>
-          <p className="text-xl text-gray-700">
-            Заполните анкету предзаписи прямо сейчас и получите доступ к бонусным материалам
-          </p>
-          <Button
-            onClick={() => navigate('/form')}
-            size="lg"
-            className="px-12 py-8 text-xl bg-[#9A1E15] hover:bg-[#7A1610] transition-all transform hover:scale-105 animate-pulse-subtle shadow-xl"
-          >
-            Записаться на трекинг
-            <Icon name="ArrowRight" size={24} className="ml-2" />
-          </Button>
         </div>
       </div>
     </div>
