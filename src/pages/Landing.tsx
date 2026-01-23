@@ -106,15 +106,15 @@ const Landing = () => {
                       А я, мой опыт и моя команда будем вам в этом помогать.
                     </p>
                   </div>
-                  <div className="md:w-2/5 flex-shrink-0 -mt-8 md:mt-0 md:-mr-4">
+                  <div className="md:w-2/5 flex-shrink-0 -mt-8 md:mt-0 md:mr-2">
                     <div className="relative" style={{transform: 'perspective(1200px) rotateY(-8deg) translateZ(30px)', filter: 'drop-shadow(25px 25px 50px rgba(0,0,0,0.35))'}}>
                       <img 
                         src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/3daf4adc-09dc-47cf-83f2-b8ec44259f81.png"
                         alt="Светлана Скорнякова"
                         className="w-full h-auto rounded-lg"
                       />
-                      <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-white rounded-lg px-8 py-3 shadow-xl whitespace-nowrap z-10" style={{transform: 'translateX(-50%) perspective(1200px) rotateY(-8deg)', minWidth: '85%'}}>
-                        <p className="text-base font-semibold text-gray-800">Светлана Скорнякова</p>
+                      <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-white rounded-lg px-8 py-3 shadow-xl whitespace-nowrap z-10 text-center" style={{transform: 'translateX(-50%) perspective(1200px) rotateY(-8deg)', minWidth: '85%'}}>
+                        <p className="text-base font-semibold text-gray-800 text-center">Светлана Скорнякова</p>
                       </div>
                     </div>
                   </div>
@@ -127,20 +127,20 @@ const Landing = () => {
                 <h3 className="text-xl font-bold text-[#9A1E15] mb-4">
                   4 встречи с мощными экспертами по самым актуальным вопросам:
                 </h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center gap-2">
-                    <span className="text-[#9A1E15]">•</span> юрист
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-[#9A1E15]">•</span> бухгалтер для онлайн экспертов
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-[#9A1E15]">•</span> продажи в переписке
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-[#9A1E15]">•</span> нейросети
-                  </li>
-                </ul>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="border-2 border-[#9A1E15]/30 rounded-lg p-4 text-center bg-white">
+                    <p className="text-gray-700 font-medium">юрист</p>
+                  </div>
+                  <div className="border-2 border-[#9A1E15]/30 rounded-lg p-4 text-center bg-white">
+                    <p className="text-gray-700 font-medium">бухгалтер для онлайн экспертов</p>
+                  </div>
+                  <div className="border-2 border-[#9A1E15]/30 rounded-lg p-4 text-center bg-white">
+                    <p className="text-gray-700 font-medium">продажи в переписке</p>
+                  </div>
+                  <div className="border-2 border-[#9A1E15]/30 rounded-lg p-4 text-center bg-white">
+                    <p className="text-gray-700 font-medium">нейросети</p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
@@ -325,15 +325,15 @@ const Landing = () => {
                   <ul className="space-y-3 text-gray-700 mb-8">
                     <li className="flex items-start gap-3">
                       <span className="text-[#9A1E15] font-bold flex-shrink-0">1.</span>
-                      <span>видеоурок «Как запустить продажи консультаций и мини-продуктов за 30 минут»</span>
+                      <span>Видеоурок «Как запустить продажи консультаций и мини-продуктов за 30 минут»</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-[#9A1E15] font-bold flex-shrink-0">2.</span>
-                      <span>структуру воронки продаж, которая принесла мне и моим клиентам более 10 млн ₽ за 2024–2025 и продолжает работать в 2026</span>
+                      <span>Структуру воронки продаж, которая принесла мне и моим клиентам более 10 млн ₽ за 2024–2025 и продолжает работать в 2026</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-[#9A1E15] font-bold flex-shrink-0">3.</span>
-                      <span>возможность попасть на большую стратегическую сессию по продажам 2026</span>
+                      <span>Возможность попасть на большую стратегическую сессию по продажам 2026</span>
                     </li>
                   </ul>
 
@@ -347,7 +347,7 @@ const Landing = () => {
                     </Button>
                   </div>
                 </div>
-                <div className="md:w-1/3 flex-shrink-0">
+                <div className="md:w-2/5 flex-shrink-0">
                   <div className="relative">
                     <img 
                       src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/6eba5e4e-13c4-4e53-b8ad-1b5f62466eb5.png"
