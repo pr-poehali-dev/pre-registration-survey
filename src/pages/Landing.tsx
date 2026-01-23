@@ -22,7 +22,7 @@ const Landing = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-50">
+    <div className="min-h-screen bg-gradient-to-br from-yellow-100 via-orange-100 to-amber-100">
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
@@ -41,7 +41,7 @@ const Landing = () => {
           <Button
             onClick={() => navigate('/form')}
             size="lg"
-            className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] transition-all transform hover:scale-105 animate-pulse-subtle shadow-xl mt-6"
+            className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 animate-pulse shadow-xl mt-6"
           >
             ЗАПОЛНЯЙТЕ АНКЕТУ ПРЕДЗАПИСИ
           </Button>
@@ -84,7 +84,7 @@ const Landing = () => {
           <div className="space-y-6">
             <Card className="border-0 shadow-lg bg-white">
               <CardContent className="p-8">
-                <h3 className="text-xl font-bold text-[#9A1E15] mb-3">база знаний</h3>
+                <h3 className="text-xl font-bold text-[#9A1E15] mb-3">База знаний</h3>
                 <p className="text-gray-700">
                   ключевое, что позволяет всем без исключения двигаться к результату в своем темпе, без поиска дополнительных решений.
                 </p>
@@ -136,7 +136,7 @@ const Landing = () => {
             <Card className="border-2 border-[#9A1E15] shadow-xl bg-gradient-to-br from-yellow-50 to-amber-50">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold text-[#9A1E15] mb-4">
-                  САМОЕ ЦЕННОЕ<br/>
+                  САМОЕ ЦЕННОЕ:<br/>
                   ИНДИВИДУАЛЬНЫЙ ТРЕК (ПУТЬ) ДЛЯ КАЖДОГО УЧАСТНИКА
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -189,7 +189,7 @@ const Landing = () => {
             <Button
               onClick={() => navigate('/form')}
               size="lg"
-              className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] transition-all transform hover:scale-105 shadow-xl"
+              className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 animate-pulse shadow-xl"
             >
               ЗАПОЛНИТЬ АНКЕТУ
             </Button>
@@ -228,6 +228,34 @@ const Landing = () => {
           <div className="grid md:grid-cols-2 gap-6 mb-10">
             <div className="overflow-hidden">
               <img 
+                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/93438950-9a3a-472c-89df-e4b4e4c553ac.png"
+                alt="Ольга Квартальнова - Брейн-тренер"
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/048949a5-dbaf-4eb0-8b09-29382ba139ac.png"
+                alt="Ольга Мар - Специалист по трафику"
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/703c3a7c-b15f-46a5-a12b-5e37ee2b8159.png"
+                alt="Ольга Никонова - Психолог"
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/104089d4-0ec6-41e4-b3b5-2b44f9e25b65.png"
+                alt="Наталья Смирнова - Коуч"
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="overflow-hidden">
+              <img 
                 src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/974cf5a1-3d99-4910-bfba-d1fdc2a901b1.png"
                 alt="Мария Алейникова - Эксперт по продажам"
                 className="w-full h-auto"
@@ -260,7 +288,7 @@ const Landing = () => {
             <Button
               onClick={() => navigate('/form')}
               size="lg"
-              className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] transition-all transform hover:scale-105 shadow-xl"
+              className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 animate-pulse shadow-xl"
             >
               ОСТАВИТЬ ЗАЯВКУ
             </Button>
@@ -300,7 +328,7 @@ const Landing = () => {
                 <Button
                   onClick={() => navigate('/form')}
                   size="lg"
-                  className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] transition-all transform hover:scale-105 shadow-xl"
+                  className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 animate-pulse shadow-xl"
                 >
                   ЗАПОЛНИТЬ АНКЕТУ
                 </Button>
