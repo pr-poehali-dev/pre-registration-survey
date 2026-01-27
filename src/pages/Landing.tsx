@@ -28,7 +28,7 @@ const Landing = () => {
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-[#9A1E15] leading-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-[#9A1E15] leading-tight">
             90-дневный трекинг продаж для экспертов и предпринимателей
           </h1>
           
@@ -53,15 +53,17 @@ const Landing = () => {
             Если вы хотите запустить / увеличить продажи своих услуг, вырасти в деньгах и вам нужно понимание конкретных действий и что именно надо менять.
           </p>
 
-          <div className="relative inline-block">
-            <div className="absolute inset-0 rounded-lg border-2 border-[#F5C83A]" style={{margin: '-4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'}}></div>
-            <Button
-              onClick={() => navigate('/form')}
-              size="lg"
-              className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 shadow-xl relative z-10"
-            >
-              ЗАПОЛНЯЙТЕ АНКЕТУ ПРЕДЗАПИСИ
-            </Button>
+          <div className="flex justify-center">
+            <div className="relative inline-block">
+              <div className="absolute inset-0 rounded-lg border-2 border-[#F5C83A]" style={{margin: '-4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'}}></div>
+              <Button
+                onClick={() => navigate('/form')}
+                size="lg"
+                className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 shadow-xl relative z-10"
+              >
+                ЗАПОЛНЯЙТЕ АНКЕТУ ПРЕДЗАПИСИ
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -246,11 +248,11 @@ const Landing = () => {
             Какие задачи мы решаем на Трекинге:
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-3">
             {tasks.map((task, index) => (
               <Card key={index} className="border-2 border-[#9A1E15]/30 bg-white hover:border-[#9A1E15] transition-all">
-                <CardContent className="p-5">
-                  <p className="text-sm text-gray-700 font-medium text-center">
+                <CardContent className="p-3">
+                  <p className="text-xs md:text-sm text-gray-700 font-medium text-center">
                     {task}
                   </p>
                 </CardContent>
