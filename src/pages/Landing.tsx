@@ -49,7 +49,12 @@ const Landing = () => {
             </div>
           </div>
 
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto text-center">
+            Что такое Трекинг<br />
+            (видео для тех, кто уже на себе ощутил, что продавать стало сложнее)
+          </p>
+
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto mt-6">
             Если вы хотите запустить / увеличить продажи своих услуг, вырасти в деньгах и вам нужно понимание конкретных действий и что именно надо менять.
           </p>
 
