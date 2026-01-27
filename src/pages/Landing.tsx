@@ -36,6 +36,19 @@ const Landing = () => {
             Кто устал слышать, что 2026 — сложный период и надо как-то адаптироваться.
           </p>
 
+          {/* Video Block */}
+          <div className="my-8 max-w-4xl mx-auto">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                src="https://kinescope.io/rGQwK4EMiZPZfG1yaQoEVk"
+                allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write;"
+                frameBorder="0"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+              ></iframe>
+            </div>
+          </div>
+
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
             Если вы хотите запустить / увеличить продажи своих услуг, вырасти в деньгах и вам нужно понимание конкретных действий и что именно надо менять.
           </p>
