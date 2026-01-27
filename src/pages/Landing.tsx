@@ -40,7 +40,7 @@ const Landing = () => {
           <div className="my-8 max-w-4xl mx-auto">
             <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
               <iframe
-                src="https://kinescope.io/rGQwK4EMiZPZfG1yaQoEVk"
+                src="https://kinescope.io/w2XGP5WcoogHEM975nxSuV"
                 allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write;"
                 frameBorder="0"
                 allowFullScreen
