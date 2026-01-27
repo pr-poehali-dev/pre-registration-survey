@@ -49,8 +49,8 @@ const Landing = () => {
             </div>
           </div>
 
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto text-center">
-            Что такое Трекинг<br />
+          <p className="text-sm md:text-base text-gray-700 leading-relaxed max-w-3xl mx-auto text-center italic">
+            <strong>Что такое Трекинг</strong><br />
             (видео для тех, кто уже на себе ощутил, что продавать стало сложнее)
           </p>
 
