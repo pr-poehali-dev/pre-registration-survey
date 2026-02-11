@@ -35,7 +35,7 @@ const Webinar = () => {
               <div className="pt-4">
                 <Button 
                   size="lg"
-                  className="bg-[#9A1E15] hover:bg-[#7a1711] text-white text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-pulse"
+                  className="bg-[#9A1E15] hover:bg-[#7a1711] text-white text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-pulse-subtle"
                   onClick={() => window.open('https://us06web.zoom.us/j/9797722356?pwd=4xvRvE4crlVLGGMLrbWmkJ04zLRfoP.1', '_blank')}
                 >
                   Присоединиться к эфиру
