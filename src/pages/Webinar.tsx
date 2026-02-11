@@ -11,7 +11,7 @@ const Webinar = () => {
             <div className="w-full md:w-1/2 flex justify-center">
               <div className="relative w-64 h-64 md:w-full md:h-auto md:max-w-md overflow-hidden rounded-lg shadow-xl">
                 <img 
-                  src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/7d7e811f-1ab8-4123-8eb3-70be78965a54.jpg"
+                  src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/1322caa9-b767-4a5e-9361-e2d702099ee4.jpg"
                   alt="Эксперт"
                   className="w-full h-full md:h-auto object-cover md:object-contain"
                   style={{
