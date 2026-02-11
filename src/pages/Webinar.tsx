@@ -9,11 +9,11 @@ const Webinar = () => {
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             {/* Image Section */}
             <div className="w-full md:w-1/2 flex justify-center">
-              <div className="relative w-full max-w-md">
+              <div className="relative w-64 h-64 md:w-full md:h-auto md:max-w-md overflow-hidden rounded-lg shadow-xl">
                 <img 
                   src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/7d7e811f-1ab8-4123-8eb3-70be78965a54.jpg"
                   alt="Эксперт"
-                  className="w-full h-auto rounded-lg shadow-xl"
+                  className="w-full h-full md:h-auto object-cover md:object-contain"
                   style={{
                     mixBlendMode: 'multiply',
                     backgroundColor: 'transparent'
