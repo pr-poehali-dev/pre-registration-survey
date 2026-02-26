@@ -235,7 +235,7 @@ const Landing = () => {
             </ul>
           </div>
 
-          <div className="text-center mt-8">
+          <div className="flex justify-center mt-8">
             <Button
               onClick={() => navigate('/form')}
               size="lg"
@@ -335,7 +335,7 @@ const Landing = () => {
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="flex justify-center">
             <Button
               onClick={() => navigate('/form')}
               size="lg"
@@ -378,7 +378,7 @@ const Landing = () => {
                     </li>
                   </ul>
 
-                  <div className="text-center">
+                  <div className="flex justify-center">
                     <Button
                       onClick={() => navigate('/form')}
                       size="lg"
