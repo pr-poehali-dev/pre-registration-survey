@@ -64,9 +64,10 @@ const Landing = () => {
               <Button
                 onClick={() => navigate('/form')}
                 size="lg"
-                className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 shadow-xl relative z-10"
+                className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 shadow-xl relative z-10 flex flex-col items-center leading-tight"
               >
-                ЗАПОЛНЯЙТЕ АНКЕТУ ПРЕДЗАПИСИ
+                <span>ЗАПОЛНЯЙТЕ АНКЕТУ ПРЕДЗАПИСИ</span>
+                <span className="text-xs font-normal opacity-90 mt-0.5">и получите скидку 20.000₽</span>
               </Button>
             </div>
           </div>
@@ -238,9 +239,10 @@ const Landing = () => {
             <Button
               onClick={() => navigate('/form')}
               size="lg"
-              className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 animate-pulse shadow-xl"
+              className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 animate-pulse shadow-xl flex flex-col items-center leading-tight"
             >
-              ЗАПОЛНИТЬ АНКЕТУ
+              <span>ЗАПОЛНИТЬ АНКЕТУ</span>
+              <span className="text-xs font-normal opacity-90 mt-0.5">и получить скидку 20.000₽ на Трекинг</span>
             </Button>
           </div>
         </div>
@@ -337,9 +339,10 @@ const Landing = () => {
             <Button
               onClick={() => navigate('/form')}
               size="lg"
-              className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 animate-pulse shadow-xl"
+              className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 animate-pulse shadow-xl flex flex-col items-center leading-tight"
             >
-              ОСТАВИТЬ ЗАЯВКУ
+              <span>ОСТАВИТЬ ЗАЯВКУ</span>
+              <span className="text-xs font-normal opacity-90 mt-0.5">и получить скидку 20.000₽ на Трекинг</span>
             </Button>
           </div>
         </div>
@@ -379,9 +382,10 @@ const Landing = () => {
                     <Button
                       onClick={() => navigate('/form')}
                       size="lg"
-                      className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 animate-pulse shadow-xl"
+                      className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 animate-pulse shadow-xl flex flex-col items-center leading-tight"
                     >
-                      ЗАПОЛНИТЬ АНКЕТУ
+                      <span>ЗАПОЛНИТЬ АНКЕТУ</span>
+                      <span className="text-xs font-normal opacity-90 mt-0.5">и получить бонусы</span>
                     </Button>
                   </div>
                 </div>
