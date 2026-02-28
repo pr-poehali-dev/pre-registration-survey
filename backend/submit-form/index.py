@@ -73,7 +73,7 @@ def handler(event: dict, context) -> dict:
             'individual': 'Индивидуальная работа'
         }
         
-        tracking_goals_text = '\n'.join([f'— {goal}' for goal in tracking_goals]) if tracking_goals else 'Не указано'
+        tracking_goals_text = '\n'.join([f'— {goal}' for goal in tracking_goals]) if tracking_goals else ''
         
         message = f"""🔥 <b>Новая заявка на Трекинг!</b>
 
@@ -86,29 +86,29 @@ def handler(event: dict, context) -> dict:
 <b>Ниша:</b>
 {niche}
 
-<b>Сколько времени в нише:</b>
-{time_in_niche_names.get(time_in_niche, time_in_niche)}
-
-<b>Ситуация с продажами сейчас:</b>
-{sales_status_names.get(sales_status, sales_status)}
-
-<b>Продукт:</b>
-{product_type_names.get(product_type, product_type)}
-
 <b>Ссылка на канал:</b>
-{channel_link}
+{channel_link}"""
 
-<b>С какими проблемами сталкиваетесь в продажах / трафике / контенте:</b>
-{sales_difficulties}
+        if time_in_niche:
+            message += f"\n\n<b>Сколько времени в нише:</b>\n{time_in_niche_names.get(time_in_niche, time_in_niche)}"
 
-<b>Какие задачи хотите решить на трекинге:</b>
-{tracking_goals_text}
+        if sales_status:
+            message += f"\n\n<b>Ситуация с продажами сейчас:</b>\n{sales_status_names.get(sales_status, sales_status)}"
 
-<b>Какой формат трекинга больше подходит:</b>
-{tracking_format_names.get(tracking_format, tracking_format)}
+        if product_type:
+            message += f"\n\n<b>Продукт:</b>\n{product_type_names.get(product_type, product_type)}"
 
-<b>Готов(-а) ли в ближайшие 2 недели зайти в работу:</b>
-{ready_to_start}"""
+        if sales_difficulties:
+            message += f"\n\n<b>С какими проблемами сталкиваетесь в продажах / трафике / контенте:</b>\n{sales_difficulties}"
+
+        if tracking_goals_text:
+            message += f"\n\n<b>Какие задачи хотите решить на трекинге:</b>\n{tracking_goals_text}"
+
+        if tracking_format:
+            message += f"\n\n<b>Какой формат трекинга больше подходит:</b>\n{tracking_format_names.get(tracking_format, tracking_format)}"
+
+        if ready_to_start:
+            message += f"\n\n<b>Готов(-а) ли в ближайшие 2 недели зайти в работу:</b>\n{ready_to_start}"
         
         bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
         chat_id = os.environ.get('TELEGRAM_CHAT_ID')
