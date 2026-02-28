@@ -93,7 +93,7 @@ const Landing = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center mt-8 gap-4">
+          <div className="mt-8 border-4 border-[#9A1E15] rounded-2xl p-6 bg-white flex flex-col items-center gap-4">
             <p className="text-xl md:text-2xl font-bold text-[#9A1E15] text-center">
               Оставляйте заявку на Трекинг со скидкой 20.000 руб
             </p>
