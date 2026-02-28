@@ -54,14 +54,11 @@ const Landing = () => {
             (видео для тех, кто уже на себе ощутил, что продавать стало сложнее)
           </p>
 
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto mt-6 mb-2">
-            Если вы хотите запустить / увеличить продажи своих услуг, вырасти в деньгах и вам нужно понимание конкретных действий и что именно надо менять.
-          </p>
         </div>
       </div>
 
       {/* Global Tasks */}
-      <div className="container mx-auto px-4 pt-2 pb-6">
+      <div className="container mx-auto px-4 pt-1 pb-6">
         <div className="max-w-4xl mx-auto">
           <div className="flex justify-center mb-8">
             <div className="bg-white border-4 border-[#9A1E15] rounded-2xl px-8 py-5 shadow-2xl text-center">
