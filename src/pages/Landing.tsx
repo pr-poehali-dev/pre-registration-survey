@@ -65,9 +65,6 @@ const Landing = () => {
             <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full opacity-10" style={{background: '#F5C83A', transform: 'translate(-30%, 30%)'}}></div>
 
             <div className="relative z-10 p-8 md:p-10 text-center">
-              <div className="inline-block bg-[#F5C83A] text-[#9A1E15] text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full mb-5">
-                Главная цель трекинга
-              </div>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-2 leading-tight">
                 Система, которая приносит клиентов
               </h2>
@@ -77,19 +74,17 @@ const Landing = () => {
 
               <div className="flex items-center gap-3 mb-6">
                 <div className="flex-1 h-px bg-white/20"></div>
-                <p className="text-white/80 text-sm uppercase tracking-widest">2 ключевые задачи</p>
+                <p className="text-white/80 text-sm">глобально в рамках Трекинга мы решаем 2 ключевые задачи:</p>
                 <div className="flex-1 h-px bg-white/20"></div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 flex flex-col items-center gap-3">
-                  <span className="text-3xl">📥</span>
+                <div className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 flex items-center justify-center">
                   <p className="text-white text-lg font-medium text-center">
                     как стабильно получать заявки на свои продукты и услуги
                   </p>
                 </div>
-                <div className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 flex flex-col items-center gap-3">
-                  <span className="text-3xl">💰</span>
+                <div className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 flex items-center justify-center">
                   <p className="text-white text-lg font-medium text-center">
                     как продавать тем, кто оставил заявку
                   </p>
