@@ -58,19 +58,7 @@ const Landing = () => {
             Если вы хотите запустить / увеличить продажи своих услуг, вырасти в деньгах и вам нужно понимание конкретных действий и что именно надо менять.
           </p>
 
-          <div className="flex justify-center">
-            <div className="relative inline-block">
-              <div className="absolute inset-0 rounded-lg border-2 border-[#F5C83A]" style={{margin: '-4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'}}></div>
-              <Button
-                onClick={() => navigate('/form')}
-                size="lg"
-                className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 shadow-xl relative z-10 flex flex-col items-center gap-0"
-              >
-                <span>ЗАПОЛНЯЙТЕ АНКЕТУ ПРЕДЗАПИСИ</span>
-                <span className="text-sm font-normal opacity-90">и получите скидку 20.000₽</span>
-              </Button>
-            </div>
-          </div>
+
         </div>
       </div>
 
