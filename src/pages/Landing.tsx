@@ -119,6 +119,19 @@ const Landing = () => {
                 </Card>
               ))}
             </div>
+
+            <Card className="border-2 border-[#9A1E15] shadow-xl bg-gradient-to-br from-yellow-50 to-amber-50 mt-6">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-[#9A1E15] mb-4 text-center">
+                  САМОЕ ЦЕННОЕ:<br/>
+                  ИНДИВИДУАЛЬНЫЙ ТРЕК (ПУТЬ) ДЛЯ КАЖДОГО УЧАСТНИКА
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Под ваш продукт и уникальность строим стратегию, которая реализуется на трекинге нашими с вами совместными усилиями. 
+                  Это ваш персональный маршрут, построенный исключительно под вас, ваш опыт, экспертность, вашу нишу и продукт
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
@@ -206,18 +219,6 @@ const Landing = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-[#9A1E15] shadow-xl bg-gradient-to-br from-yellow-50 to-amber-50">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-[#9A1E15] mb-4 text-center">
-                  САМОЕ ЦЕННОЕ:<br/>
-                  ИНДИВИДУАЛЬНЫЙ ТРЕК (ПУТЬ) ДЛЯ КАЖДОГО УЧАСТНИКА
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Под ваш продукт и уникальность строим стратегию, которая реализуется на трекинге нашими с вами совместными усилиями. 
-                  Это ваш персональный маршрут, построенный исключительно под вас, ваш опыт, экспертность, вашу нишу и продукт
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
