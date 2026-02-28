@@ -54,16 +54,14 @@ const Landing = () => {
             (видео для тех, кто уже на себе ощутил, что продавать стало сложнее)
           </p>
 
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto mt-6">
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto mt-6 mb-2">
             Если вы хотите запустить / увеличить продажи своих услуг, вырасти в деньгах и вам нужно понимание конкретных действий и что именно надо менять.
           </p>
-
-
         </div>
       </div>
 
       {/* Global Tasks */}
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 pt-2 pb-6">
         <div className="max-w-4xl mx-auto">
           <div className="flex justify-center mb-8">
             <div className="bg-white border-4 border-[#9A1E15] rounded-2xl px-8 py-5 shadow-2xl text-center">
@@ -95,7 +93,7 @@ const Landing = () => {
 
           <div className="flex flex-col items-center mt-8 gap-4">
             <p className="text-xl md:text-2xl font-bold text-[#9A1E15] text-center">
-              Оставляйте заявку на трекинг со скидкой 20.000 руб
+              Оставляйте заявку на Трекинг со скидкой 20.000 руб
             </p>
             <div className="relative inline-block">
               <div className="absolute inset-0 rounded-lg border-2 border-[#F5C83A]" style={{margin: '-4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'}}></div>
@@ -105,7 +103,6 @@ const Landing = () => {
                 className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 shadow-xl relative z-10 flex flex-col items-center gap-0"
               >
                 <span>ОСТАВИТЬ ЗАЯВКУ</span>
-                <span className="text-sm font-normal opacity-90">и получите скидку 20.000₽</span>
               </Button>
             </div>
           </div>
