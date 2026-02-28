@@ -80,7 +80,7 @@ const Landing = () => {
           <div className="flex justify-center mb-8">
             <div className="bg-white border-4 border-[#9A1E15] rounded-2xl px-8 py-5 shadow-2xl text-center">
               <p className="text-2xl md:text-3xl font-heading font-bold text-[#9A1E15]">
-                Система, которая приносит клиентов на 300.000+ рублей
+                Система, которая приносит клиентов<br />на 300.000+ рублей
               </p>
             </div>
           </div>
@@ -103,6 +103,23 @@ const Landing = () => {
                 </p>
               </CardContent>
             </Card>
+          </div>
+
+          <div className="flex flex-col items-center mt-8 gap-4">
+            <p className="text-xl md:text-2xl font-bold text-[#9A1E15] text-center">
+              Оставляйте заявку на трекинг со скидкой 20.000 руб
+            </p>
+            <div className="relative inline-block">
+              <div className="absolute inset-0 rounded-lg border-2 border-[#F5C83A]" style={{margin: '-4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'}}></div>
+              <Button
+                onClick={() => navigate('/form')}
+                size="lg"
+                className="px-10 py-7 text-lg bg-[#9A1E15] hover:bg-[#7A1610] text-white transition-all transform hover:scale-105 shadow-xl relative z-10 flex flex-col items-center gap-0"
+              >
+                <span>ОСТАВИТЬ ЗАЯВКУ</span>
+                <span className="text-sm font-normal opacity-90">и получите скидку 20.000₽</span>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
