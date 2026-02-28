@@ -77,6 +77,13 @@ const Landing = () => {
       {/* Global Tasks */}
       <div className="container mx-auto px-4 py-6">
         <div className="max-w-4xl mx-auto">
+          <div className="flex justify-center mb-8">
+            <div className="bg-white border-4 border-[#9A1E15] rounded-2xl px-8 py-5 shadow-2xl text-center">
+              <p className="text-2xl md:text-3xl font-heading font-bold text-[#9A1E15]">
+                Система, которая приносит клиентов на 300.000+ рублей
+              </p>
+            </div>
+          </div>
           <h2 className="text-2xl md:text-3xl font-heading font-bold text-[#9A1E15] text-center mb-8">
             Глобально, в рамках трекинга мы решаем 2 ключевые задачи:
           </h2>
