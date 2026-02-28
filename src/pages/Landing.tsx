@@ -103,6 +103,23 @@ const Landing = () => {
               </Button>
             </div>
           </div>
+
+          <div className="mt-10">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-[#9A1E15] text-center mb-8">
+              Какие задачи мы решаем на Трекинге:
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-3">
+              {tasks.map((task, index) => (
+                <Card key={index} className="border-2 border-[#9A1E15]/30 bg-white hover:border-[#9A1E15] transition-all">
+                  <CardContent className="p-3">
+                    <p className="text-xs md:text-sm text-gray-700 font-medium text-center">
+                      {task}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
@@ -250,27 +267,6 @@ const Landing = () => {
               <span>ЗАПОЛНИТЬ АНКЕТУ</span>
               <span className="text-sm font-normal opacity-90">и получить скидку 20.000₽ на Трекинг</span>
             </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Tasks Grid */}
-      <div className="container mx-auto px-4 py-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold text-[#9A1E15] text-center mb-8">
-            Какие задачи мы решаем на Трекинге:
-          </h2>
-
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-3">
-            {tasks.map((task, index) => (
-              <Card key={index} className="border-2 border-[#9A1E15]/30 bg-white hover:border-[#9A1E15] transition-all">
-                <CardContent className="p-3">
-                  <p className="text-xs md:text-sm text-gray-700 font-medium text-center">
-                    {task}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </div>
