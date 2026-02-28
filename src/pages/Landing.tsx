@@ -81,7 +81,7 @@ const Landing = () => {
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 flex items-center justify-center">
                   <p className="text-white text-lg font-medium text-center">
-                    как стабильно получать заявки на свои продукты и услуги
+                    как стабильно получать заявки<br />на свои продукты и услуги
                   </p>
                 </div>
                 <div className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 flex items-center justify-center">
