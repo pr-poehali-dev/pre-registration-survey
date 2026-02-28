@@ -74,7 +74,7 @@ const Landing = () => {
 
               <div className="flex items-center gap-3 mb-6">
                 <div className="flex-1 h-px bg-white/20"></div>
-                <p className="text-white/80 text-sm">глобально в рамках Трекинга мы решаем 2 ключевые задачи:</p>
+                <p className="text-white text-lg font-medium">глобально в рамках Трекинга мы решаем 2 ключевые задачи:</p>
                 <div className="flex-1 h-px bg-white/20"></div>
               </div>
 
