@@ -86,7 +86,7 @@ const Landing = () => {
                 </div>
                 <div className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 flex items-center justify-center">
                   <p className="text-white text-lg font-medium text-center">
-                    как продавать тем, кто оставил заявку
+                    как продавать тем,<br />кто оставил заявку
                   </p>
                 </div>
               </div>
