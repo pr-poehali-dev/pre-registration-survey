@@ -158,7 +158,7 @@ const Landing = () => {
             </div>
           </div>
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#9A1E15] text-center mb-10">
-            КАК ВСЕ ПРОИСХОДИТ:
+            Как все происходит:
           </h2>
 
           <div className="space-y-6">
