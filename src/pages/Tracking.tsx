@@ -70,7 +70,7 @@ const Tracking = () => {
             <Button 
               size="lg" 
               className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse flex items-center gap-2"
-              onClick={() => window.open('https://t.me/m/Ax9hlnZWM2Zi', '_blank')}
+              onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
             >
               <Icon name="Hand" size={24} />
               Хочу на трекинг
@@ -79,7 +79,7 @@ const Tracking = () => {
               size="lg" 
               variant="outline"
               className="border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/10 px-10 py-7 text-lg font-bold animate-pulse flex items-center gap-2"
-              onClick={() => window.open('https://t.me/m/9UrM7yc3NTRi', '_blank')}
+              onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
             >
               <Icon name="Hand" size={24} />
               Узнать подробности
@@ -209,7 +209,7 @@ const Tracking = () => {
             <Button 
               size="lg" 
               className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all"
-              onClick={() => window.open('https://t.me/m/Ax9hlnZWM2Zi', '_blank')}
+              onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
             >
               Хочу на трекинг
             </Button>
@@ -217,7 +217,7 @@ const Tracking = () => {
               size="lg" 
               variant="outline"
               className="border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/10 px-10 py-7 text-lg font-bold"
-              onClick={() => window.open('https://t.me/m/9UrM7yc3NTRi', '_blank')}
+              onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
             >
               Узнать подробности
             </Button>
@@ -305,7 +305,7 @@ const Tracking = () => {
             <Button 
               size="lg" 
               className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all"
-              onClick={() => window.open('https://t.me/m/Ax9hlnZWM2Zi', '_blank')}
+              onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
             >
               Хочу на трекинг
             </Button>
@@ -313,7 +313,7 @@ const Tracking = () => {
               size="lg" 
               variant="outline"
               className="border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/10 px-10 py-7 text-lg font-bold"
-              onClick={() => window.open('https://t.me/m/9UrM7yc3NTRi', '_blank')}
+              onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
             >
               Узнать подробности
             </Button>
@@ -359,7 +359,7 @@ const Tracking = () => {
             <Button 
               size="lg" 
               className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse flex items-center gap-2"
-              onClick={() => window.open('https://t.me/m/Ax9hlnZWM2Zi', '_blank')}
+              onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
             >
               <Icon name="Hand" size={24} />
               Хочу на трекинг
@@ -368,7 +368,7 @@ const Tracking = () => {
               size="lg" 
               variant="outline"
               className="border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/10 px-10 py-7 text-lg font-bold animate-pulse flex items-center gap-2"
-              onClick={() => window.open('https://t.me/m/9UrM7yc3NTRi', '_blank')}
+              onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
             >
               <Icon name="Hand" size={24} />
               Узнать подробности
@@ -481,7 +481,7 @@ const Tracking = () => {
                   <Button 
                     size="lg" 
                     className="w-full bg-[#9A1E15] hover:bg-[#9A1E15]/90 text-white py-6 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse"
-                    onClick={() => window.open('https://t.me/m/Ax9hlnZWM2Zi', '_blank')}
+                    onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
                   >
                     Иду на трекинг
                   </Button>
@@ -527,7 +527,7 @@ const Tracking = () => {
                   <Button 
                     size="lg" 
                     className="w-full bg-[#9A1E15] hover:bg-[#9A1E15]/90 text-white py-6 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse"
-                    onClick={() => window.open('https://t.me/m/Mw4nmAZiNjZi', '_blank')}
+                    onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
                   >
                     Получить персональные условия
                   </Button>
@@ -622,7 +622,7 @@ const Tracking = () => {
             <Button 
               size="lg"
               className="bg-white hover:bg-white/90 text-[#9A1E14] px-12 py-7 text-xl font-bold shadow-xl hover:shadow-2xl transition-all animate-pulse flex items-center gap-2"
-              onClick={() => window.open('https://t.me/m/Ax9hlnZWM2Zi', '_blank')}
+              onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
             >
               <Icon name="Hand" size={24} />
               Хочу на трекинг
