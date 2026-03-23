@@ -69,7 +69,7 @@ const Tracking = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <Button 
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse flex items-center gap-2"
+              className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse flex items-center gap-2"
               onClick={() => window.open('https://t.me/m/Ax9hlnZWM2Zi', '_blank')}
             >
               <Icon name="Hand" size={24} />
@@ -78,7 +78,7 @@ const Tracking = () => {
             <Button 
               size="lg" 
               variant="outline"
-              className="border-2 border-primary text-primary hover:bg-primary/10 px-10 py-7 text-lg font-bold animate-pulse flex items-center gap-2"
+              className="border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/10 px-10 py-7 text-lg font-bold animate-pulse flex items-center gap-2"
               onClick={() => window.open('https://t.me/m/9UrM7yc3NTRi', '_blank')}
             >
               <Icon name="Hand" size={24} />
@@ -208,7 +208,7 @@ const Tracking = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all"
+              className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all"
               onClick={() => window.open('https://t.me/m/Ax9hlnZWM2Zi', '_blank')}
             >
               Хочу на трекинг
@@ -216,7 +216,7 @@ const Tracking = () => {
             <Button 
               size="lg" 
               variant="outline"
-              className="border-2 border-primary text-primary hover:bg-primary/10 px-10 py-7 text-lg font-bold"
+              className="border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/10 px-10 py-7 text-lg font-bold"
               onClick={() => window.open('https://t.me/m/9UrM7yc3NTRi', '_blank')}
             >
               Узнать подробности
@@ -304,7 +304,7 @@ const Tracking = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all"
+              className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all"
               onClick={() => window.open('https://t.me/m/Ax9hlnZWM2Zi', '_blank')}
             >
               Хочу на трекинг
@@ -312,7 +312,7 @@ const Tracking = () => {
             <Button 
               size="lg" 
               variant="outline"
-              className="border-2 border-primary text-primary hover:bg-primary/10 px-10 py-7 text-lg font-bold"
+              className="border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/10 px-10 py-7 text-lg font-bold"
               onClick={() => window.open('https://t.me/m/9UrM7yc3NTRi', '_blank')}
             >
               Узнать подробности
@@ -358,7 +358,7 @@ const Tracking = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse flex items-center gap-2"
+              className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse flex items-center gap-2"
               onClick={() => window.open('https://t.me/m/Ax9hlnZWM2Zi', '_blank')}
             >
               <Icon name="Hand" size={24} />
@@ -367,7 +367,7 @@ const Tracking = () => {
             <Button 
               size="lg" 
               variant="outline"
-              className="border-2 border-primary text-primary hover:bg-primary/10 px-10 py-7 text-lg font-bold animate-pulse flex items-center gap-2"
+              className="border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/10 px-10 py-7 text-lg font-bold animate-pulse flex items-center gap-2"
               onClick={() => window.open('https://t.me/m/9UrM7yc3NTRi', '_blank')}
             >
               <Icon name="Hand" size={24} />
