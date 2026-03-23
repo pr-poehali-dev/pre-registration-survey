@@ -121,7 +121,7 @@ const Tracking = () => {
         <div className="max-w-6xl mx-auto space-y-8">
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              Что мы делаем на <span className="text-primary">трекинге</span>
+              Что мы делаем на <span className="text-[#9A1E14]">трекинге</span>
             </h2>
           </div>
 
@@ -229,7 +229,7 @@ const Tracking = () => {
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              С какими запросами приходят на <span className="text-primary">трекинг</span>
+              С какими запросами приходят на <span className="text-[#9A1E14]">трекинг</span>
             </h2>
           </div>
 
@@ -264,7 +264,7 @@ const Tracking = () => {
         <div className="max-w-6xl mx-auto space-y-8">
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              Как проходит <span className="text-primary">работа</span>
+              Как проходит <span className="text-[#9A1E14]">работа</span>
             </h2>
           </div>
 
@@ -388,7 +388,7 @@ const Tracking = () => {
               />
             </div>
             <div className="order-2 md:order-2 space-y-6">
-              <h2 className="text-4xl md:text-5xl font-bold text-primary text-left">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#9A1E14] text-left">
                 Светлана Скорнякова
               </h2>
               <div className="space-y-4 text-lg text-foreground leading-relaxed text-left">
@@ -407,7 +407,7 @@ const Tracking = () => {
         <div className="max-w-7xl mx-auto space-y-8">
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              Реальные <span className="text-primary">результаты</span> клиентов
+              Реальные <span className="text-[#9A1E14]">результаты</span> клиентов
             </h2>
           </div>
 
@@ -589,7 +589,7 @@ const Tracking = () => {
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              Почему важно <span className="text-primary">не откладывать</span>
+              Почему важно <span className="text-[#9A1E14]">не откладывать</span>
             </h2>
           </div>
 
@@ -607,7 +607,7 @@ const Tracking = () => {
         </div>
       </section>
 
-      <section id="contact" className="py-8 px-4 bg-gradient-to-br from-primary via-primary to-primary/90">
+      <section id="contact" className="py-8 px-4 bg-[#9A1E14]">
         <div className="max-w-5xl mx-auto text-center space-y-8">
           <div className="space-y-6">
             <h2 className="text-4xl md:text-5xl font-bold text-white">
@@ -621,7 +621,7 @@ const Tracking = () => {
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center pt-4">
             <Button 
               size="lg"
-              className="bg-[#9A1E15] hover:bg-[#9A1E15]/90 text-white px-12 py-7 text-xl font-bold shadow-xl hover:shadow-2xl transition-all animate-pulse flex items-center gap-2"
+              className="bg-white hover:bg-white/90 text-[#9A1E14] px-12 py-7 text-xl font-bold shadow-xl hover:shadow-2xl transition-all animate-pulse flex items-center gap-2"
               onClick={() => window.open('https://t.me/m/Ax9hlnZWM2Zi', '_blank')}
             >
               <Icon name="Hand" size={24} />
@@ -630,7 +630,7 @@ const Tracking = () => {
             
             <Button 
               size="lg"
-              className="bg-[#9A1E15] hover:bg-[#9A1E15]/90 text-white px-12 py-7 text-xl font-bold shadow-xl hover:shadow-2xl transition-all animate-pulse flex items-center gap-2"
+              className="bg-white hover:bg-white/90 text-[#9A1E14] px-12 py-7 text-xl font-bold shadow-xl hover:shadow-2xl transition-all animate-pulse flex items-center gap-2"
               onClick={() => window.open('https://t.me/m/xinPDaoNNDYy', '_blank')}
             >
               <Icon name="Hand" size={24} />
@@ -639,7 +639,7 @@ const Tracking = () => {
             
             <Button 
               size="lg"
-              className="bg-[#9A1E15] hover:bg-[#9A1E15]/90 text-white px-12 py-7 text-xl font-bold shadow-xl hover:shadow-2xl transition-all animate-pulse flex items-center gap-2"
+              className="bg-white hover:bg-white/90 text-[#9A1E14] px-12 py-7 text-xl font-bold shadow-xl hover:shadow-2xl transition-all animate-pulse flex items-center gap-2"
               onClick={() => window.open('https://t.me/m/KOA-jbpiMDVi', '_blank')}
             >
               <Icon name="Hand" size={24} />
