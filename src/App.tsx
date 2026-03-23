@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import ThankYou from "./pages/ThankYou";
 import Webinar from "./pages/Webinar";
 import Form2 from "./pages/Form2";
+import Tracking from "./pages/Tracking";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/webinar" element={<Webinar />} />
           <Route path="/form2" element={<Form2 />} />
+          <Route path="/tracking" element={<Tracking />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
