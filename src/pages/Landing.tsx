@@ -20,7 +20,7 @@ const Landing = () => {
     'внедрить в работу нейросети',
     'разобраться и внедрить автоворонки',
     'найти рабочие связки по трафику',
-    'выстроить свою работу на ближайшие 6-12 мес'
+    'выстроить свою работу на ближайшие 12 месяцев'
   ];
 
   return (
@@ -29,30 +29,10 @@ const Landing = () => {
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-[#9A1E15] leading-tight">
-            90-дневный трекинг продаж для экспертов и предпринимателей
+            Годовое сопровождение по продажам в Telegram и MAX для экспертов и предпринимателей
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto font-bold">
-            Кто устал слышать, что 2026 — сложный период и надо как-то адаптироваться.
-          </p>
 
-          {/* Video Block */}
-          <div className="my-8 max-w-4xl mx-auto">
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-              <iframe
-                src="https://kinescope.io/w2XGP5WcoogHEM975nxSuV"
-                allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write;"
-                frameBorder="0"
-                allowFullScreen
-                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
-              ></iframe>
-            </div>
-          </div>
-
-          <p className="text-sm md:text-base text-gray-700 leading-relaxed max-w-3xl mx-auto text-center italic">
-            <strong>Что такое Трекинг</strong><br />
-            (видео для тех, кто уже на себе ощутил, что продавать стало сложнее)
-          </p>
 
         </div>
       </div>
@@ -188,12 +168,12 @@ const Landing = () => {
               <CardContent className="p-8">
                 <div className="flex flex-col md:flex-row gap-8 items-center">
                   <div className="md:w-3/5">
-                    <h3 className="text-2xl md:text-3xl font-bold text-[#9A1E15] mb-3">12 больших разборов со мной</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold text-[#9A1E15] mb-3">Еженедельные разборы</h3>
                     <p className="text-gray-700">
                       Определяем ЦЕЛЕВЫЕ ДЕЙСТВИЯ, которые приносят заявки, клиентов и деньги.
                     </p>
                     <p className="text-gray-700 mt-3">
-                      За 90 дней на трекинге вы полностью модернизируете и настроите свои продажи под свои финансовые цели.
+                      На Трекинге вы полностью модернизируете и настроите свои продажи под свои финансовые цели.
                     </p>
                     <p className="text-gray-700 mt-3">
                       А я, мой опыт и моя команда будем вам в этом помогать.
@@ -218,7 +198,7 @@ const Landing = () => {
             <Card className="border-0 shadow-lg bg-white">
               <CardContent className="p-8">
                 <h3 className="text-2xl md:text-3xl font-bold text-[#9A1E15] mb-4 text-center">
-                  4 встречи с мощными экспертами по самым актуальным вопросам:
+                  Встречи с мощными экспертами по самым актуальным вопросам:
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="border-2 border-[#9A1E15]/30 rounded-lg p-4 text-center bg-white">
