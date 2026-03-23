@@ -621,7 +621,7 @@ const Tracking = () => {
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center pt-4">
             <Button 
               size="lg"
-              className="bg-[#F5C83A] hover:bg-[#F5C83A]/90 text-black px-12 py-7 text-xl font-bold shadow-xl hover:shadow-2xl transition-all animate-pulse flex items-center gap-2"
+              className="bg-[#9A1E15] hover:bg-[#9A1E15]/90 text-white px-12 py-7 text-xl font-bold shadow-xl hover:shadow-2xl transition-all animate-pulse flex items-center gap-2"
               onClick={() => window.open('https://t.me/m/Ax9hlnZWM2Zi', '_blank')}
             >
               <Icon name="Hand" size={24} />
@@ -630,7 +630,7 @@ const Tracking = () => {
             
             <Button 
               size="lg"
-              className="bg-[#F5C83A] hover:bg-[#F5C83A]/90 text-black px-12 py-7 text-xl font-bold shadow-xl hover:shadow-2xl transition-all animate-pulse flex items-center gap-2"
+              className="bg-[#9A1E15] hover:bg-[#9A1E15]/90 text-white px-12 py-7 text-xl font-bold shadow-xl hover:shadow-2xl transition-all animate-pulse flex items-center gap-2"
               onClick={() => window.open('https://t.me/m/xinPDaoNNDYy', '_blank')}
             >
               <Icon name="Hand" size={24} />
@@ -639,7 +639,7 @@ const Tracking = () => {
             
             <Button 
               size="lg"
-              className="bg-[#F5C83A] hover:bg-[#F5C83A]/90 text-black px-12 py-7 text-xl font-bold shadow-xl hover:shadow-2xl transition-all animate-pulse flex items-center gap-2"
+              className="bg-[#9A1E15] hover:bg-[#9A1E15]/90 text-white px-12 py-7 text-xl font-bold shadow-xl hover:shadow-2xl transition-all animate-pulse flex items-center gap-2"
               onClick={() => window.open('https://t.me/m/KOA-jbpiMDVi', '_blank')}
             >
               <Icon name="Hand" size={24} />
