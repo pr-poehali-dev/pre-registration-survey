@@ -613,7 +613,7 @@ const Tracking = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white">
               Начните 2026 год с продаж!
             </h2>
-            <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-black max-w-3xl mx-auto leading-relaxed">
               Перестаньте действовать наугад и соберите систему, которая будет работать на вас весь год.
             </p>
           </div>
