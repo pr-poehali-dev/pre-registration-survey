@@ -1,18 +1,32 @@
 const Razbor = () => {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12">
+      <style>{`
+        @keyframes pulse-scale {
+          0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(154, 30, 20, 0.4); }
+          50% { transform: scale(1.03); box-shadow: 0 0 0 8px rgba(154, 30, 20, 0); }
+        }
+        @keyframes pulse-scale-tg {
+          0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 158, 217, 0.4); }
+          50% { transform: scale(1.03); box-shadow: 0 0 0 8px rgba(34, 158, 217, 0); }
+        }
+        .btn-pulse-red { animation: pulse-scale 2s ease-in-out infinite; }
+        .btn-pulse-tg { animation: pulse-scale-tg 2s ease-in-out infinite; }
+        .btn-pulse-red:hover, .btn-pulse-tg:hover { animation: none; opacity: 0.9; }
+      `}</style>
+
       <div className="max-w-2xl w-full mx-auto space-y-8">
 
         {/* Заголовок в рамке */}
         <div
-          className="text-center py-5 px-6 rounded-2xl border-2 font-bold text-2xl md:text-3xl leading-tight"
+          className="text-left py-5 px-6 rounded-2xl border-2 font-bold text-2xl md:text-3xl leading-tight"
           style={{ borderColor: '#9A1E14', color: '#9A1E14' }}
         >
           Запись на бесплатный стратегический разбор
         </div>
 
         {/* Описание */}
-        <p className="text-gray-700 text-base md:text-lg leading-relaxed text-center">
+        <p className="text-gray-700 text-base md:text-lg leading-relaxed text-left">
           Мы посмотрим ваш блог, продукт и модель продаж,{' '}
           <strong>найдём 2–3 ключевые точки роста, которые быстрее всего могут привести заявки</strong>,
           и соберём понятный план действий,
@@ -20,27 +34,27 @@ const Razbor = () => {
         </p>
 
         {/* Предупреждение */}
-        <p className="text-gray-800 text-base md:text-lg text-center font-medium">
+        <p className="text-gray-800 text-base md:text-lg text-left font-medium">
           ⚠️ Чтобы погрузиться в каждый проект, я возьму только 5 проектов.
         </p>
 
         {/* Места */}
-        <p className="text-center text-base md:text-lg font-medium text-gray-800">
+        <p className="text-left text-base md:text-lg font-medium text-gray-800">
           Из пяти свободных мест осталось только <span className="font-bold" style={{ color: '#9A1E14' }}>два</span>.
         </p>
 
         {/* Призыв */}
-        <p className="text-center text-gray-800 text-base md:text-lg font-medium">
+        <p className="text-left text-gray-800 text-base md:text-lg font-medium">
           Выберите удобный способ записи и отправьте заявку 👇
         </p>
 
         {/* Кнопки */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4">
           <a
             href="https://t.me/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 px-6 py-4 rounded-xl text-white font-semibold text-base transition-opacity hover:opacity-90"
+            className="btn-pulse-tg flex items-center justify-center gap-3 px-6 py-4 rounded-xl text-white font-semibold text-base"
             style={{ backgroundColor: '#229ED9' }}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +67,7 @@ const Razbor = () => {
             href="https://max.ru/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 px-6 py-4 rounded-xl text-white font-semibold text-base transition-opacity hover:opacity-90"
+            className="btn-pulse-red flex items-center justify-center gap-3 px-6 py-4 rounded-xl text-white font-semibold text-base"
             style={{ backgroundColor: '#9A1E14' }}
           >
             <img
