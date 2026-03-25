@@ -17,40 +17,58 @@ const Razbor = () => {
 
         {/* Описание */}
         <p className="text-gray-700 text-base md:text-lg leading-relaxed text-center">
-          Мы посмотрим ваш блог, продукт и модель продаж, найдём 2–3 ключевые точки роста,
-          которые быстрее всего могут привести заявки, и соберём понятный план действий,
+          Мы посмотрим ваш блог, продукт и модель продаж,{' '}
+          <strong>найдём 2–3 ключевые точки роста, которые быстрее всего могут привести заявки</strong>,
+          и соберём понятный план действий,
           чтобы блог начал приводить клиентов, а продажи перестали зависеть от сарафана.
         </p>
 
         {/* Предупреждение */}
         <p className="text-gray-800 text-base md:text-lg text-center font-medium">
-          ⚠️ Чтобы погрузиться в каждый проект, я беру только 5 блогов.
+          ⚠️ Чтобы погрузиться в каждый проект, я возьму только 5 проектов.
         </p>
 
-        {/* Счётчик мест */}
-        <div className="text-center space-y-3">
-          <p className="text-gray-700 text-base font-medium">
-            Сейчас осталось <span className="font-bold text-xl" style={{ color: '#9A1E14' }}>{freeSlots}</span> места из {totalSlots}
-          </p>
-          <div className="flex justify-center gap-2">
+        {/* Счётчик мест — прогресс-бар */}
+        <div
+          className="rounded-2xl p-6 space-y-4"
+          style={{ backgroundColor: '#FFF5F5', border: '1px solid #f3c3c0' }}
+        >
+          <div className="flex items-center justify-between text-sm font-semibold" style={{ color: '#9A1E14' }}>
+            <span>Свободных мест</span>
+            <span className="text-2xl font-black">{freeSlots} из {totalSlots}</span>
+          </div>
+
+          {/* Прогресс-бар */}
+          <div className="w-full h-4 rounded-full bg-white overflow-hidden" style={{ border: '1px solid #f3c3c0' }}>
+            <div
+              className="h-full rounded-full transition-all duration-700"
+              style={{
+                width: `${(takenSlots / totalSlots) * 100}%`,
+                backgroundColor: '#9A1E14',
+              }}
+            />
+          </div>
+
+          {/* Слоты */}
+          <div className="flex gap-2">
             {Array.from({ length: totalSlots }).map((_, i) => (
-              <div
-                key={i}
-                className="w-10 h-10 rounded-full border-2 flex items-center justify-center text-sm font-bold transition-all"
-                style={
-                  i < takenSlots
-                    ? { backgroundColor: '#9A1E14', borderColor: '#9A1E14', color: 'white' }
-                    : { backgroundColor: 'white', borderColor: '#9A1E14', color: '#9A1E14' }
-                }
-              >
-                {i < takenSlots ? '✓' : i + 1}
-            </div>
+              <div key={i} className="flex-1 text-center">
+                <div
+                  className="rounded-lg py-2 text-xs font-bold"
+                  style={
+                    i < takenSlots
+                      ? { backgroundColor: '#9A1E14', color: 'white' }
+                      : { backgroundColor: 'white', color: '#9A1E14', border: '1.5px dashed #9A1E14' }
+                  }
+                >
+                  {i < takenSlots ? '✗' : '✓'}
+                </div>
+                <p className="text-xs mt-1" style={{ color: i < takenSlots ? '#9A1E14' : '#888' }}>
+                  {i < takenSlots ? 'занято' : 'свободно'}
+                </p>
+              </div>
             ))}
           </div>
-          <p className="text-sm text-gray-500">
-            {Array.from({ length: totalSlots }).map((_, i) => i < takenSlots ? '🔴' : '🟢').join(' ')}
-            &nbsp;— занято / свободно
-          </p>
         </div>
 
         {/* Призыв */}
@@ -80,7 +98,13 @@ const Razbor = () => {
             className="flex items-center justify-center gap-3 px-6 py-4 rounded-xl text-white font-semibold text-base transition-opacity hover:opacity-90"
             style={{ backgroundColor: '#9A1E14' }}
           >
-            <span className="text-white font-black text-lg leading-none">MAX</span>
+            <img
+              src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/8fc3310f-d083-44cf-a661-9a036b6e2eb3.png"
+              alt="MAX"
+              width={26}
+              height={26}
+              className="rounded-md"
+            />
             Записаться через MAX
           </a>
         </div>
