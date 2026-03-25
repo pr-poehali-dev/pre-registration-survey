@@ -1,6 +1,6 @@
 const Razbor = () => {
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-white flex items-start md:items-center justify-center px-4 pt-6 pb-12 md:py-12">
       <style>{`
         @keyframes pulse-scale {
           0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(154, 30, 20, 0.4); }
