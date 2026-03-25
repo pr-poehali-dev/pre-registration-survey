@@ -19,7 +19,7 @@ const Razbor = () => {
 
         {/* Заголовок в рамке */}
         <div
-          className="text-left py-5 px-6 rounded-2xl border-2 font-bold text-2xl md:text-3xl leading-tight"
+          className="text-center py-5 px-6 rounded-2xl border-2 font-bold text-2xl md:text-3xl leading-tight uppercase"
           style={{ borderColor: '#9A1E14', color: '#9A1E14' }}
         >
           Запись на бесплатный стратегический разбор
@@ -49,9 +49,9 @@ const Razbor = () => {
         </p>
 
         {/* Кнопки */}
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://t.me/"
+            href="https://t.me/m/90U-mcg7MDUy"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-pulse-tg flex items-center justify-center gap-3 px-6 py-4 rounded-xl text-white font-semibold text-base"
@@ -64,7 +64,7 @@ const Razbor = () => {
           </a>
 
           <a
-            href="https://max.ru/"
+            href="https://max.ru/u/f9LHodD0cOKOjXse9skzPbp9bGsnQ1uYA-cdamaPa_dZ4ZueQW5bWMgAc_o"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-pulse-red flex items-center justify-center gap-3 px-6 py-4 rounded-xl text-white font-semibold text-base"
