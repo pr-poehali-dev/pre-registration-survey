@@ -1,8 +1,4 @@
 const Razbor = () => {
-  const totalSlots = 5;
-  const takenSlots = 3;
-  const freeSlots = totalSlots - takenSlots;
-
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12">
       <div className="max-w-2xl w-full mx-auto space-y-8">
@@ -28,48 +24,10 @@ const Razbor = () => {
           ⚠️ Чтобы погрузиться в каждый проект, я возьму только 5 проектов.
         </p>
 
-        {/* Счётчик мест — прогресс-бар */}
-        <div
-          className="rounded-2xl p-6 space-y-4"
-          style={{ backgroundColor: '#FFF5F5', border: '1px solid #f3c3c0' }}
-        >
-          <div className="flex items-center justify-between text-sm font-semibold" style={{ color: '#9A1E14' }}>
-            <span>Свободных мест</span>
-            <span className="text-2xl font-black">{freeSlots} из {totalSlots}</span>
-          </div>
-
-          {/* Прогресс-бар */}
-          <div className="w-full h-4 rounded-full bg-white overflow-hidden" style={{ border: '1px solid #f3c3c0' }}>
-            <div
-              className="h-full rounded-full transition-all duration-700"
-              style={{
-                width: `${(takenSlots / totalSlots) * 100}%`,
-                backgroundColor: '#9A1E14',
-              }}
-            />
-          </div>
-
-          {/* Слоты */}
-          <div className="flex gap-2">
-            {Array.from({ length: totalSlots }).map((_, i) => (
-              <div key={i} className="flex-1 text-center">
-                <div
-                  className="rounded-lg py-2 text-xs font-bold"
-                  style={
-                    i < takenSlots
-                      ? { backgroundColor: '#9A1E14', color: 'white' }
-                      : { backgroundColor: 'white', color: '#9A1E14', border: '1.5px dashed #9A1E14' }
-                  }
-                >
-                  {i < takenSlots ? '✗' : '✓'}
-                </div>
-                <p className="text-xs mt-1" style={{ color: i < takenSlots ? '#9A1E14' : '#888' }}>
-                  {i < takenSlots ? 'занято' : 'свободно'}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* Места */}
+        <p className="text-center text-base md:text-lg font-medium text-gray-800">
+          Из пяти свободных мест осталось только <span className="font-bold" style={{ color: '#9A1E14' }}>два</span>.
+        </p>
 
         {/* Призыв */}
         <p className="text-center text-gray-800 text-base md:text-lg font-medium">
