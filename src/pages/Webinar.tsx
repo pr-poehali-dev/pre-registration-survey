@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import Footer from '@/components/Footer';
 
 const Webinar = () => {
   return (
@@ -45,6 +46,7 @@ const Webinar = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

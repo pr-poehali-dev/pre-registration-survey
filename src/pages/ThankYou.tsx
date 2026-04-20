@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
+import Footer from '@/components/Footer';
 import confetti from 'canvas-confetti';
 
 const ThankYou = () => {
@@ -91,6 +92,7 @@ const ThankYou = () => {
           </CardContent>
         </Card>
       </div>
+      <Footer />
     </div>
   );
 };

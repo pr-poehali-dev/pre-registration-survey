@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 import { useNavigate } from 'react-router-dom';
+import Footer from '@/components/Footer';
 
 const Landing = () => {
   const navigate = useNavigate();
@@ -426,6 +427,7 @@ const Landing = () => {
           />
         </div>
       )}
+      <Footer />
     </div>
   );
 };
