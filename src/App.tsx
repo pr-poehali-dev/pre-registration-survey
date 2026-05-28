@@ -11,6 +11,7 @@ import Webinar from "./pages/Webinar";
 import Form2 from "./pages/Form2";
 import Tracking from "./pages/Tracking";
 import Razbor from "./pages/Razbor";
+import Usloviya from "./pages/Usloviya";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/form2" element={<Form2 />} />
           <Route path="/tracking" element={<Landing />} />
           <Route path="/razbor" element={<Razbor />} />
+          <Route path="/usloviya" element={<Usloviya />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

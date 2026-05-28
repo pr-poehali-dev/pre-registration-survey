@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import Footer from "@/components/Footer";
 
 const Tracking = () => {
+  const navigate = useNavigate();
   const cases = [
     {
       id: 1,
@@ -87,7 +89,7 @@ const Tracking = () => {
               <Button
                 size="lg"
                 className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse flex items-center gap-2 mx-auto md:mx-0"
-                onClick={() => window.open('https://t.me/m/KOA-jbpiMDVi', '_blank')}
+                onClick={() => navigate('/usloviya')}
               >
                 Хочу продажи и клиентов
               </Button>
@@ -215,7 +217,7 @@ const Tracking = () => {
           <Button
             size="lg"
             className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse"
-            onClick={() => window.open('https://t.me/m/KOA-jbpiMDVi', '_blank')}
+            onClick={() => navigate('/usloviya')}
           >
             Хочу продажи и клиентов
           </Button>
@@ -424,7 +426,7 @@ const Tracking = () => {
                   <Button 
                     size="lg" 
                     className="w-full bg-[#9A1E15] hover:bg-[#9A1E15]/90 text-white py-6 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse"
-                    onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
+                    onClick={() => navigate('/usloviya')}
                   >
                     Иду на трекинг
                   </Button>
@@ -470,7 +472,7 @@ const Tracking = () => {
                   <Button 
                     size="lg" 
                     className="w-full bg-[#9A1E15] hover:bg-[#9A1E15]/90 text-white py-6 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse"
-                    onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
+                    onClick={() => navigate('/usloviya')}
                   >
                     Получить персональные условия
                   </Button>
@@ -517,7 +519,7 @@ const Tracking = () => {
                   <Button 
                     size="lg" 
                     className="w-full bg-[#9A1E15] hover:bg-[#9A1E15]/90 text-white py-6 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse"
-                    onClick={() => window.open('https://t.me/m/xinPDaoNNDYy', '_blank')}
+                    onClick={() => navigate('/usloviya')}
                   >
                     Записаться на тест-драйв
                   </Button>
@@ -565,7 +567,7 @@ const Tracking = () => {
             <Button 
               size="lg"
               className="bg-white hover:bg-white/90 text-[#9A1E14] px-12 py-7 text-xl font-bold shadow-xl hover:shadow-2xl transition-all animate-pulse flex items-center gap-2"
-              onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
+              onClick={() => navigate('/usloviya')}
             >
               <Icon name="Hand" size={24} />
               Хочу на трекинг
@@ -574,7 +576,7 @@ const Tracking = () => {
             <Button 
               size="lg"
               className="bg-white hover:bg-white/90 text-[#9A1E14] px-12 py-7 text-xl font-bold shadow-xl hover:shadow-2xl transition-all animate-pulse flex items-center gap-2"
-              onClick={() => window.open('https://t.me/m/xinPDaoNNDYy', '_blank')}
+              onClick={() => navigate('/usloviya')}
             >
               <Icon name="Hand" size={24} />
               Тест-драйв
