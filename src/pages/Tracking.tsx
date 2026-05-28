@@ -268,6 +268,12 @@ const Tracking = () => {
                 name: "Алла Деменко",
                 profession: "Конфликтолог для руководителей среднего звена",
                 desc: "Помогает вернуть управление без борьбы, выгорания и скрытых конфликтов."
+              },
+              {
+                photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/faf10fc0-dfdd-4682-abc7-bfd22aebcb89.jpg",
+                name: "Ольга Кубанова",
+                profession: "Наставник экспертов и IT-проектов",
+                desc: "Превращает идею стартапа в работающий бизнес без перегруза и хаоса."
               }
             ].map((client, i) => (
               <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64 bg-[#9A1E15]/5 flex-shrink-0 snap-start">
