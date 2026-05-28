@@ -232,6 +232,12 @@ const Tracking = () => {
                 name: "Мару",
                 profession: "Цифровой психолог",
                 desc: "Помогает женщинам понять свою природу через цифровой анализ и мягко встроить изменения в жизнь."
+              },
+              {
+                photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/cc3982a9-c6b7-4e71-84a5-f7b7434d8b83.jpg",
+                name: "Ирина Воловик",
+                profession: "Специалист по чат-ботам",
+                desc: "Создает чат-боты и автоворонки, которые помогают экспертам получать клиентов стабильнее и экономить время."
               }
             ].map((client, i) => (
               <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64 bg-[#9A1E15]/5 flex-shrink-0 snap-start">
