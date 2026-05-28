@@ -286,6 +286,12 @@ const Tracking = () => {
                 name: "Анастасия Лозинская",
                 profession: "Психолог",
                 desc: "Помогает выйти из тревоги, внутренней усталости и ощущения «живу не свою жизнь»."
+              },
+              {
+                photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/27def94d-0887-4b22-b2ad-cef683a6b9e7.jpg",
+                name: "Татьяна Алексеева",
+                profession: "Бухгалтер и налоговый консультант",
+                desc: "Переводит бухгалтерию и налоги на «человеческий язык» и помогает предпринимателям защитить бизнес и не жить в страхе перед проверками."
               }
             ].map((client, i) => (
               <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64 bg-[#9A1E15]/5 flex-shrink-0 snap-start">
