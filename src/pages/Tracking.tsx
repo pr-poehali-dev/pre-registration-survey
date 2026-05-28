@@ -238,6 +238,12 @@ const Tracking = () => {
                 name: "Ирина Воловик",
                 profession: "Специалист по чат-ботам",
                 desc: "Создает чат-боты и автоворонки, которые помогают экспертам получать клиентов стабильнее и экономить время."
+              },
+              {
+                photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/5896d5e7-fc6f-426c-9936-11fea1372620.jpg",
+                name: "Ольга Илькинова",
+                profession: "Инструктор по йоге",
+                desc: "Помогает убрать напряжение, тревожность и усталость, вернуть спокойствие в голове и ресурсное состояние через мягкую работу с телом."
               }
             ].map((client, i) => (
               <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64 bg-[#9A1E15]/5 flex-shrink-0 snap-start">
