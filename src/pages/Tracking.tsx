@@ -471,6 +471,10 @@ const Tracking = () => {
                 "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/b4db252e-6e82-4b40-8a85-242a0ae88bad.png",
                 "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/4124a46d-3cd7-4805-8bf4-625d981679d2.png",
                 "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/33eec339-67cf-413e-b894-399b97fe8527.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/9f43954e-3e82-4af7-9454-069deb33e8d1.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/75928077-bd48-4bf5-a742-e546c0ed4414.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/68cad181-e2ce-4db2-8933-03d9651660cb.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/353e4b65-fbba-4b3e-8007-52f1e1046476.png",
               ].map((src, i) => (
                 <div key={i} className="flex-shrink-0 snap-start border-2 border-[#9A1E15] rounded-2xl overflow-hidden w-72">
                   <img src={src} alt={`Отзыв ${i + 1}`} className="w-full h-auto object-contain" />
