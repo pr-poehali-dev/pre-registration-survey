@@ -194,22 +194,26 @@ const Tracking = () => {
               {
                 photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/aeee2140-04d7-478d-aea5-46470a1d786c.jpg",
                 name: "Ирина Плотникова",
-                role: "Психолог для женщин, которые в отношениях с мужчиной терпят, молчат, сохраняют отношения ценой себя — вернуть лёгкость в теле, вкус к жизни и расправить свои крылышки"
+                profession: "Психолог",
+                desc: "для женщин, которые в отношениях с мужчиной терпят, молчат, сохраняют отношения ценой себя — вернуть лёгкость в теле, вкус к жизни и расправить свои крылышки"
               },
               {
                 photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/9201e3df-e8a7-4cb5-8437-0fde9dd6689f.jpg",
                 name: "Гульмира",
-                role: "Таролог. Помогает выйти из внутреннего тупика в проявленность, уверенность и реализацию себя."
+                profession: "Таролог",
+                desc: "Помогает выйти из внутреннего тупика в проявленность, уверенность и реализацию себя."
               },
               {
                 photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/2fb800ac-ddd9-4514-b78c-a317f74439c8.jpg",
                 name: "Анна Малышева",
-                role: "Карьерный трекер. Помогаю специалистам, руководителям и лидерам бизнеса соединить карьеру с уникальностью личности и реализовываться в удовольствие."
+                profession: "Карьерный трекер",
+                desc: "Помогает специалистам, руководителям и лидерам бизнеса соединить карьеру с уникальностью личности и реализовываться в удовольствие."
               },
               {
                 photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/060d1ddc-f5de-492a-9fdc-95d1c05d4099.jpg",
                 name: "Екатерина Довженко",
-                role: "Психолог, Арт-терапевт. Помогает снять внутреннее напряжение, вернуть контакт с собой и мягко устанавливать границы."
+                profession: "Психолог, Арт-терапевт",
+                desc: "Помогает снять внутреннее напряжение, вернуть контакт с собой и мягко устанавливать границы."
               }
             ].map((client, i) => (
               <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64 bg-[#9A1E15]/5 flex-shrink-0 snap-start">
@@ -217,8 +221,9 @@ const Tracking = () => {
                   <img src={client.photo} alt={client.name} className="w-full h-full object-cover" />
                 </div>
                 <div className="text-center space-y-1">
-                  <p className="font-bold text-base text-foreground">{client.name}</p>
-                  <p className="text-sm text-muted-foreground leading-snug">{client.role}</p>
+                  <p className="font-bold text-base text-[#9A1E15]">{client.name}</p>
+                  <p className="text-sm font-bold text-foreground">{client.profession}</p>
+                  <p className="text-sm text-muted-foreground leading-snug">{client.desc}</p>
                 </div>
               </div>
             ))}
