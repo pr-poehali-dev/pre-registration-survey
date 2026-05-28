@@ -72,17 +72,8 @@ const Tracking = () => {
             <div className="space-y-6 text-center md:text-left">
               <div className="relative inline-block">
                 <span
-                  className="relative z-10 text-5xl md:text-7xl font-black tracking-tight text-transparent"
-                  style={{
-                    WebkitTextStroke: '2px #9A1E14',
-                    textShadow: '4px 4px 0px #9A1E14',
-                  }}
-                >
-                  ТРЕКИНГ
-                </span>
-                <span
-                  className="absolute inset-0 text-5xl md:text-7xl font-black tracking-tight text-[#9A1E14] opacity-10 blur-sm"
-                  aria-hidden="true"
+                  className="text-5xl md:text-7xl font-black tracking-tight text-[#9A1E14]"
+                  style={{ textShadow: '4px 4px 0px rgba(154,30,20,0.15)' }}
                 >
                   ТРЕКИНГ
                 </span>
