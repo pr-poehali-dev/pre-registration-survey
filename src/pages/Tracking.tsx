@@ -103,7 +103,7 @@ const Tracking = () => {
 
       {/* БОЛИ */}
       <section className="py-4 px-4 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-4xl mx-auto space-y-3">
+        <div className="max-w-6xl mx-auto space-y-3">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             Скорее всего, сейчас у вас:
           </h2>
@@ -131,7 +131,7 @@ const Tracking = () => {
 
       {/* ЧТО ТАКОЕ ТРЕКИНГ */}
       <section className="py-4 px-4 bg-white">
-        <div className="max-w-4xl mx-auto space-y-3">
+        <div className="max-w-6xl mx-auto space-y-3">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             «Трекинг» — это сопровождение, где мы вместе:
           </h2>
@@ -163,7 +163,7 @@ const Tracking = () => {
 
       {/* КОМУ ПОДОЙДЕТ */}
       <section className="py-4 px-4 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-4xl mx-auto space-y-3">
+        <div className="max-w-6xl mx-auto space-y-3">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             Подойдет вам, если вы:
           </h2>
@@ -185,7 +185,7 @@ const Tracking = () => {
 
       {/* ВНУТРИ СОПРОВОЖДЕНИЯ */}
       <section className="py-4 px-4 bg-white">
-        <div className="max-w-4xl mx-auto space-y-3">
+        <div className="max-w-6xl mx-auto space-y-3">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             Внутри сопровождения мы вместе создаем:
           </h2>
@@ -213,7 +213,7 @@ const Tracking = () => {
 
       {/* CTA */}
       <section className="py-4 px-4 bg-white">
-        <div className="max-w-4xl mx-auto flex justify-center">
+        <div className="max-w-6xl mx-auto flex justify-center">
           <Button
             size="lg"
             className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse"
@@ -226,7 +226,7 @@ const Tracking = () => {
 
       {/* ПОЧЕМУ НЕТ ПРОДАЖ */}
       <section className="py-4 px-4 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-4xl mx-auto space-y-4">
+        <div className="max-w-6xl mx-auto space-y-4">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             ПОЧЕМУ У МНОГИХ НЕТ ПРОДАЖ?
           </h2>
@@ -340,7 +340,7 @@ const Tracking = () => {
       </section>
 
       <section id="cases" className="py-4 px-4 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto space-y-4">
+        <div className="max-w-6xl mx-auto space-y-4">
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               Реальные <span className="text-[#9A1E14]">результаты</span> клиентов
@@ -376,7 +376,7 @@ const Tracking = () => {
       </section>
 
       <section className="py-4 px-4 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto space-y-6">
+        <div className="max-w-6xl mx-auto space-y-6">
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               Варианты работы на <span className="text-[#9A1E15]">Трекинге</span>
@@ -531,7 +531,7 @@ const Tracking = () => {
       </section>
 
       <section className="py-4 px-4 bg-white">
-        <div className="max-w-5xl mx-auto space-y-4">
+        <div className="max-w-6xl mx-auto space-y-4">
           <div className="text-center space-y-2">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               Почему важно <span className="text-[#9A1E14]">не откладывать</span>
@@ -553,7 +553,7 @@ const Tracking = () => {
       </section>
 
       <section id="contact" className="py-6 px-4 bg-[#9A1E14]">
-        <div className="max-w-5xl mx-auto text-center space-y-4">
+        <div className="max-w-6xl mx-auto text-center space-y-4">
           <div className="space-y-3">
             <h2 className="text-4xl md:text-5xl font-bold text-white">
               Проведите лето 2026 с продажами!
