@@ -200,6 +200,11 @@ const Tracking = () => {
                 photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/9201e3df-e8a7-4cb5-8437-0fde9dd6689f.jpg",
                 name: "Гульмира",
                 role: "Таролог. Помогает выйти из внутреннего тупика в проявленность, уверенность и реализацию себя."
+              },
+              {
+                photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/2fb800ac-ddd9-4514-b78c-a317f74439c8.jpg",
+                name: "Анна Малышева",
+                role: "Карьерный трекер. Помогаю специалистам, руководителям и лидерам бизнеса соединить карьеру с уникальностью личности и реализовываться в удовольствие."
               }
             ].map((client, i) => (
               <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64 bg-[#9A1E15]/5">
