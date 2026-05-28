@@ -274,6 +274,12 @@ const Tracking = () => {
                 name: "Ольга Кубанова",
                 profession: "Наставник экспертов и IT-проектов",
                 desc: "Превращает идею стартапа в работающий бизнес без перегруза и хаоса."
+              },
+              {
+                photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/c7837edc-5b9c-41f2-8415-1071d64f1e8d.jpg",
+                name: "Анастасия Лозинская",
+                profession: "Психолог",
+                desc: "Помогает выйти из тревоги, внутренней усталости и ощущения «живу не свою жизнь»."
               }
             ].map((client, i) => (
               <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64 bg-[#9A1E15]/5 flex-shrink-0 snap-start">
