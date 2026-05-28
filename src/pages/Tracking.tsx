@@ -220,6 +220,12 @@ const Tracking = () => {
                 name: "Людмила Борисенко",
                 profession: "Психолог, инструктор ТВТ",
                 desc: "Помогает экспертам мягких ниш выйти на доход от 150К за 2 месяца и масштабировать его."
+              },
+              {
+                photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/ffdc46fb-1d91-45d1-96c8-10b596294231.jpg",
+                name: "Кирилл Гапонов",
+                profession: "Психолог, коуч",
+                desc: "Помогает снизить внутреннее напряжение, справиться с тревогой, страхами и внутренними конфликтами, вернуть опору, ясность и устойчивость."
               }
             ].map((client, i) => (
               <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64 bg-[#9A1E15]/5 flex-shrink-0 snap-start">
