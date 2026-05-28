@@ -361,6 +361,16 @@ const Tracking = () => {
               </div>
             ))}
           </div>
+          <div className="flex justify-center pt-2">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/10 px-8 py-5 text-base font-bold"
+              onClick={() => window.open('https://t.me/otzyvy_skorny', '_blank')}
+            >
+              Больше кейсов и отзывов в TG канале
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -377,7 +387,7 @@ const Tracking = () => {
               <CardContent className="pt-8 space-y-6">
                 <div className="text-center space-y-3">
                   <h3 className="text-2xl md:text-3xl font-bold text-[#9A1E15]">
-                    Групповое сопровождение
+                    Групповое сопровождение 6 месяцев
                   </h3>
                   <p className="text-base text-foreground leading-relaxed">
                     Основная программа, которая создаёт вашу личную систему продаж и выводит на стабильный доход 150–300 тысяч. ежемесячно.
@@ -388,13 +398,13 @@ const Tracking = () => {
                   <h4 className="font-bold text-lg text-[#9A1E15]">Что входит в основную программу:</h4>
                   <ul className="space-y-3 text-sm text-foreground leading-relaxed">
                     <li><span className="font-bold">• Личная стратегическая сессия,</span> на которой мы выбираем правильную нишу, определяем вашу уникальность, формируем сильное позиционирование и собираем основу продукта.</li>
-                    <li><span className="font-bold">• Персональный трек на 365 дней</span> — индивидуальный план, который строится под ваш темп, нишу, уровень, загруженность и финансовые цели.</li>
+                    <li><span className="font-bold">• Персональный трек на 180 дней</span> — индивидуальный план, который строится под ваш темп, нишу, уровень, загруженность и финансовые цели.</li>
                     <li><span className="font-bold">• Четыре групповых созвона каждый месяц</span> — глубокие разборы ваших продуктов, контента, постов, каналов, консультаций и переписок. Это формат, где вы получаете не уроки, а индивидуальные задачи и корректировку своих реальных действий.</li>
                     <li><span className="font-bold">• Чат ежедневной поддержки</span> — я лично отвечаю на вопросы, даю корректировки по продажам, контенту, структуре продукта, перепискам. Это сопровождение, которое ускоряет результат.</li>
                     <li><span className="font-bold">• Полный доступ ко всем модулям:</span> позиционирование, продуктовая линейка, продающие смыслы, контент, продажи, переписки, консультации, воронки продаж, трафик, найм команды и делегирование.</li>
                     <li><span className="font-bold">• Библиотека ускорения:</span> ИИ-промпты и нейропомощники, контент-шаблоны, шаблоны воронок, актуальные связки 2026 года, библиотека рабочих офферов.</li>
                     <li><span className="font-bold">• Приглашённые эксперты:</span> юрист, бухгалтер, эксперт по ИИ, специалист по продажам в переписке.</li>
-                    <li><span className="font-bold">• Разбор ваших материалов</span> — офферов, консультаций, продуктов, Telegram-канала, прогревов, контента, чтобы каждая часть вашей системы работала на результат.</li>
+                    <li><span className="font-bold">• Разбор ваших материалов</span> — офферов, консультаций, продуктов, канала, прогревов, контента, чтобы каждая часть вашей системы работала на результат.</li>
                   </ul>
 
                   <h4 className="font-bold text-lg text-[#9A1E15] pt-2">Преимущества тарифа:</h4>
@@ -410,7 +420,7 @@ const Tracking = () => {
 
                 <div className="pt-4 space-y-4">
                   <p className="text-2xl font-bold text-[#9A1E15] text-center">
-                    От 6.500 ₽ в месяц
+                    Получить персональные условия
                   </p>
                   <Button 
                     size="lg" 
@@ -427,7 +437,7 @@ const Tracking = () => {
               <CardContent className="pt-8 space-y-6">
                 <div className="text-center space-y-3">
                   <h3 className="text-2xl md:text-3xl font-bold text-[#9A1E15]">
-                    VIP-сопровождение
+                    VIP-сопровождение 6 месяцев
                   </h3>
                   <p className="text-base text-foreground leading-relaxed">
                     Самый быстрый, глубокий и поддерживающий формат. Для тех, кому важны скорость, качество, индивидуальная работа и быстрый рост дохода.
@@ -438,7 +448,7 @@ const Tracking = () => {
                   <h4 className="font-bold text-lg text-[#9A1E15]">Что входит в VIP:</h4>
                   <ul className="space-y-3 text-sm text-foreground leading-relaxed">
                     <li><span className="font-bold">• Всё, что есть в Групповом сопровождении</span>, плюс расширенный уровень индивидуальной работы.</li>
-                    <li><span className="font-bold">• 3 индивидуальные встречи,</span> на которых мы вместе глубоко прорабатываем ваш продукт, линейку, подачу, смыслы, контент, продажи, консультации, переписки, трафик и воронку. Каждый элемент доводится до состояния, когда он приносит результат.</li>
+                    <li><span className="font-bold">• 5 индивидуальных встреч,</span> на которых мы вместе глубоко прорабатываем ваш продукт, линейку, подачу, смыслы, контент, продажи, консультации, переписки, трафик и воронку. Каждый элемент доводится до состояния, когда он приносит результат.</li>
                     <li><span className="font-bold">• Полный разбор всех ваших материалов,</span> вы отправляете посты, переписки, консультации, офферы, воронки, сценарии. Всё проходит детальную корректировку, чтобы убрать ошибки и дать максимально сильный результат.</li>
                     <li><span className="font-bold">• Работа с уверенностью, внутренними ограничителями и подачей,</span> чтобы убрать страхи продажи, сомнения в цене и сложности с самопрезентацией.</li>
                     <li><span className="font-bold">• Разработка продуктовой линейки от низкого до высокого чека,</span> так, чтобы вы могли продавать дороже, уверенно и экологично.</li>
@@ -545,7 +555,7 @@ const Tracking = () => {
         <div className="max-w-5xl mx-auto text-center space-y-4">
           <div className="space-y-3">
             <h2 className="text-4xl md:text-5xl font-bold text-white">
-              Начните 2026 год с продаж!
+              Проведите лето 2026 с продажами!
             </h2>
             <p className="text-xl md:text-2xl text-black max-w-3xl mx-auto leading-relaxed">
               Перестаньте действовать наугад и соберите систему, которая будет работать на вас весь год.
@@ -571,14 +581,7 @@ const Tracking = () => {
               Тест-драйв
             </Button>
             
-            <Button 
-              size="lg"
-              className="bg-white hover:bg-white/90 text-[#9A1E14] px-12 py-7 text-xl font-bold shadow-xl hover:shadow-2xl transition-all animate-pulse flex items-center gap-2"
-              onClick={() => window.open('https://t.me/m/KOA-jbpiMDVi', '_blank')}
-            >
-              <Icon name="Hand" size={24} />
-              Бронь места
-            </Button>
+
           </div>
         </div>
       </section>
