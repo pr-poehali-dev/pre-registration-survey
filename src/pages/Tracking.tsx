@@ -48,6 +48,34 @@ const Tracking = () => {
       name: "Зульфия",
       role: "Наставник, ментор для экспертов",
       result: "858.000 руб. за 2 месяца"
+    },
+    {
+      id: 7,
+      image: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/ff105c75-7112-4f5d-b26a-90dde81e545a.png",
+      name: "Элла и Елена",
+      role: "Эзотерики",
+      result: "250.000₽ в нише эзотерики"
+    },
+    {
+      id: 8,
+      image: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/b0abbb1a-b9a5-48e4-b02a-b3c39f5eb520.png",
+      name: "Светлана Пичугина",
+      role: "Эксперт по работе с бессознательным",
+      result: "185.000₽ за 12 дней"
+    },
+    {
+      id: 9,
+      image: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/ac45b913-d483-4953-bcb2-1e3269fdaa0d.png",
+      name: "Ольга Никонова",
+      role: "Психолог",
+      result: "+162.000₽ за 3 недели"
+    },
+    {
+      id: 10,
+      image: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/e2518ff2-3ea6-42e7-8142-5c4441d4421d.png",
+      name: "Светлана Даниленко",
+      role: "Нумеролог, эзотерик",
+      result: "64.000₽ за 4 недели с нуля"
     }
   ];
 
