@@ -420,15 +420,12 @@ const Tracking = () => {
                 </div>
 
                 <div className="pt-4 space-y-4">
-                  <p className="text-2xl font-bold text-[#9A1E15] text-center">
-                    Получить персональные условия
-                  </p>
                   <Button 
                     size="lg" 
                     className="w-full bg-[#9A1E15] hover:bg-[#9A1E15]/90 text-white py-6 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse"
                     onClick={() => navigate('/usloviya')}
                   >
-                    Иду на трекинг
+                    Получить персональные условия
                   </Button>
                 </div>
               </CardContent>
