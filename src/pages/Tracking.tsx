@@ -209,7 +209,7 @@ const Tracking = () => {
               {
                 photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/060d1ddc-f5de-492a-9fdc-95d1c05d4099.jpg",
                 name: "Екатерина Довженко",
-                role: "Психолог, Арт-терапевт. Помогаю снять внутреннее напряжение, вернуть контакт с собой и мягко устанавливать границы."
+                role: "Психолог, Арт-терапевт. Помогает снять внутреннее напряжение, вернуть контакт с собой и мягко устанавливать границы."
               }
             ].map((client, i) => (
               <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64 bg-[#9A1E15]/5 flex-shrink-0 snap-start">
