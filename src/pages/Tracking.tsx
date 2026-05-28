@@ -202,7 +202,7 @@ const Tracking = () => {
                 role: "Таролог. Помогает выйти из внутреннего тупика в проявленность, уверенность и реализацию себя."
               }
             ].map((client, i) => (
-              <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64">
+              <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64 bg-[#9A1E15]/5">
                 <div className="w-28 h-28 rounded-full border-4 border-[#9A1E15] overflow-hidden flex-shrink-0">
                   <img src={client.photo} alt={client.name} className="w-full h-full object-cover" />
                 </div>
