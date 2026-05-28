@@ -250,6 +250,12 @@ const Tracking = () => {
                 name: "Элла и Елена",
                 profession: "Трансформационные практики, эзотерики",
                 desc: "Помогают выйти из внутренних ограничений, сценариев и потолка в доходе через глубокую работу с состоянием, энергией и сознанием."
+              },
+              {
+                photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/ce3fd275-d1f8-41a1-b9e2-e993aeead5b9.jpg",
+                name: "Алла Деменко",
+                profession: "Конфликтолог для руководителей среднего звена",
+                desc: "Помогает вернуть управление без борьбы, выгорания и скрытых конфликтов."
               }
             ].map((client, i) => (
               <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64 bg-[#9A1E15]/5 flex-shrink-0 snap-start">
