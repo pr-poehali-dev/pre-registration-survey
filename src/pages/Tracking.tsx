@@ -152,8 +152,7 @@ const Tracking = () => {
 
           <Card className="border-2 border-[#9A1E15] bg-[#9A1E15]/5 shadow-md mt-4">
             <CardContent className="pt-6 space-y-2">
-              <p className="text-lg font-bold text-foreground">Это не просто обучение. Это:</p>
-              <p className="text-base font-medium text-foreground">внедрение, сопровождение, контроль, разборы и система</p>
+              <p className="text-base md:text-lg font-medium text-foreground">Это не просто обучение. Это внедрение, сопровождение, контроль, индивидуальные разборы и система продаж, которая работает на вас 24/7</p>
             </CardContent>
           </Card>
         </div>
