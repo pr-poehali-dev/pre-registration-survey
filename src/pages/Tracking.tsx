@@ -192,6 +192,12 @@ const Tracking = () => {
           <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x snap-mandatory">
             {[
               {
+                photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/1ae522e9-92ed-4bf1-b596-3b4c6b61b618.jpg",
+                name: "Ринат Ахметов",
+                profession: "Психолог по отношениям",
+                desc: "Помогает женщинам избавиться от одиночества и создать счастливый долгосрочный союз."
+              },
+              {
                 photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/fdf808de-52d5-4474-a96b-9597cc5b4659.jpg",
                 name: "Светлана Пичугина",
                 profession: "Коуч",
