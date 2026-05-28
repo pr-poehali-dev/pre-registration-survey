@@ -192,6 +192,12 @@ const Tracking = () => {
           <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x snap-mandatory">
             {[
               {
+                photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/fdf808de-52d5-4474-a96b-9597cc5b4659.jpg",
+                name: "Светлана Пичугина",
+                profession: "Коуч",
+                desc: "Помогает экспертам выйти на доход 100К+ через простые, понятные шаги: уверенность, проявленность и действия."
+              },
+              {
                 photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/aeee2140-04d7-478d-aea5-46470a1d786c.jpg",
                 name: "Ирина Плотникова",
                 profession: "Психолог",
