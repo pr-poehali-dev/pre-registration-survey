@@ -2,7 +2,7 @@ import Footer from '@/components/Footer';
 
 const Usloviya = () => {
   return (
-    <div className="min-h-screen bg-white flex items-start md:items-center justify-center px-4 pt-6 pb-12 md:py-12">
+    <div className="min-h-screen bg-white w-full px-4 pt-6 pb-12 md:py-12 flex flex-col items-center">
       <style>{`
         @keyframes pulse-scale {
           0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(154, 30, 20, 0.4); }
@@ -17,7 +17,7 @@ const Usloviya = () => {
         .btn-pulse-red:hover, .btn-pulse-tg:hover { animation: none; opacity: 0.9; }
       `}</style>
 
-      <div className="max-w-2xl w-full mx-auto space-y-8">
+      <div className="max-w-2xl w-full space-y-8">
 
         <div
           className="text-center py-5 px-6 rounded-2xl border-2 font-bold text-2xl md:text-3xl leading-tight uppercase"
