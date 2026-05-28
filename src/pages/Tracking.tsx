@@ -244,11 +244,20 @@ const Tracking = () => {
                 name: "Ольга Илькинова",
                 profession: "Инструктор по йоге",
                 desc: "Помогает убрать напряжение, тревожность и усталость, вернуть спокойствие в голове и ресурсное состояние через мягкую работу с телом."
+              },
+              {
+                photo: null,
+                name: "Элла и Елена",
+                profession: "Трансформационные практики, эзотерики",
+                desc: "Помогают выйти из внутренних ограничений, сценариев и потолка в доходе через глубокую работу с состоянием, энергией и сознанием."
               }
             ].map((client, i) => (
               <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64 bg-[#9A1E15]/5 flex-shrink-0 snap-start">
-                <div className="w-28 h-28 rounded-full border-4 border-[#9A1E15] overflow-hidden flex-shrink-0">
-                  <img src={client.photo} alt={client.name} className="w-full h-full object-cover" />
+                <div className="w-28 h-28 rounded-full border-4 border-[#9A1E15] overflow-hidden flex-shrink-0 bg-[#9A1E15]/10 flex items-center justify-center">
+                  {client.photo
+                    ? <img src={client.photo} alt={client.name} className="w-full h-full object-cover" />
+                    : <span className="text-2xl font-bold text-[#9A1E15]">{client.name.split(' ').map(w => w[0]).join('').slice(0,2)}</span>
+                  }
                 </div>
                 <div className="text-center space-y-1">
                   <p className="font-bold text-base text-[#9A1E15]">{client.name}</p>
