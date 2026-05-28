@@ -226,6 +226,12 @@ const Tracking = () => {
                 name: "Кирилл Гапонов",
                 profession: "Психолог, коуч",
                 desc: "Помогает снизить внутреннее напряжение, справиться с тревогой, страхами и внутренними конфликтами, вернуть опору, ясность и устойчивость."
+              },
+              {
+                photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/bf85726e-acf7-45c4-92a3-1a638c12f681.jpg",
+                name: "Мару",
+                profession: "Цифровой психолог",
+                desc: "Помогает женщинам понять свою природу через цифровой анализ и мягко встроить изменения в жизнь."
               }
             ].map((client, i) => (
               <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64 bg-[#9A1E15]/5 flex-shrink-0 snap-start">
