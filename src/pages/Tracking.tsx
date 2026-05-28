@@ -84,7 +84,7 @@ const Tracking = () => {
                 className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse flex items-center gap-2 mx-auto md:mx-0"
                 onClick={() => window.open('https://t.me/m/KOA-jbpiMDVi', '_blank')}
               >
-                👉 Хочу продажи и клиентов
+                Хочу продажи и клиентов
               </Button>
               <p className="text-base md:text-lg text-muted-foreground font-medium">
                 Без огромного блога, сложных запусков и выгорания.
@@ -139,7 +139,7 @@ const Tracking = () => {
               "приводим к стабильным продажам",
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-3">
-                <span className="text-[#9A1E14] font-bold text-lg flex-shrink-0">✔️</span>
+                <span className="text-[#9A1E14] font-black text-xl flex-shrink-0 leading-snug">•</span>
                 <p className="text-base md:text-lg text-foreground">{item}</p>
               </div>
             ))}
@@ -148,14 +148,7 @@ const Tracking = () => {
           <Card className="border-2 border-[#9A1E15] bg-[#9A1E15]/5 shadow-md mt-4">
             <CardContent className="pt-6 space-y-2">
               <p className="text-lg font-bold text-foreground">Это не просто обучение. Это:</p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                {["внедрение", "сопровождение", "контроль", "разборы", "система"].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <span className="text-[#9A1E14] font-bold">✔️</span>
-                    <span className="text-base font-medium">{item}</span>
-                  </div>
-                ))}
-              </div>
+              <p className="text-base font-medium text-foreground">внедрение, сопровождение, контроль, разборы и система</p>
             </CardContent>
           </Card>
         </div>
@@ -203,7 +196,7 @@ const Tracking = () => {
               "и выходим на стабильные результаты",
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-3">
-                <span className="text-[#9A1E14] font-bold flex-shrink-0">✔️</span>
+                <span className="text-[#9A1E14] font-black text-xl flex-shrink-0 leading-snug">•</span>
                 <p className="text-base md:text-lg text-foreground">{item}</p>
               </div>
             ))}
@@ -219,7 +212,7 @@ const Tracking = () => {
             className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse"
             onClick={() => window.open('https://t.me/m/KOA-jbpiMDVi', '_blank')}
           >
-            👉 Хочу продажи и клиентов
+            Хочу продажи и клиентов
           </Button>
         </div>
       </section>
@@ -264,48 +257,13 @@ const Tracking = () => {
                   "заявки и продажи",
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-2">
-                    <span className="text-[#9A1E14] font-bold flex-shrink-0">✔️</span>
+                    <span className="text-green-500 font-bold flex-shrink-0">✔️</span>
                     <p className="text-base text-foreground">{item}</p>
                   </div>
                 ))}
               </CardContent>
             </Card>
           </div>
-        </div>
-      </section>
-
-      <section className="py-8 px-4 bg-white">
-        <div className="max-w-6xl mx-auto space-y-8">
-          <div className="text-center space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              С какими запросами приходят на <span className="text-[#9A1E14]">трекинг</span>
-            </h2>
-          </div>
-
-          <Card className="border-4 border-[#9A1E15] shadow-2xl bg-gradient-to-br from-[#9A1E15]/10 to-white">
-            <CardContent className="pt-8 space-y-6">
-              <p className="text-xl font-semibold text-[#9A1E15]">
-                Трекинг подходит тем, кто хочет:
-              </p>
-              <div className="space-y-4">
-                {[
-                  "запустить продажи с нуля или перестать метаться между инструментами",
-                  "увеличить доход и сделать продажи стабильными",
-                  "понять, что именно делать дальше, а не «пробовать всё подряд»",
-                  "автоматизировать процессы и освободить время",
-                  "внедрить автоворонки и рабочие связки по трафику",
-                  "собрать понятный план роста на 12 месяцев и быть в курсе всех изменений на рынке"
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start gap-4 group">
-                    <div className="w-6 h-6 bg-[#9A1E15] rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform">
-                      <Icon name="Check" className="text-white" size={16} />
-                    </div>
-                    <p className="text-lg text-foreground">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </section>
 
@@ -345,84 +303,6 @@ const Tracking = () => {
               </p>
             </CardContent>
           </Card>
-        </div>
-      </section>
-
-      <section className="py-6 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all"
-              onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
-            >
-              Хочу на трекинг
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/10 px-10 py-7 text-lg font-bold"
-              onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
-            >
-              Узнать подробности
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-8 px-4 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-6xl mx-auto space-y-8">
-          <div className="text-center space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              Что вы получаете:
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              { icon: "Settings", text: "понятная система продаж под ваш продукт" },
-              { icon: "Rocket", text: "запущенные или усиленные продажи" },
-              { icon: "Filter", text: "рабочие воронки и источники заявок" },
-              { icon: "Shield", text: "уверенность в продукте, цене и действиях" },
-              { icon: "TrendingUp", text: "чёткий план масштабирования на 2026 год" },
-              { icon: "Compass", text: "понимание, как адаптироваться к изменениям рынка" }
-            ].map((item, index) => (
-              <Card key={index} className="border-2 border-border hover:border-primary transition-all shadow-md hover:shadow-xl">
-                <CardContent className="pt-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon name={item.icon} className="text-secondary" size={24} />
-                    </div>
-                    <p className="text-lg text-foreground font-medium pt-2">{item.text}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-4 px-4 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse flex items-center gap-2"
-              onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
-            >
-              <Icon name="Hand" size={24} />
-              Хочу на трекинг
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/10 px-10 py-7 text-lg font-bold animate-pulse flex items-center gap-2"
-              onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
-            >
-              <Icon name="Hand" size={24} />
-              Узнать подробности
-            </Button>
-          </div>
         </div>
       </section>
 
