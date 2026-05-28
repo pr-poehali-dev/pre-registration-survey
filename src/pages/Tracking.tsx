@@ -195,6 +195,11 @@ const Tracking = () => {
                 photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/aeee2140-04d7-478d-aea5-46470a1d786c.jpg",
                 name: "Ирина Плотникова",
                 role: "Психолог для женщин, которые в отношениях с мужчиной терпят, молчат, сохраняют отношения ценой себя — вернуть лёгкость в теле, вкус к жизни и расправить свои крылышки"
+              },
+              {
+                photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/9201e3df-e8a7-4cb5-8437-0fde9dd6689f.jpg",
+                name: "Гульмира",
+                role: "Таролог. Помогает выйти из внутреннего тупика в проявленность, уверенность и реализацию себя."
               }
             ].map((client, i) => (
               <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64">
