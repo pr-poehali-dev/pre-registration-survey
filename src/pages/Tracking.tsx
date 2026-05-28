@@ -189,7 +189,8 @@ const Tracking = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             Эксперты, которые уже в сопровождении на Трекинге:
           </h2>
-          <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x snap-mandatory">
+          <div className="relative">
+            <div id="clients-carousel" className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x snap-mandatory">
             {[
               {
                 photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/1ae522e9-92ed-4bf1-b596-3b4c6b61b618.jpg",
@@ -314,7 +315,17 @@ const Tracking = () => {
                 </div>
               </div>
             ))}
+            </div>
+            <button
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-9 h-9 rounded-full bg-[#9A1E15] text-white flex items-center justify-center shadow-lg hover:bg-[#9A1E15]/80 transition-all z-10"
+              onClick={() => { const el = document.getElementById('clients-carousel'); if(el) el.scrollBy({left: -280, behavior: 'smooth'}); }}
+            >‹</button>
+            <button
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-9 h-9 rounded-full bg-[#9A1E15] text-white flex items-center justify-center shadow-lg hover:bg-[#9A1E15]/80 transition-all z-10"
+              onClick={() => { const el = document.getElementById('clients-carousel'); if(el) el.scrollBy({left: 280, behavior: 'smooth'}); }}
+            >›</button>
           </div>
+          <p className="text-center text-sm text-muted-foreground">← листайте →</p>
         </div>
       </section>
 
