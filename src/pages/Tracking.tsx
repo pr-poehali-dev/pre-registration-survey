@@ -519,7 +519,7 @@ const Tracking = () => {
                   <Button 
                     size="lg" 
                     className="w-full bg-[#9A1E15] hover:bg-[#9A1E15]/90 text-white py-6 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse"
-                    onClick={() => navigate('/usloviya')}
+                    onClick={() => window.open('https://payform.ru/56bCCJD/', '_blank')}
                   >
                     Записаться на тест-драйв
                   </Button>
@@ -576,7 +576,7 @@ const Tracking = () => {
             <Button 
               size="lg"
               className="bg-white hover:bg-white/90 text-[#9A1E14] px-12 py-7 text-xl font-bold shadow-xl hover:shadow-2xl transition-all animate-pulse flex items-center gap-2"
-              onClick={() => navigate('/usloviya')}
+              onClick={() => window.open('https://payform.ru/56bCCJD/', '_blank')}
             >
               <Icon name="Hand" size={24} />
               Тест-драйв
