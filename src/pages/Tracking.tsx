@@ -65,14 +65,14 @@ const Tracking = () => {
     },
     {
       id: 9,
-      image: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/ac45b913-d483-4953-bcb2-1e3269fdaa0d.png",
+      image: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/8b3a46f4-13ce-4cab-b762-34c4ed933338.png",
       name: "Ольга Никонова",
       role: "Психолог",
       result: "+162.000₽ за 3 недели"
     },
     {
       id: 10,
-      image: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/e2518ff2-3ea6-42e7-8142-5c4441d4421d.png",
+      image: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/21bbbeb7-dd17-4e18-9642-e07d89e0245e.png",
       name: "Светлана Даниленко",
       role: "Нумеролог, эзотерик",
       result: "64.000₽ за 4 недели с нуля"
