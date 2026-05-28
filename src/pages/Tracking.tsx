@@ -183,6 +183,34 @@ const Tracking = () => {
         </div>
       </section>
 
+      {/* ЭКСПЕРТЫ В СОПРОВОЖДЕНИИ */}
+      <section className="py-6 px-4 bg-white">
+        <div className="max-w-6xl mx-auto space-y-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
+            Эксперты, которые уже в сопровождении на Трекинге:
+          </h2>
+          <div className="flex flex-wrap gap-4 justify-center">
+            {[
+              {
+                photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/aeee2140-04d7-478d-aea5-46470a1d786c.jpg",
+                name: "Ирина Плотникова",
+                role: "Психолог для женщин, которые в отношениях с мужчиной терпят, молчат, сохраняют отношения ценой себя — вернуть лёгкость в теле, вкус к жизни и расправить свои крылышки"
+              }
+            ].map((client, i) => (
+              <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64">
+                <div className="w-28 h-28 rounded-full border-4 border-[#9A1E15] overflow-hidden flex-shrink-0">
+                  <img src={client.photo} alt={client.name} className="w-full h-full object-cover" />
+                </div>
+                <div className="text-center space-y-1">
+                  <p className="font-bold text-base text-foreground">{client.name}</p>
+                  <p className="text-sm text-muted-foreground leading-snug">{client.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ВНУТРИ СОПРОВОЖДЕНИЯ */}
       <section className="py-4 px-4 bg-white">
         <div className="max-w-6xl mx-auto space-y-3">
