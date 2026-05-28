@@ -26,12 +26,12 @@ const Usloviya = () => {
           Как получить персональные условия
         </div>
 
-        <div className="text-gray-700 text-base md:text-lg leading-relaxed text-left space-y-4">
-          <p>В работу я беру только после предварительного разбора, на котором:</p>
-          <ul className="space-y-2 pl-2">
+        <div className="text-gray-700 text-base md:text-lg leading-relaxed text-left md:text-center space-y-4">
+          <p>На сопровождение я беру только после предварительного разбора, на котором:</p>
+          <ul className="space-y-2 pl-2 text-left inline-block">
             <li className="flex items-start gap-2">
               <span className="text-[#9A1E14] font-bold flex-shrink-0">—</span>
-              <span>посмотрим ваш канал, продукт и модель продаж</span>
+              <span>посмотрим ваш канал, продукт и текущую ситуацию</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-[#9A1E14] font-bold flex-shrink-0">—</span>
@@ -45,8 +45,8 @@ const Usloviya = () => {
           <p>После этого подберём для вас оптимальный вариант сопровождения и предложим персональные условия.</p>
         </div>
 
-        <p className="text-left text-gray-800 text-base md:text-lg font-medium">
-          Выберите удобный способ записи и отправьте заявку 👇
+        <p className="text-left md:text-center text-gray-800 text-base md:text-lg font-medium">
+          Выберите удобный способ записи и отправьте слово <strong>«хочу разбор»</strong> 👇
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
