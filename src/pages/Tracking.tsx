@@ -53,7 +53,7 @@ const Tracking = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
 
       {/* HERO */}
-      <section className="relative px-4 py-10 md:py-16 overflow-hidden bg-white">
+      <section className="relative px-4 py-6 md:py-10 overflow-hidden bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
             {/* Фото */}
@@ -100,8 +100,8 @@ const Tracking = () => {
       </section>
 
       {/* БОЛИ */}
-      <section className="py-10 px-4 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-4xl mx-auto space-y-6">
+      <section className="py-4 px-4 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-4xl mx-auto space-y-3">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             Скорее всего, сейчас у вас:
           </h2>
@@ -128,8 +128,8 @@ const Tracking = () => {
       </section>
 
       {/* ЧТО ТАКОЕ ТРЕКИНГ */}
-      <section className="py-10 px-4 bg-white">
-        <div className="max-w-4xl mx-auto space-y-6">
+      <section className="py-4 px-4 bg-white">
+        <div className="max-w-4xl mx-auto space-y-3">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             «Трекинг» — это сопровождение, где мы вместе:
           </h2>
@@ -160,8 +160,8 @@ const Tracking = () => {
       </section>
 
       {/* КОМУ ПОДОЙДЕТ */}
-      <section className="py-10 px-4 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-4xl mx-auto space-y-6">
+      <section className="py-4 px-4 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-4xl mx-auto space-y-3">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             Подойдет вам, если вы:
           </h2>
@@ -182,8 +182,8 @@ const Tracking = () => {
       </section>
 
       {/* ВНУТРИ СОПРОВОЖДЕНИЯ */}
-      <section className="py-10 px-4 bg-white">
-        <div className="max-w-4xl mx-auto space-y-6">
+      <section className="py-4 px-4 bg-white">
+        <div className="max-w-4xl mx-auto space-y-3">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             Внутри сопровождения мы вместе создаем:
           </h2>
@@ -210,7 +210,7 @@ const Tracking = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-6 px-4 bg-white">
+      <section className="py-4 px-4 bg-white">
         <div className="max-w-4xl mx-auto flex justify-center">
           <Button
             size="lg"
@@ -223,8 +223,8 @@ const Tracking = () => {
       </section>
 
       {/* ПОЧЕМУ НЕТ ПРОДАЖ */}
-      <section className="py-10 px-4 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-4xl mx-auto space-y-8">
+      <section className="py-4 px-4 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-4xl mx-auto space-y-4">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             ПОЧЕМУ У МНОГИХ НЕТ ПРОДАЖ?
           </h2>
@@ -272,8 +272,8 @@ const Tracking = () => {
         </div>
       </section>
 
-      <section id="format" className="py-8 px-4 bg-white">
-        <div className="max-w-6xl mx-auto space-y-8">
+      <section id="format" className="py-4 px-4 bg-white">
+        <div className="max-w-6xl mx-auto space-y-4">
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               Как проходит <span className="text-[#9A1E14]">работа</span>
@@ -311,9 +311,9 @@ const Tracking = () => {
         </div>
       </section>
 
-      <section className="py-8 px-4 bg-white">
+      <section className="py-4 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="order-1 md:order-1">
               <img 
                 src="https://cdn.poehali.dev/files/telegram-cloud-photo-size-4-5874222278663408774-y 2.png" 
@@ -337,8 +337,8 @@ const Tracking = () => {
         </div>
       </section>
 
-      <section id="cases" className="py-8 px-4 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto space-y-8">
+      <section id="cases" className="py-4 px-4 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto space-y-4">
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               Реальные <span className="text-[#9A1E14]">результаты</span> клиентов
@@ -364,8 +364,8 @@ const Tracking = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto space-y-12">
+      <section className="py-4 px-4 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto space-y-6">
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               Варианты работы на <span className="text-[#9A1E15]">Трекинге</span>
@@ -519,9 +519,9 @@ const Tracking = () => {
         </div>
       </section>
 
-      <section className="py-8 px-4 bg-white">
-        <div className="max-w-5xl mx-auto space-y-8">
-          <div className="text-center space-y-4">
+      <section className="py-4 px-4 bg-white">
+        <div className="max-w-5xl mx-auto space-y-4">
+          <div className="text-center space-y-2">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               Почему важно <span className="text-[#9A1E14]">не откладывать</span>
             </h2>
@@ -541,9 +541,9 @@ const Tracking = () => {
         </div>
       </section>
 
-      <section id="contact" className="py-8 px-4 bg-[#9A1E14]">
-        <div className="max-w-5xl mx-auto text-center space-y-8">
-          <div className="space-y-6">
+      <section id="contact" className="py-6 px-4 bg-[#9A1E14]">
+        <div className="max-w-5xl mx-auto text-center space-y-4">
+          <div className="space-y-3">
             <h2 className="text-4xl md:text-5xl font-bold text-white">
               Начните 2026 год с продаж!
             </h2>
