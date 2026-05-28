@@ -282,7 +282,7 @@ const Tracking = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {[
               { icon: "Video", text: "Групповые разборы каждую неделю" },
               { icon: "Route", text: "индивидуальный трек под ваш проект" },
