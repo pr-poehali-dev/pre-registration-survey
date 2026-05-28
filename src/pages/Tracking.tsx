@@ -282,7 +282,7 @@ const Tracking = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-3xl mx-auto">
             {[
               { icon: "Video", text: "Групповые разборы каждую неделю" },
               { icon: "Route", text: "индивидуальный трек под ваш проект" },
@@ -292,9 +292,9 @@ const Tracking = () => {
               { icon: "Briefcase", text: "список проверенных подрядчиков" }
             ].map((item, index) => (
               <Card key={index} className="border-2 border-border hover:border-primary transition-all shadow-md hover:shadow-lg">
-                <CardContent className="pt-6 space-y-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Icon name={item.icon} className="text-primary" size={24} />
+                <CardContent className="py-4 px-4 flex items-center gap-3">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon name={item.icon} className="text-primary" size={20} />
                   </div>
                   <p className="text-base text-foreground font-medium">{item.text}</p>
                 </CardContent>
