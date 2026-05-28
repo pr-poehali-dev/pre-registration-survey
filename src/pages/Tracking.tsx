@@ -51,67 +51,223 @@ const Tracking = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
-      <section className="relative min-h-screen flex items-center justify-center px-4 py-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent"></div>
-        <div className="relative max-w-6xl mx-auto text-center space-y-6 animate-fade-in">
-          <div className="space-y-6">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              Годовое сопровождение для экспертов и предпринимателей
-            </h1>
-            <div className="flex justify-center">
-              <p className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#9A1E15] border-4 border-[#9A1E15] rounded-2xl inline-block px-6 py-2 shadow-lg">Трекинг</p>
+
+      {/* HERO */}
+      <section className="relative px-4 py-10 md:py-16 overflow-hidden bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+            {/* Фото */}
+            <div className="flex-shrink-0 flex justify-center md:justify-start">
+              <div className="relative">
+                <img
+                  src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/d8b25a80-a37d-42fa-98a6-a37e9f697b0d.png"
+                  alt="Светлана Скорнякова"
+                  className="w-64 md:w-80 lg:w-96 h-auto object-contain drop-shadow-2xl"
+                  style={{ mixBlendMode: 'multiply' }}
+                />
+              </div>
             </div>
-            <p className="text-xl md:text-2xl text-black max-w-4xl mx-auto leading-relaxed font-medium">
-              Совместная работа над вашим проектом, где мы пересобираем или запускаем продажи под реалии 2026 года 
-              и доводим 1-2 целевых действия до заявок и денег.
-            </p>
+
+            {/* Текст */}
+            <div className="space-y-6 text-center md:text-left">
+              <div className="inline-block bg-[#9A1E14] text-white text-sm font-bold px-4 py-1 rounded-full tracking-widest uppercase">
+                🔥 Трекинг
+              </div>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+                Сопровождение для экспертов и помогающих практиков,
+              </h1>
+              <p className="text-lg md:text-xl text-foreground font-medium leading-relaxed">
+                которые хотят выйти на стабильные продажи, перестать хаотично вести блог и выстроить систему клиентов
+              </p>
+              <Button
+                size="lg"
+                className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse flex items-center gap-2 mx-auto md:mx-0"
+                onClick={() => window.open('https://t.me/m/KOA-jbpiMDVi', '_blank')}
+              >
+                👉 Хочу продажи и клиентов
+              </Button>
+              <p className="text-base md:text-lg text-muted-foreground font-medium">
+                Без огромного блога, сложных запусков и выгорания.
+              </p>
+            </div>
           </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button 
-              size="lg" 
-              className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse flex items-center gap-2"
-              onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
-            >
-              <Icon name="Hand" size={24} />
-              Хочу на трекинг
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/10 px-10 py-7 text-lg font-bold animate-pulse flex items-center gap-2"
-              onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
-            >
-              <Icon name="Hand" size={24} />
-              Узнать подробности
-            </Button>
+        </div>
+      </section>
+
+      {/* БОЛИ */}
+      <section className="py-10 px-4 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-4xl mx-auto space-y-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
+            Скорее всего, сейчас у вас:
+          </h2>
+          <Card className="border-2 border-[#9A1E15]/30 shadow-lg bg-white">
+            <CardContent className="pt-6 space-y-3">
+              {[
+                "продажи нестабильны",
+                "клиенты приходят случайно",
+                "вы ведете канал, но заявок почти нет",
+                "страшно продавать",
+                "вы не понимаете, что именно выкладывать",
+                "уже куплено много обучений, но системы так и нет",
+                "внутри ощущение хаоса и усталости",
+                "кажется, что у всех получается, кроме вас",
+              ].map((pain, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <span className="text-[#9A1E14] font-bold text-lg flex-shrink-0">—</span>
+                  <p className="text-base md:text-lg text-foreground">{pain}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* ЧТО ТАКОЕ ТРЕКИНГ */}
+      <section className="py-10 px-4 bg-white">
+        <div className="max-w-4xl mx-auto space-y-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
+            «Трекинг» — это сопровождение, где мы вместе:
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              "упаковываем канал и продающие смыслы",
+              "создаем контент, который приводит клиентов",
+              "выстраиваем простую воронку",
+              "внедряем регулярные действия",
+              "запускаем трафик",
+              "выстраиваем систему продаж",
+              "приводим к стабильным продажам",
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <span className="text-[#9A1E14] font-bold text-lg flex-shrink-0">✔️</span>
+                <p className="text-base md:text-lg text-foreground">{item}</p>
+              </div>
+            ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 max-w-5xl mx-auto">
-            <Card className="border-2 border-primary/20 shadow-lg hover:shadow-xl transition-all bg-white/80 backdrop-blur">
-              <CardContent className="pt-6 text-center space-y-2">
-                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Icon name="Calendar" className="text-primary" size={28} />
-                </div>
-                <h3 className="text-xl font-bold text-foreground">365 дней сопровождения</h3>
+          <Card className="border-2 border-[#9A1E15] bg-[#9A1E15]/5 shadow-md mt-4">
+            <CardContent className="pt-6 space-y-2">
+              <p className="text-lg font-bold text-foreground">Это не просто обучение. Это:</p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                {["внедрение", "сопровождение", "контроль", "разборы", "система"].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <span className="text-[#9A1E14] font-bold">✔️</span>
+                    <span className="text-base font-medium">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* КОМУ ПОДОЙДЕТ */}
+      <section className="py-10 px-4 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-4xl mx-auto space-y-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
+            Подойдет вам, если вы:
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            {["психолог", "коуч", "эзотерик", "наставник", "помогающий эксперт", "эксперт мягкой ниши"].map((item, i) => (
+              <Card key={i} className="border-2 border-[#9A1E15]/30 shadow-sm hover:shadow-md transition-all">
+                <CardContent className="pt-4 pb-4 flex items-center gap-2">
+                  <span className="text-[#9A1E14]">✔️</span>
+                  <span className="text-base font-medium">{item}</span>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <p className="text-center text-base md:text-lg text-muted-foreground">
+            И хотите не просто вести блог, а начать стабильно зарабатывать на своей экспертности.
+          </p>
+        </div>
+      </section>
+
+      {/* ВНУТРИ СОПРОВОЖДЕНИЯ */}
+      <section className="py-10 px-4 bg-white">
+        <div className="max-w-4xl mx-auto space-y-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
+            Внутри сопровождения мы вместе создаем:
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {[
+              "упаковку канала",
+              "смыслы и позиционирование",
+              "контент, который приводит заявки",
+              "систему продаж",
+              "лид-магниты",
+              "воронки",
+              "бесплатный и платный трафик",
+              "рекламные подачи",
+              "продажи через разборы",
+              "и выходим на стабильные результаты",
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <span className="text-[#9A1E14] font-bold flex-shrink-0">✔️</span>
+                <p className="text-base md:text-lg text-foreground">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-6 px-4 bg-white">
+        <div className="max-w-4xl mx-auto flex justify-center">
+          <Button
+            size="lg"
+            className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse"
+            onClick={() => window.open('https://t.me/m/KOA-jbpiMDVi', '_blank')}
+          >
+            👉 Хочу продажи и клиентов
+          </Button>
+        </div>
+      </section>
+
+      {/* ПОЧЕМУ НЕТ ПРОДАЖ */}
+      <section className="py-10 px-4 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
+            ПОЧЕМУ У МНОГИХ НЕТ ПРОДАЖ?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="border-2 border-red-200 shadow-lg bg-red-50">
+              <CardContent className="pt-6 space-y-3">
+                <p className="font-bold text-lg text-foreground mb-2">Большинство экспертов:</p>
+                {[
+                  "хаотично ведут блог",
+                  "выкладывают контент «обо всем»",
+                  "не понимают, как продавать экологично",
+                  "пытаются копировать других",
+                  "не выстраивают систему",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-2">
+                    <span className="text-red-500 font-bold flex-shrink-0">❌</span>
+                    <p className="text-base text-foreground">{item}</p>
+                  </div>
+                ))}
+                <p className="text-base font-medium text-muted-foreground pt-2">
+                  Именно поэтому продажи остаются случайными.
+                </p>
               </CardContent>
             </Card>
-            
-            <Card className="border-2 border-primary/20 shadow-lg hover:shadow-xl transition-all bg-white/80 backdrop-blur">
-              <CardContent className="pt-6 text-center space-y-2">
-                <div className="w-14 h-14 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Icon name="Target" className="text-secondary" size={28} />
-                </div>
-                <h3 className="text-xl font-bold text-foreground">Персональная стратегия</h3>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-2 border-primary/20 shadow-lg hover:shadow-xl transition-all bg-white/80 backdrop-blur">
-              <CardContent className="pt-6 text-center space-y-2">
-                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Icon name="Users" className="text-primary" size={28} />
-                </div>
-                <h3 className="text-xl font-bold text-foreground">Ограниченное количество мест</h3>
+
+            <Card className="border-2 border-[#9A1E15] shadow-lg bg-[#9A1E15]/5">
+              <CardContent className="pt-6 space-y-3">
+                <p className="font-bold text-lg text-[#9A1E14] mb-2">После «Трекинга» у вас появляется:</p>
+                {[
+                  "понятная система действий",
+                  "уверенность в продажах",
+                  "контент, который вызывает доверие",
+                  "понимание, как привлекать клиентов",
+                  "структура, а не хаос",
+                  "заявки и продажи",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-2">
+                    <span className="text-[#9A1E14] font-bold flex-shrink-0">✔️</span>
+                    <p className="text-base text-foreground">{item}</p>
+                  </div>
+                ))}
               </CardContent>
             </Card>
           </div>
@@ -120,114 +276,6 @@ const Tracking = () => {
 
       <section className="py-8 px-4 bg-white">
         <div className="max-w-6xl mx-auto space-y-8">
-          <div className="text-center space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              Что мы делаем на <span className="text-[#9A1E14]">трекинге</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="border-2 border-border hover:border-primary transition-all shadow-md hover:shadow-xl">
-              <CardContent className="pt-6 space-y-4">
-                <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Icon name="RefreshCw" className="text-primary" size={28} />
-                </div>
-                <h3 className="text-2xl font-bold">Пересборка продаж под рынок 2026</h3>
-                <p className="text-muted-foreground">
-                  Учитываем изменения в законодательстве, налогах, стоимости трафика и поведении клиентов. 
-                  Собираем продажи так, чтобы они были устойчивыми, а не «на удаче».
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-border hover:border-primary transition-all shadow-md hover:shadow-xl">
-              <CardContent className="pt-6 space-y-4">
-                <div className="w-14 h-14 bg-secondary/20 rounded-lg flex items-center justify-center">
-                  <Icon name="GitBranch" className="text-secondary" size={28} />
-                </div>
-                <h3 className="text-2xl font-bold">Рабочие модели продаж и воронки</h3>
-                <p className="text-muted-foreground">
-                  Выбираем одну модель, которая подходит именно вам, и доводим её до результата. 
-                  Без лишних инструментов и хаоса.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-border hover:border-primary transition-all shadow-md hover:shadow-xl">
-              <CardContent className="pt-6 space-y-4">
-                <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Icon name="Package" className="text-primary" size={28} />
-                </div>
-                <h3 className="text-2xl font-bold">Продукт и оффер</h3>
-                <p className="text-muted-foreground">
-                  Упаковываем экспертность в понятный продукт, формируем оффер, который легко объяснить и легко продать.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-border hover:border-primary transition-all shadow-md hover:shadow-xl">
-              <CardContent className="pt-6 space-y-4">
-                <div className="w-14 h-14 bg-secondary/20 rounded-lg flex items-center justify-center">
-                  <Icon name="Send" className="text-secondary" size={28} />
-                </div>
-                <h3 className="text-2xl font-bold">Продажи через блог и базу</h3>
-                <p className="text-muted-foreground">
-                  Настраиваем поток заявок из Telegram и MAX: через контент, диагностики, переписки и автоворонки.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-border hover:border-primary transition-all shadow-md hover:shadow-xl">
-              <CardContent className="pt-6 space-y-4">
-                <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Icon name="Sparkles" className="text-primary" size={28} />
-                </div>
-                <h3 className="text-2xl font-bold">Нейросети в работе эксперта</h3>
-                <p className="text-muted-foreground">
-                  Внедряем ИИ для ускорения работы: тексты, контент, презентации, сайты, воронки — быстрее и без перегруза.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-border hover:border-primary transition-all shadow-md hover:shadow-xl">
-              <CardContent className="pt-6 space-y-4">
-                <div className="w-14 h-14 bg-secondary/20 rounded-lg flex items-center justify-center">
-                  <Icon name="UserCheck" className="text-secondary" size={28} />
-                </div>
-                <h3 className="text-2xl font-bold">Персональный трек</h3>
-                <p className="text-muted-foreground">
-                  Стратегия, решения и фокус под ваш опыт, нишу и цели.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-6 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all"
-              onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
-            >
-              Хочу на трекинг
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/10 px-10 py-7 text-lg font-bold"
-              onClick={() => window.open('https://svetlanaskornyakova.ru/tracking', '_blank')}
-            >
-              Узнать подробности
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-8 px-4 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-5xl mx-auto space-y-8">
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               С какими запросами приходят на <span className="text-[#9A1E14]">трекинг</span>
