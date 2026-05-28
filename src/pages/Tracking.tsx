@@ -456,6 +456,32 @@ const Tracking = () => {
               </p>
             </CardContent>
           </Card>
+
+          {/* ОТЗЫВЫ */}
+          <div className="relative">
+            <div id="reviews-carousel" className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x snap-mandatory">
+              {[
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/cdb221d0-67c4-4fee-96cc-606c25d3c806.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/6a4f83c8-ab33-476a-a284-edc51c36803f.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/79cab33d-8313-4f5a-8ad0-d2567ffc709a.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/8418ef70-f647-4baa-b55a-377fff350855.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/05c26f4c-ce0d-4808-92aa-d9bea67003e0.png",
+              ].map((src, i) => (
+                <div key={i} className="flex-shrink-0 snap-start border-2 border-[#9A1E15] rounded-2xl overflow-hidden w-72">
+                  <img src={src} alt={`Отзыв ${i + 1}`} className="w-full h-auto object-contain" />
+                </div>
+              ))}
+            </div>
+            <button
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-9 h-9 rounded-full bg-[#9A1E15] text-white flex items-center justify-center shadow-lg hover:bg-[#9A1E15]/80 transition-all z-10"
+              onClick={() => { const el = document.getElementById('reviews-carousel'); if(el) el.scrollBy({left: -290, behavior: 'smooth'}); }}
+            >‹</button>
+            <button
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-9 h-9 rounded-full bg-[#9A1E15] text-white flex items-center justify-center shadow-lg hover:bg-[#9A1E15]/80 transition-all z-10"
+              onClick={() => { const el = document.getElementById('reviews-carousel'); if(el) el.scrollBy({left: 290, behavior: 'smooth'}); }}
+            >›</button>
+          </div>
+          <p className="text-center text-sm text-muted-foreground">← листайте →</p>
         </div>
       </section>
 
