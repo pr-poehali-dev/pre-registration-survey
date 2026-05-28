@@ -364,8 +364,7 @@ const Tracking = () => {
           <div className="flex justify-center pt-2">
             <Button
               size="lg"
-              variant="outline"
-              className="border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/10 px-8 py-5 text-base font-bold"
+              className="border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/10 px-8 py-5 text-base font-bold animate-pulse"
               onClick={() => window.open('https://t.me/otzyvy_skorny', '_blank')}
             >
               Больше кейсов и отзывов в TG канале
