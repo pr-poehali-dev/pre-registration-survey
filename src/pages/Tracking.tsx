@@ -189,7 +189,7 @@ const Tracking = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             Эксперты, которые уже в сопровождении на Трекинге:
           </h2>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x snap-mandatory">
             {[
               {
                 photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/aeee2140-04d7-478d-aea5-46470a1d786c.jpg",
@@ -205,9 +205,14 @@ const Tracking = () => {
                 photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/2fb800ac-ddd9-4514-b78c-a317f74439c8.jpg",
                 name: "Анна Малышева",
                 role: "Карьерный трекер. Помогаю специалистам, руководителям и лидерам бизнеса соединить карьеру с уникальностью личности и реализовываться в удовольствие."
+              },
+              {
+                photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/060d1ddc-f5de-492a-9fdc-95d1c05d4099.jpg",
+                name: "Екатерина Довженко",
+                role: "Психолог, Арт-терапевт. Помогаю снять внутреннее напряжение, вернуть контакт с собой и мягко устанавливать границы."
               }
             ].map((client, i) => (
-              <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64 bg-[#9A1E15]/5">
+              <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64 bg-[#9A1E15]/5 flex-shrink-0 snap-start">
                 <div className="w-28 h-28 rounded-full border-4 border-[#9A1E15] overflow-hidden flex-shrink-0">
                   <img src={client.photo} alt={client.name} className="w-full h-full object-cover" />
                 </div>
