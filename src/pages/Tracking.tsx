@@ -383,7 +383,7 @@ const Tracking = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <Card className="border-4 border-[#9A1E15] shadow-2xl bg-white hover:shadow-3xl transition-all">
               <CardContent className="pt-8 space-y-6">
                 <div className="text-center space-y-3">
@@ -480,7 +480,7 @@ const Tracking = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-4 border-[#9A1E15] shadow-2xl bg-white hover:shadow-3xl transition-all">
+            <Card className="border-4 border-[#9A1E15] shadow-2xl bg-white hover:shadow-3xl transition-all lg:col-span-2">
               <CardContent className="pt-8 space-y-6">
                 <div className="text-center space-y-3">
                   <h3 className="text-2xl md:text-3xl font-bold text-[#9A1E15]">
