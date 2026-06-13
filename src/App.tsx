@@ -12,6 +12,7 @@ import Form2 from "./pages/Form2";
 import Tracking from "./pages/Tracking";
 import Razbor from "./pages/Razbor";
 import Usloviya from "./pages/Usloviya";
+import ImpulsPro from "./pages/ImpulsPro";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/tracking" element={<Landing />} />
           <Route path="/razbor" element={<Razbor />} />
           <Route path="/usloviya" element={<Usloviya />} />
+          <Route path="/impuls-pro" element={<ImpulsPro />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
