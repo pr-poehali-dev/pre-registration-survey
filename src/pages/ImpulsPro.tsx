@@ -187,65 +187,177 @@ const ImpulsPro = () => {
         </div>
       </section>
 
-      {/* ПРОГРАММА - СОЗВОН 1 */}
-      <section className="py-6 px-4 bg-white">
-        <div className="max-w-5xl mx-auto space-y-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
-            Программа
-          </h2>
+      {/* ПРОГРАММА */}
+      <section className="py-8 px-4 bg-white">
+        <div className="max-w-5xl mx-auto space-y-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">Программа</h2>
+          <p className="text-center text-base md:text-lg text-muted-foreground">14 дней — 3 созвона — конкретный результат</p>
 
-          <div className="border-2 border-[#9A1E15] rounded-2xl overflow-hidden">
-            <div className="bg-[#9A1E14] px-6 py-4">
-              <p className="text-white font-black text-lg md:text-xl tracking-wide">СОЗВОН №1</p>
-              <p className="text-white/90 font-bold text-xl md:text-2xl">СОЗДАЁМ ВАШ ПЛАН ЗАЯВОК И ПРОДАЖ</p>
-            </div>
-            <div className="p-6 space-y-6">
-              <p className="text-base md:text-lg text-foreground leading-relaxed">
-                На первом созвоне мы разберём вашу текущую ситуацию и создадим персональную дорожную карту действий на ближайшие 14 дней.
-              </p>
+          <div className="space-y-4">
 
-              {[
-                {
-                  title: "Вы точно будете понимать:",
-                  items: ["что продавать", "кому продавать", "почему люди должны выбрать именно вас", "какие действия приведут к заявкам именно в вашей ситуации"],
-                },
-                {
-                  title: "Распакуем целевую аудиторию. Определим:",
-                  items: ["кто ваши идеальные клиенты", "какие проблемы их беспокоят прямо сейчас", "чего они хотят на самом деле", "что мешает им принять решение", "какие смыслы вызывают доверие и желание купить"],
-                },
-                {
-                  title: "Создадим летний продукт. Мы определим:",
-                  items: ["результат продукта", "формат работы", "ценность для клиента", "что должно входить в продукт", "как объяснять его простым и понятным языком", "почему люди захотят его купить"],
-                },
-                {
-                  title: "Составим план продаж без вложений. Разберём:",
-                  items: ["где искать клиентов", "как получать заявки без сложных запусков", "какие действия действительно приводят к продажам", "на что не стоит тратить время и силы"],
-                },
-              ].map((block, i) => (
-                <div key={i} className="space-y-2">
-                  <p className="font-bold text-base md:text-lg text-foreground">{block.title}</p>
-                  <div className="space-y-1 pl-2">
-                    {block.items.map((item, j) => (
-                      <div key={j} className="flex items-start gap-2">
-                        <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
-                        <p className="text-base text-foreground">{item}</p>
-                      </div>
-                    ))}
-                  </div>
+            {/* СОЗВОН 1 */}
+            <div className="border-2 border-[#9A1E15] rounded-2xl overflow-hidden">
+              <div className="bg-[#9A1E14] px-6 py-4 flex items-center gap-4">
+                <span className="text-white/40 font-black text-4xl leading-none">01</span>
+                <div>
+                  <p className="text-white/70 font-semibold text-sm uppercase tracking-widest">Созвон №1</p>
+                  <p className="text-white font-bold text-xl md:text-2xl">Создаём ваш план заявок и продаж</p>
                 </div>
-              ))}
-
-              <div className="bg-[#9A1E14]/5 border border-[#9A1E14]/30 rounded-xl p-5 space-y-2">
-                <p className="font-bold text-base md:text-lg text-[#9A1E14]">Результат первого созвона:</p>
-                <p className="text-sm text-muted-foreground">После первого созвона у вас будет:</p>
-                {["персональная дорожная карта на 14 дней", "понимание своей аудитории", "готовый летний продукт для продажи", "понятное предложение для клиентов", "стратегия получения заявок под вашу финансовую цель"].map((item, i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
-                    <p className="text-base text-foreground">{item}</p>
+              </div>
+              <div className="p-6 space-y-5">
+                <p className="text-base md:text-lg text-foreground leading-relaxed">
+                  На первом созвоне мы разберём вашу текущую ситуацию и создадим персональную дорожную карту действий на ближайшие 14 дней.
+                </p>
+                {[
+                  { title: "Вы точно будете понимать:", items: ["что продавать", "кому продавать", "почему люди должны выбрать именно вас", "какие действия приведут к заявкам именно в вашей ситуации"] },
+                  { title: "Распакуем целевую аудиторию. Определим:", items: ["кто ваши идеальные клиенты", "какие проблемы их беспокоят прямо сейчас", "чего они хотят на самом деле", "что мешает им принять решение", "какие смыслы вызывают доверие и желание купить"] },
+                  { title: "Создадим летний продукт. Мы определим:", items: ["результат продукта", "формат работы", "ценность для клиента", "что должно входить в продукт", "как объяснять его простым и понятным языком", "почему люди захотят его купить"] },
+                  { title: "Составим план продаж без вложений. Разберём:", items: ["где искать клиентов", "как получать заявки без сложных запусков", "какие действия действительно приводят к продажам", "на что не стоит тратить время и силы"] },
+                ].map((block, i) => (
+                  <div key={i} className="space-y-2">
+                    <p className="font-bold text-base text-foreground">{block.title}</p>
+                    <div className="space-y-1 pl-2">
+                      {block.items.map((item, j) => (
+                        <div key={j} className="flex items-start gap-2">
+                          <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
+                          <p className="text-base text-foreground">{item}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 ))}
+                <div className="bg-[#9A1E14]/5 border border-[#9A1E14]/30 rounded-xl p-4 space-y-2">
+                  <p className="font-bold text-base text-[#9A1E14]">После созвона у вас будет:</p>
+                  {["персональная дорожная карта на 14 дней", "понимание своей аудитории", "готовый летний продукт для продажи", "понятное предложение для клиентов", "стратегия получения заявок под вашу финансовую цель"].map((item, i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
+                      <p className="text-base text-foreground">{item}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
+
+            {/* СОЗВОН 2 */}
+            <div className="border-2 border-[#9A1E15] rounded-2xl overflow-hidden">
+              <div className="bg-[#9A1E14] px-6 py-4 flex items-center gap-4">
+                <span className="text-white/40 font-black text-4xl leading-none">02</span>
+                <div>
+                  <p className="text-white/70 font-semibold text-sm uppercase tracking-widest">Созвон №2</p>
+                  <p className="text-white font-bold text-xl md:text-2xl">Превращаем интерес в заявки</p>
+                </div>
+              </div>
+              <div className="p-6 space-y-5">
+                <p className="text-base md:text-lg text-foreground leading-relaxed">
+                  На втором созвоне мы переходим от подготовки к реальным продажам. Именно здесь начинается работа с заявками, диалогами и интересом аудитории.
+                </p>
+                {[
+                  { title: "Создадим структуру продающей переписки. Без навязчивых продаж — вы сможете:", items: ["вызывать доверие", "доносить ценность своих услуг", "уверенно рассказывать о своих продуктах", "переводить интерес в заявки", "продавать экологично"] },
+                  { title: "Разберём главные страхи продаж:", items: ["боюсь продавать", "не умею доносить ценность", "не знаю, что отвечать клиентам", "боюсь показаться навязчивым"] },
+                  { title: "Работа с нейро-продажником. Специальный помощник поможет:", items: ["создавать продающие переписки", "отвечать на возражения", "доносить ценность продукта", "переводить интерес в заявку", "уверенно вести диалог с клиентом", "собирать заявки и оплаты"] },
+                ].map((block, i) => (
+                  <div key={i} className="space-y-2">
+                    <p className="font-bold text-base text-foreground">{block.title}</p>
+                    <div className="space-y-1 pl-2">
+                      {block.items.map((item, j) => (
+                        <div key={j} className="flex items-start gap-2">
+                          <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
+                          <p className="text-base text-foreground">{item}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+                <div className="bg-[#9A1E14]/5 border border-[#9A1E14]/30 rounded-xl p-4 space-y-2">
+                  <p className="font-bold text-base text-[#9A1E14]">После созвона у вас будет:</p>
+                  {["понятная система общения с клиентами", "уверенность в продажах без давления", "первые заявки или активные диалоги с потенциальными клиентами", "понимание, как вызывать интерес у аудитории и превращать его в продажи"].map((item, i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
+                      <p className="text-base text-foreground">{item}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* КОНТЕНТ-ЧЕЛЛЕНДЖ */}
+                <div className="border border-[#9A1E15]/40 rounded-xl overflow-hidden mt-2">
+                  <div className="bg-[#9A1E14]/10 px-5 py-3">
+                    <p className="font-black text-base text-[#9A1E14] uppercase tracking-wide">7-дневный контент-челлендж</p>
+                    <p className="text-sm text-muted-foreground">Стартует после второго созвона</p>
+                  </div>
+                  <div className="p-5 space-y-4">
+                    <div className="space-y-2">
+                      <p className="font-bold text-base text-foreground">Каждый день вы будете получать:</p>
+                      {["короткий видеоурок", "шаблон поста", "нейропомощника для создания текста", "мою обратную связь"].map((item, i) => (
+                        <div key={i} className="flex items-start gap-2">
+                          <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
+                          <p className="text-base text-foreground">{item}</p>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="space-y-2">
+                      <p className="font-bold text-base text-foreground">За 7 дней вы создадите контент, который:</p>
+                      {["вовлекает аудиторию", "вызывает доверие", "показывает вашу экспертность", "помогает подписчикам узнать себя", "прогревает к покупке", "приводит заявки"].map((item, i) => (
+                        <div key={i} className="flex items-start gap-2">
+                          <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
+                          <p className="text-base text-foreground">{item}</p>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="bg-[#9A1E14]/5 border border-[#9A1E14]/20 rounded-lg p-3 space-y-1">
+                      <p className="font-bold text-sm text-[#9A1E14]">Результат челленджа:</p>
+                      {["понимание, как через контент вызывать доверие и получать заявки без постоянных продаж в лоб", "7 постов, которые последовательно ведут подписчиков от интереса к заявке", "активная и вовлечённая аудитория", "система создания контента без мучений и ступора", "заявки из контента"].map((item, i) => (
+                        <div key={i} className="flex items-start gap-2">
+                          <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
+                          <p className="text-sm text-foreground">{item}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* СОЗВОН 3 */}
+            <div className="border-2 border-[#9A1E15] rounded-2xl overflow-hidden">
+              <div className="bg-[#9A1E14] px-6 py-4 flex items-center gap-4">
+                <span className="text-white/40 font-black text-4xl leading-none">03</span>
+                <div>
+                  <p className="text-white/70 font-semibold text-sm uppercase tracking-widest">Созвон №3</p>
+                  <p className="text-white font-bold text-xl md:text-2xl">Докручиваем результат и создаём план на лето</p>
+                </div>
+              </div>
+              <div className="p-6 space-y-5">
+                <p className="text-base md:text-lg text-foreground leading-relaxed">
+                  На финальном созвоне мы подведём итоги и посмотрим, что уже сработало именно у вас.
+                </p>
+                {[
+                  { title: "Разберём:", items: ["какие действия дали лучший результат", "что привело заявки", "что можно усилить", "какие действия стоит убрать", "как увеличить количество заявок дальше"] },
+                  { title: "Создадим личную летнюю стратегию. Вы поймёте:", items: ["что делать дальше", "как продолжать получать заявки", "как развивать свой канал", "как масштабировать результат", "как прийти к стабильным продажам"] },
+                ].map((block, i) => (
+                  <div key={i} className="space-y-2">
+                    <p className="font-bold text-base text-foreground">{block.title}</p>
+                    <div className="space-y-1 pl-2">
+                      {block.items.map((item, j) => (
+                        <div key={j} className="flex items-start gap-2">
+                          <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
+                          <p className="text-base text-foreground">{item}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+                <div className="bg-[#9A1E14]/5 border border-[#9A1E14]/30 rounded-xl p-4 space-y-2">
+                  <p className="font-bold text-base text-[#9A1E14]">После созвона у вас будет:</p>
+                  {["персональная стратегия на лето", "понимание дальнейших шагов", "рабочая система продаж", "ясность и уверенность в своих действиях"].map((item, i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
+                      <p className="text-base text-foreground">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
