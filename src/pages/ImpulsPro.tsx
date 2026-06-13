@@ -253,7 +253,7 @@ const ImpulsPro = () => {
                 </p>
                 {[
                   { title: "Создадим структуру продающей переписки. Без навязчивых продаж — вы сможете:", items: ["вызывать доверие", "доносить ценность своих услуг", "уверенно рассказывать о своих продуктах", "переводить интерес в заявки", "продавать экологично"] },
-                  { title: "Разберём главные страхи продаж:", items: ["боюсь продавать", "не умею доносить ценность", "не знаю, что отвечать клиентам", "боюсь показаться навязчивым"] },
+                  { title: "Уберём главные страхи продаж:", items: ["боюсь продавать", "не умею доносить ценность", "не знаю, что отвечать клиентам", "боюсь показаться навязчивым"] },
                   { title: "Работа с нейро-продажником. Специальный помощник поможет:", items: ["создавать продающие переписки", "отвечать на возражения", "доносить ценность продукта", "переводить интерес в заявку", "уверенно вести диалог с клиентом", "собирать заявки и оплаты"] },
                 ].map((block, i) => (
                   <div key={i} className="space-y-2">
@@ -362,15 +362,159 @@ const ImpulsPro = () => {
         </div>
       </section>
 
+      {/* БОНУСЫ */}
+      <section className="py-8 px-4 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-5xl mx-auto space-y-5">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">Бонусы</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { icon: "🧬", name: "Нейро-Распаковщик аудитории", desc: "Поможет быстро понять свою целевую аудиторию, её боли, желания и триггеры принятия решения.", result: "Вы будете точно понимать, кому продаёте и какие смыслы приводят клиентов." },
+              { icon: "🧬", name: "Нейро-Методолог", desc: "Поможет быстро собрать продукт под запрос вашей аудитории и упаковать его в понятное предложение, которое хочется купить.", result: "Готовый продукт, который можно продавать уже сейчас." },
+              { icon: "🧬", name: "Нейро-Продажник", desc: "Ваш помощник по продажам и перепискам. Поможет уверенно доносить ценность своих услуг и не терять заявки.", result: "Больше уверенности в продажах и больше диалогов, которые приводят к оплатам." },
+              { icon: "🎁", name: "Мастер-класс «Диагностики, после которых покупают»", desc: "Вы узнаете, как проводить встречи так, чтобы клиент видел ценность вашей помощи и принимал решение о работе.", result: "Больше продаж без давления и уговоров." },
+            ].map((bonus, i) => (
+              <Card key={i} className="border-2 border-[#9A1E15]/30 shadow-sm hover:shadow-md transition-all">
+                <CardContent className="pt-5 pb-5 space-y-2">
+                  <p className="text-2xl">{bonus.icon}</p>
+                  <p className="font-bold text-base text-[#9A1E14]">{bonus.name}</p>
+                  <p className="text-base text-foreground leading-relaxed">{bonus.desc}</p>
+                  <div className="pt-1 border-t border-[#9A1E15]/20">
+                    <p className="text-sm font-semibold text-muted-foreground">Результат:</p>
+                    <p className="text-sm text-foreground">{bonus.result}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ЧТО БУДЕТ ЧЕРЕЗ 14 ДНЕЙ */}
+      <section className="py-8 px-4 bg-white">
+        <div className="max-w-5xl mx-auto space-y-5">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">Что будет через 14 дней</h2>
+          <Card className="border-2 border-[#9A1E15] bg-[#9A1E15]/5 shadow-md">
+            <CardContent className="pt-6 space-y-3">
+              {[
+                "У вас будет продукт, который можно продавать уже сейчас",
+                "Вы будете понимать, кому и как его предлагать",
+                "У вас появится система получения заявок без хаотичных действий",
+                "Вы создадите контент, который приводит клиентов",
+                "У вас будет план продвижения на всё лето",
+                "И самое главное — вы перестанете гадать, что делать дальше",
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <span className="text-[#9A1E14] font-black text-xl flex-shrink-0">✔</span>
+                  <p className="text-base md:text-lg text-foreground">{item}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* ТАРИФЫ */}
+      <section className="py-8 px-4 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-5xl mx-auto space-y-5">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">Тарифы Импульс PRO</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            {/* ГРУППОВОЙ */}
+            <div className="border-2 border-[#9A1E15] rounded-2xl overflow-hidden flex flex-col">
+              <div className="bg-[#9A1E14] px-6 py-5 text-center">
+                <p className="text-white/70 text-sm font-semibold uppercase tracking-widest mb-1">Групповой тариф</p>
+                <p className="text-white font-black text-4xl">9.990 <span className="text-2xl">руб.</span></p>
+                <p className="text-yellow-300 font-semibold text-sm mt-1">До 21 июня</p>
+                <p className="text-white/60 text-sm line-through">Затем 14.990 руб.</p>
+              </div>
+              <div className="p-6 space-y-4 flex-1 bg-white">
+                <div className="space-y-2">
+                  <p className="font-bold text-base text-foreground">В тариф входит:</p>
+                  {[
+                    "14 дней работы в группе внедрения",
+                    "3 групповых созвона со Светланой",
+                    "Персональная дорожная карта действий",
+                    "Проверка заданий и обратная связь",
+                    "7-дневный контент-челлендж",
+                    "Персональная стратегия продаж на лето",
+                    "Доступ к записям — 14 дней",
+                    "Доступ к нейропомощникам — 14 дней",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
+                      <p className="text-base text-foreground">{item}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="space-y-2 border-t border-[#9A1E15]/20 pt-3">
+                  <p className="font-bold text-base text-foreground">Бонусы:</p>
+                  {[
+                    "🧬 Нейро-Распаковщик аудитории",
+                    "🧬 Нейро-Методолог",
+                    "🧬 Нейро-Продажник",
+                    "🎁 Мастер-класс «Диагностики, после которых покупают»",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <p className="text-base text-foreground">{item}</p>
+                    </div>
+                  ))}
+                </div>
+                <Button
+                  className="w-full bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white font-bold py-6 text-lg mt-2"
+                  onClick={() => navigate("/form")}
+                >
+                  Записаться
+                </Button>
+              </div>
+            </div>
+
+            {/* VIP */}
+            <div className="border-2 border-[#9A1E15] rounded-2xl overflow-hidden flex flex-col">
+              <div className="bg-gradient-to-br from-[#9A1E14] to-[#6b1510] px-6 py-5 text-center">
+                <p className="text-yellow-300 text-sm font-semibold uppercase tracking-widest mb-1">VIP</p>
+                <p className="text-white font-black text-4xl">24.990 <span className="text-2xl">₽</span></p>
+                <p className="text-white/80 text-sm mt-1">Максимально близко со Светланой</p>
+              </div>
+              <div className="p-6 space-y-4 flex-1 bg-white">
+                <div className="space-y-2">
+                  <p className="font-bold text-base text-foreground">Всё из группового тарифа +</p>
+                  {[
+                    "Персональная адаптация всей стратегии под вашу ситуацию",
+                    "2 личных созвона со Светланой",
+                    "Персональный аудит канала и продаж",
+                    "Личная докрутка продукта и оффера",
+                    "Индивидуальная стратегия роста на 90 дней",
+                    "Приоритетная проверка заданий",
+                    "Приоритетная обратная связь в чате",
+                    "Разбор одной продающей консультации или диагностики",
+                    "Доступ к записям — 30 дней",
+                    "Доступ к нейропомощникам — 30 дней",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
+                      <p className="text-base text-foreground">{item}</p>
+                    </div>
+                  ))}
+                </div>
+                <Button
+                  className="w-full bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white font-bold py-6 text-lg mt-2"
+                  onClick={() => navigate("/form")}
+                >
+                  Записаться на VIP
+                </Button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-10 px-4 bg-[#9A1E14]">
         <div className="max-w-5xl mx-auto text-center space-y-6">
           <h2 className="text-2xl md:text-4xl font-bold text-white">
             Готовы получить заявки уже через 14 дней?
           </h2>
-          <p className="text-base md:text-lg text-white/90">
-            Стоимость и даты — уточняйте при записи
-          </p>
           <Button
             size="lg"
             className="bg-white text-[#9A1E14] hover:bg-white/90 px-12 py-7 text-xl font-bold shadow-2xl transition-all"
