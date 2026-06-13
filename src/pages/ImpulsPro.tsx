@@ -161,27 +161,29 @@ const ImpulsPro = () => {
       </section>
 
       {/* ОБ АВТОРЕ */}
-      <section className="py-6 px-4 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-4 px-4 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-5xl mx-auto">
-          <Card className="border-2 border-[#9A1E15]/30 shadow-lg">
-            <CardContent className="pt-6">
-              <div className="flex flex-col sm:flex-row items-center gap-6">
-                <img
-                  src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/d8b25a80-a37d-42fa-98a6-a37e9f697b0d.png"
-                  alt="Светлана Скорнякова"
-                  className="w-32 h-32 object-contain rounded-full flex-shrink-0"
-                  style={{ mixBlendMode: "multiply" }}
-                />
-                <div className="space-y-2 text-center sm:text-left">
-                  <p className="text-xl font-bold text-[#9A1E14]">Светлана Скорнякова</p>
-                  <p className="text-base text-muted-foreground font-medium">Трекер для экспертов и помогающих практиков</p>
-                  <p className="text-base text-foreground leading-relaxed">
-                    Помогаю экспертам выстраивать стабильные продажи без хаоса, сложных запусков и выгорания. Сопровождаю на каждом шаге — от идеи до результата.
-                  </p>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="order-1 md:order-1">
+              <img
+                src="https://cdn.poehali.dev/files/telegram-cloud-photo-size-4-5874222278663408774-y 2.png"
+                alt="Светлана Скорнякова"
+                className="w-full h-auto rounded-2xl shadow-xl"
+              />
+            </div>
+            <div className="order-2 md:order-2 space-y-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#9A1E14] text-left">
+                Светлана Скорнякова
+              </h2>
+              <div className="space-y-4 text-lg text-foreground leading-relaxed text-left">
+                <p>— более 100 экспертов вышли на доход 300.000 ₽+</p>
+                <p>— средний рост дохода за 90 дней — x2–x4</p>
+                <p>— заработала 15+ млн ₽ в Telegram за 2 года</p>
+                <p>— инвестировала в своё развитие более 2 млн ₽</p>
+                <p>— работаю с мягкими и твёрдыми нишами: психологи, коучи, наставники, эксперты услуг</p>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </section>
 
