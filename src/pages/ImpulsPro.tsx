@@ -84,9 +84,7 @@ const ImpulsPro = () => {
               />
             </div>
             <div className="space-y-5 text-center md:text-left">
-              <div className="inline-flex items-center gap-2 bg-[#9A1E14]/10 text-[#9A1E14] text-sm font-bold px-4 py-2 rounded-full">
-                ⚡ Групповое внедрение · 14 дней
-              </div>
+              <p className="text-base font-semibold text-muted-foreground">📅 29 июня — 12 июля</p>
               <div>
                 <span
                   className="text-4xl md:text-6xl font-black tracking-tight text-[#9A1E14]"
