@@ -20,12 +20,12 @@ const ImpulsPro = () => {
   ];
 
   const format = [
-    "3 групповых созвона",
-    "Персональная дорожная xmind-карта действий",
-    "Простые задания между созвонами, которые ведут к результату",
-    "Проверка и обратная связь от меня",
-    "7-дневный контент-челлендж",
-    "Шаблоны продающих постов и продающих переписок",
+    { icon: "🎯", text: "3 групповых созвона" },
+    { icon: "🗺️", text: "Персональная дорожная xmind-карта действий" },
+    { icon: "📋", text: "Простые задания между созвонами, которые ведут к результату" },
+    { icon: "💬", text: "Проверка и обратная связь от меня" },
+    { icon: "⚡", text: "7-дневный контент-челлендж" },
+    { icon: "📝", text: "Шаблоны продающих постов и продающих переписок" },
   ];
 
   const why = [
@@ -37,12 +37,43 @@ const ImpulsPro = () => {
     "Вместо хаотичных действий у вас — чёткая система, которая даёт результат",
   ];
 
+  const CheckItem = ({ text }: { text: string }) => (
+    <div className="flex items-start gap-2">
+      <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
+      <p className="text-base text-foreground">{text}</p>
+    </div>
+  );
+
+  const DotItem = ({ text }: { text: string }) => (
+    <div className="flex items-start gap-2">
+      <span className="text-[#9A1E14] font-black text-lg flex-shrink-0 leading-snug">•</span>
+      <p className="text-base text-foreground">{text}</p>
+    </div>
+  );
+
+  const ArrowItem = ({ text }: { text: string }) => (
+    <div className="flex items-start gap-2">
+      <span className="text-[#9A1E14] font-bold flex-shrink-0">→</span>
+      <p className="text-base text-foreground">{text}</p>
+    </div>
+  );
+
+  const StarItem = ({ text }: { text: string }) => (
+    <div className="flex items-start gap-2">
+      <span className="text-[#9A1E14] flex-shrink-0">★</span>
+      <p className="text-base text-foreground">{text}</p>
+    </div>
+  );
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
 
       {/* HERO */}
       <section className="relative px-4 py-8 md:py-14 overflow-hidden bg-white">
-        <div className="max-w-5xl mx-auto">
+        {/* Декоративный элемент */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[#9A1E14]/5 rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#9A1E14]/5 rounded-full translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+        <div className="max-w-5xl mx-auto relative">
           <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
             <div className="flex-shrink-0 flex justify-center md:justify-start">
               <img
@@ -53,6 +84,9 @@ const ImpulsPro = () => {
               />
             </div>
             <div className="space-y-5 text-center md:text-left">
+              <div className="inline-flex items-center gap-2 bg-[#9A1E14]/10 text-[#9A1E14] text-sm font-bold px-4 py-2 rounded-full">
+                ⚡ Групповое внедрение · 14 дней
+              </div>
               <div>
                 <span
                   className="text-4xl md:text-6xl font-black tracking-tight text-[#9A1E14]"
@@ -85,8 +119,9 @@ const ImpulsPro = () => {
       {/* ЧТО ТАКОЕ */}
       <section className="py-6 px-4 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-5xl mx-auto">
-          <Card className="border-2 border-[#9A1E15] bg-[#9A1E15]/5 shadow-md">
-            <CardContent className="pt-6 space-y-3">
+          <Card className="border-2 border-[#9A1E15] bg-[#9A1E15]/5 shadow-md relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-1 h-full bg-[#9A1E14]" />
+            <CardContent className="pt-6 space-y-3 pl-8">
               <p className="text-base md:text-xl font-bold text-[#9A1E14] text-center">
                 Импульс PRO — это группа внедрения,
               </p>
@@ -109,8 +144,8 @@ const ImpulsPro = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {results.map((item, i) => (
-              <div key={i} className="flex items-start gap-3 bg-white border border-[#9A1E15]/20 rounded-xl p-4 shadow-sm">
-                <span className="text-[#9A1E14] font-black text-xl flex-shrink-0 leading-snug">✔</span>
+              <div key={i} className="flex items-start gap-3 bg-white border border-[#9A1E15]/20 rounded-xl p-4 shadow-sm hover:border-[#9A1E15]/50 hover:shadow-md transition-all">
+                <span className="bg-[#9A1E14] text-white text-xs font-black w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
                 <p className="text-base text-foreground">{item}</p>
               </div>
             ))}
@@ -130,10 +165,10 @@ const ImpulsPro = () => {
           <p className="text-center text-base md:text-lg text-muted-foreground">Внутри вас ждут:</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {format.map((item, i) => (
-              <Card key={i} className="border-2 border-[#9A1E15]/30 shadow-sm hover:shadow-md transition-all">
+              <Card key={i} className="border-2 border-[#9A1E15]/30 shadow-sm hover:shadow-md transition-all hover:border-[#9A1E15]/60">
                 <CardContent className="pt-4 pb-4 flex items-start gap-3">
-                  <span className="text-[#9A1E14] font-black text-xl flex-shrink-0">✔</span>
-                  <p className="text-base font-medium text-foreground">{item}</p>
+                  <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                  <p className="text-base font-medium text-foreground">{item.text}</p>
                 </CardContent>
               </Card>
             ))}
@@ -150,8 +185,8 @@ const ImpulsPro = () => {
           <Card className="border-2 border-[#9A1E15]/30 shadow-lg bg-white">
             <CardContent className="pt-6 space-y-3">
               {why.map((item, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <span className="text-[#9A1E14] font-bold text-lg flex-shrink-0">✔</span>
+                <div key={i} className="flex items-start gap-3 py-1 border-b border-gray-100 last:border-0">
+                  <span className="w-7 h-7 rounded-full bg-[#9A1E14]/10 text-[#9A1E14] font-black text-sm flex items-center justify-center flex-shrink-0 mt-0.5">✓</span>
                   <p className="text-base md:text-lg text-foreground">{item}</p>
                 </div>
               ))}
@@ -198,7 +233,7 @@ const ImpulsPro = () => {
             {/* СОЗВОН 1 */}
             <div className="border-2 border-[#9A1E15] rounded-2xl overflow-hidden">
               <div className="bg-[#9A1E14] px-6 py-4 flex items-center gap-4">
-                <span className="text-white/40 font-black text-4xl leading-none">01</span>
+                <span className="text-white/30 font-black text-5xl leading-none select-none">01</span>
                 <div>
                   <p className="text-white/70 font-semibold text-sm uppercase tracking-widest">Созвон №1</p>
                   <p className="text-white font-bold text-xl md:text-2xl">Создаём ваш план заявок и продаж</p>
@@ -208,31 +243,48 @@ const ImpulsPro = () => {
                 <p className="text-base md:text-lg text-foreground leading-relaxed">
                   На первом созвоне мы разберём вашу текущую ситуацию и создадим персональную дорожную карту действий на ближайшие 14 дней.
                 </p>
-                {[
-                  { title: "Вы точно будете понимать:", items: ["что продавать", "кому продавать", "почему люди должны выбрать именно вас", "какие действия приведут к заявкам именно в вашей ситуации"] },
-                  { title: "Распакуем целевую аудиторию. Определим:", items: ["кто ваши идеальные клиенты", "какие проблемы их беспокоят прямо сейчас", "чего они хотят на самом деле", "что мешает им принять решение", "какие смыслы вызывают доверие и желание купить"] },
-                  { title: "Создадим летний продукт. Мы определим:", items: ["результат продукта", "формат работы", "ценность для клиента", "что должно входить в продукт", "как объяснять его простым и понятным языком", "почему люди захотят его купить"] },
-                  { title: "Составим план продаж без вложений. Разберём:", items: ["где искать клиентов", "как получать заявки без сложных запусков", "какие действия действительно приводят к продажам", "на что не стоит тратить время и силы"] },
-                ].map((block, i) => (
-                  <div key={i} className="space-y-2">
-                    <p className="font-bold text-base text-foreground">{block.title}</p>
-                    <div className="space-y-1 pl-2">
-                      {block.items.map((item, j) => (
-                        <div key={j} className="flex items-start gap-2">
-                          <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
-                          <p className="text-base text-foreground">{item}</p>
-                        </div>
-                      ))}
-                    </div>
+
+                <div className="space-y-2">
+                  <p className="font-bold text-base text-foreground">Вы точно будете понимать:</p>
+                  <div className="space-y-1 pl-2">
+                    {["что продавать", "кому продавать", "почему люди должны выбрать именно вас", "какие действия приведут к заявкам именно в вашей ситуации"].map((item, j) => (
+                      <ArrowItem key={j} text={item} />
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                <div className="space-y-2">
+                  <p className="font-bold text-base text-foreground">Распакуем целевую аудиторию. Определим:</p>
+                  <div className="space-y-1 pl-2">
+                    {["кто ваши идеальные клиенты", "какие проблемы их беспокоят прямо сейчас", "чего они хотят на самом деле", "что мешает им принять решение", "какие смыслы вызывают доверие и желание купить"].map((item, j) => (
+                      <DotItem key={j} text={item} />
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <p className="font-bold text-base text-foreground">Создадим летний продукт. Мы определим:</p>
+                  <div className="space-y-1 pl-2">
+                    {["результат продукта", "формат работы", "ценность для клиента", "что должно входить в продукт", "как объяснять его простым и понятным языком", "почему люди захотят его купить"].map((item, j) => (
+                      <StarItem key={j} text={item} />
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <p className="font-bold text-base text-foreground">Составим план продаж без вложений. Разберём:</p>
+                  <div className="space-y-1 pl-2">
+                    {["где искать клиентов", "как получать заявки без сложных запусков", "какие действия действительно приводят к продажам", "на что не стоит тратить время и силы"].map((item, j) => (
+                      <CheckItem key={j} text={item} />
+                    ))}
+                  </div>
+                </div>
+
                 <div className="bg-[#9A1E14]/5 border border-[#9A1E14]/30 rounded-xl p-4 space-y-2">
-                  <p className="font-bold text-base text-[#9A1E14]">После созвона у вас будет:</p>
+                  <p className="font-bold text-base text-[#9A1E14]">Результат первого созвона:</p>
+                  <p className="text-sm text-muted-foreground">После первого созвона у вас будет:</p>
                   {["персональная дорожная карта на 14 дней", "понимание своей аудитории", "готовый летний продукт для продажи", "понятное предложение для клиентов", "стратегия получения заявок под вашу финансовую цель"].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2">
-                      <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
-                      <p className="text-base text-foreground">{item}</p>
-                    </div>
+                    <CheckItem key={i} text={item} />
                   ))}
                 </div>
               </div>
@@ -241,7 +293,7 @@ const ImpulsPro = () => {
             {/* СОЗВОН 2 */}
             <div className="border-2 border-[#9A1E15] rounded-2xl overflow-hidden">
               <div className="bg-[#9A1E14] px-6 py-4 flex items-center gap-4">
-                <span className="text-white/40 font-black text-4xl leading-none">02</span>
+                <span className="text-white/30 font-black text-5xl leading-none select-none">02</span>
                 <div>
                   <p className="text-white/70 font-semibold text-sm uppercase tracking-widest">Созвон №2</p>
                   <p className="text-white font-bold text-xl md:text-2xl">Превращаем интерес в заявки</p>
@@ -251,65 +303,67 @@ const ImpulsPro = () => {
                 <p className="text-base md:text-lg text-foreground leading-relaxed">
                   На втором созвоне мы переходим от подготовки к реальным продажам. Именно здесь начинается работа с заявками, диалогами и интересом аудитории.
                 </p>
-                {[
-                  { title: "Создадим структуру продающей переписки. Без навязчивых продаж — вы сможете:", items: ["вызывать доверие", "доносить ценность своих услуг", "уверенно рассказывать о своих продуктах", "переводить интерес в заявки", "продавать экологично"] },
-                  { title: "Уберём главные страхи продаж:", items: ["боюсь продавать", "не умею доносить ценность", "не знаю, что отвечать клиентам", "боюсь показаться навязчивым"] },
-                  { title: "Работа с нейро-продажником. Специальный помощник поможет:", items: ["создавать продающие переписки", "отвечать на возражения", "доносить ценность продукта", "переводить интерес в заявку", "уверенно вести диалог с клиентом", "собирать заявки и оплаты"] },
-                ].map((block, i) => (
-                  <div key={i} className="space-y-2">
-                    <p className="font-bold text-base text-foreground">{block.title}</p>
-                    <div className="space-y-1 pl-2">
-                      {block.items.map((item, j) => (
-                        <div key={j} className="flex items-start gap-2">
-                          <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
-                          <p className="text-base text-foreground">{item}</p>
-                        </div>
-                      ))}
-                    </div>
+
+                <div className="space-y-2">
+                  <p className="font-bold text-base text-foreground">Создадим структуру продающей переписки. Без навязчивых продаж — вы сможете:</p>
+                  <div className="space-y-1 pl-2">
+                    {["вызывать доверие", "доносить ценность своих услуг", "уверенно рассказывать о своих продуктах", "переводить интерес в заявки", "продавать экологично"].map((item, j) => (
+                      <ArrowItem key={j} text={item} />
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                <div className="space-y-2">
+                  <p className="font-bold text-base text-foreground">Уберём главные страхи продаж:</p>
+                  <div className="space-y-1 pl-2">
+                    {["боюсь продавать", "не умею доносить ценность", "не знаю, что отвечать клиентам", "боюсь показаться навязчивым"].map((item, j) => (
+                      <DotItem key={j} text={item} />
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <p className="font-bold text-base text-foreground">Работа с нейро-продажником. Специальный помощник поможет:</p>
+                  <div className="space-y-1 pl-2">
+                    {["создавать продающие переписки", "отвечать на возражения", "доносить ценность продукта", "переводить интерес в заявку", "уверенно вести диалог с клиентом", "собирать заявки и оплаты"].map((item, j) => (
+                      <StarItem key={j} text={item} />
+                    ))}
+                  </div>
+                </div>
+
                 <div className="bg-[#9A1E14]/5 border border-[#9A1E14]/30 rounded-xl p-4 space-y-2">
-                  <p className="font-bold text-base text-[#9A1E14]">После созвона у вас будет:</p>
+                  <p className="font-bold text-base text-[#9A1E14]">Результат второго созвона:</p>
                   {["понятная система общения с клиентами", "уверенность в продажах без давления", "первые заявки или активные диалоги с потенциальными клиентами", "понимание, как вызывать интерес у аудитории и превращать его в продажи"].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2">
-                      <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
-                      <p className="text-base text-foreground">{item}</p>
-                    </div>
+                    <CheckItem key={i} text={item} />
                   ))}
                 </div>
 
                 {/* КОНТЕНТ-ЧЕЛЛЕНДЖ */}
-                <div className="border border-[#9A1E15]/40 rounded-xl overflow-hidden mt-2">
-                  <div className="bg-[#9A1E14]/10 px-5 py-3">
-                    <p className="font-black text-base text-[#9A1E14] uppercase tracking-wide">7-дневный контент-челлендж</p>
-                    <p className="text-sm text-muted-foreground">Стартует после второго созвона</p>
+                <div className="border border-[#9A1E15]/40 rounded-xl overflow-hidden">
+                  <div className="bg-[#9A1E14]/10 px-5 py-3 flex items-center gap-3">
+                    <span className="text-2xl">⚡</span>
+                    <div>
+                      <p className="font-black text-base text-[#9A1E14] uppercase tracking-wide">7-дневный контент-челлендж</p>
+                      <p className="text-sm text-muted-foreground">Стартует после второго созвона</p>
+                    </div>
                   </div>
                   <div className="p-5 space-y-4">
                     <div className="space-y-2">
                       <p className="font-bold text-base text-foreground">Каждый день вы будете получать:</p>
                       {["короткий видеоурок", "шаблон поста", "нейропомощника для создания текста", "мою обратную связь"].map((item, i) => (
-                        <div key={i} className="flex items-start gap-2">
-                          <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
-                          <p className="text-base text-foreground">{item}</p>
-                        </div>
+                        <ArrowItem key={i} text={item} />
                       ))}
                     </div>
                     <div className="space-y-2">
                       <p className="font-bold text-base text-foreground">За 7 дней вы создадите контент, который:</p>
                       {["вовлекает аудиторию", "вызывает доверие", "показывает вашу экспертность", "помогает подписчикам узнать себя", "прогревает к покупке", "приводит заявки"].map((item, i) => (
-                        <div key={i} className="flex items-start gap-2">
-                          <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
-                          <p className="text-base text-foreground">{item}</p>
-                        </div>
+                        <StarItem key={i} text={item} />
                       ))}
                     </div>
                     <div className="bg-[#9A1E14]/5 border border-[#9A1E14]/20 rounded-lg p-3 space-y-1">
                       <p className="font-bold text-sm text-[#9A1E14]">Результат челленджа:</p>
                       {["понимание, как через контент вызывать доверие и получать заявки без постоянных продаж в лоб", "7 постов, которые последовательно ведут подписчиков от интереса к заявке", "активная и вовлечённая аудитория", "система создания контента без мучений и ступора", "заявки из контента"].map((item, i) => (
-                        <div key={i} className="flex items-start gap-2">
-                          <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
-                          <p className="text-sm text-foreground">{item}</p>
-                        </div>
+                        <CheckItem key={i} text={item} />
                       ))}
                     </div>
                   </div>
@@ -320,7 +374,7 @@ const ImpulsPro = () => {
             {/* СОЗВОН 3 */}
             <div className="border-2 border-[#9A1E15] rounded-2xl overflow-hidden">
               <div className="bg-[#9A1E14] px-6 py-4 flex items-center gap-4">
-                <span className="text-white/40 font-black text-4xl leading-none">03</span>
+                <span className="text-white/30 font-black text-5xl leading-none select-none">03</span>
                 <div>
                   <p className="text-white/70 font-semibold text-sm uppercase tracking-widest">Созвон №3</p>
                   <p className="text-white font-bold text-xl md:text-2xl">Докручиваем результат и создаём план на лето</p>
@@ -330,29 +384,29 @@ const ImpulsPro = () => {
                 <p className="text-base md:text-lg text-foreground leading-relaxed">
                   На финальном созвоне мы подведём итоги и посмотрим, что уже сработало именно у вас.
                 </p>
-                {[
-                  { title: "Разберём:", items: ["какие действия дали лучший результат", "что привело заявки", "что можно усилить", "какие действия стоит убрать", "как увеличить количество заявок дальше"] },
-                  { title: "Создадим личную летнюю стратегию. Вы поймёте:", items: ["что делать дальше", "как продолжать получать заявки", "как развивать свой канал", "как масштабировать результат", "как прийти к стабильным продажам"] },
-                ].map((block, i) => (
-                  <div key={i} className="space-y-2">
-                    <p className="font-bold text-base text-foreground">{block.title}</p>
-                    <div className="space-y-1 pl-2">
-                      {block.items.map((item, j) => (
-                        <div key={j} className="flex items-start gap-2">
-                          <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
-                          <p className="text-base text-foreground">{item}</p>
-                        </div>
-                      ))}
-                    </div>
+
+                <div className="space-y-2">
+                  <p className="font-bold text-base text-foreground">Разберём:</p>
+                  <div className="space-y-1 pl-2">
+                    {["какие действия дали лучший результат", "что привело заявки", "что можно усилить", "какие действия стоит убрать", "как увеличить количество заявок дальше"].map((item, j) => (
+                      <ArrowItem key={j} text={item} />
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                <div className="space-y-2">
+                  <p className="font-bold text-base text-foreground">Создадим личную летнюю стратегию. Вы поймёте:</p>
+                  <div className="space-y-1 pl-2">
+                    {["что делать дальше", "как продолжать получать заявки", "как развивать свой канал", "как масштабировать результат", "как прийти к стабильным продажам"].map((item, j) => (
+                      <StarItem key={j} text={item} />
+                    ))}
+                  </div>
+                </div>
+
                 <div className="bg-[#9A1E14]/5 border border-[#9A1E14]/30 rounded-xl p-4 space-y-2">
-                  <p className="font-bold text-base text-[#9A1E14]">После созвона у вас будет:</p>
+                  <p className="font-bold text-base text-[#9A1E14]">Результат третьего созвона:</p>
                   {["персональная стратегия на лето", "понимание дальнейших шагов", "рабочая система продаж", "ясность и уверенность в своих действиях"].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2">
-                      <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
-                      <p className="text-base text-foreground">{item}</p>
-                    </div>
+                    <CheckItem key={i} text={item} />
                   ))}
                 </div>
               </div>
@@ -373,13 +427,13 @@ const ImpulsPro = () => {
               { icon: "🧬", name: "Нейро-Продажник", desc: "Ваш помощник по продажам и перепискам. Поможет уверенно доносить ценность своих услуг и не терять заявки.", result: "Больше уверенности в продажах и больше диалогов, которые приводят к оплатам." },
               { icon: "🎁", name: "Мастер-класс «Диагностики, после которых покупают»", desc: "Вы узнаете, как проводить встречи так, чтобы клиент видел ценность вашей помощи и принимал решение о работе.", result: "Больше продаж без давления и уговоров." },
             ].map((bonus, i) => (
-              <Card key={i} className="border-2 border-[#9A1E15]/30 shadow-sm hover:shadow-md transition-all">
+              <Card key={i} className="border-2 border-[#9A1E15]/30 shadow-sm hover:shadow-md transition-all hover:border-[#9A1E15]/60">
                 <CardContent className="pt-5 pb-5 space-y-2">
-                  <p className="text-2xl">{bonus.icon}</p>
+                  <p className="text-3xl">{bonus.icon}</p>
                   <p className="font-bold text-base text-[#9A1E14]">{bonus.name}</p>
                   <p className="text-base text-foreground leading-relaxed">{bonus.desc}</p>
-                  <div className="pt-1 border-t border-[#9A1E15]/20">
-                    <p className="text-sm font-semibold text-muted-foreground">Результат:</p>
+                  <div className="pt-2 border-t border-[#9A1E15]/20">
+                    <p className="text-sm font-bold text-[#9A1E14]">Результат:</p>
                     <p className="text-sm text-foreground">{bonus.result}</p>
                   </div>
                 </CardContent>
@@ -440,10 +494,7 @@ const ImpulsPro = () => {
                     "Доступ к записям — 14 дней",
                     "Доступ к нейропомощникам — 14 дней",
                   ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2">
-                      <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
-                      <p className="text-base text-foreground">{item}</p>
-                    </div>
+                    <CheckItem key={i} text={item} />
                   ))}
                 </div>
                 <div className="space-y-2 border-t border-[#9A1E15]/20 pt-3">
@@ -454,17 +505,24 @@ const ImpulsPro = () => {
                     "🧬 Нейро-Продажник",
                     "🎁 Мастер-класс «Диагностики, после которых покупают»",
                   ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2">
-                      <p className="text-base text-foreground">{item}</p>
-                    </div>
+                    <p key={i} className="text-base text-foreground pl-2">{item}</p>
                   ))}
                 </div>
-                <Button
-                  className="w-full bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white font-bold py-6 text-lg mt-2"
-                  onClick={() => navigate("/form")}
-                >
-                  Записаться
-                </Button>
+                <div className="flex flex-col gap-3 pt-2">
+                  <Button
+                    className="w-full bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white font-bold py-6 text-lg"
+                    onClick={() => navigate("/form")}
+                  >
+                    Оплатить
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="w-full border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/5 font-bold py-6 text-lg"
+                    onClick={() => navigate("/form")}
+                  >
+                    Оплатить в рассрочку
+                  </Button>
+                </div>
               </div>
             </div>
 
@@ -473,7 +531,7 @@ const ImpulsPro = () => {
               <div className="bg-gradient-to-br from-[#9A1E14] to-[#6b1510] px-6 py-5 text-center">
                 <p className="text-yellow-300 text-sm font-semibold uppercase tracking-widest mb-1">VIP</p>
                 <p className="text-white font-black text-4xl">24.990 <span className="text-2xl">₽</span></p>
-                <p className="text-white/80 text-sm mt-1">Максимально близко со Светланой</p>
+                <p className="text-white/80 text-sm mt-2 leading-snug">Для тех, кто хочет пройти этот путь со мной максимально близко и получить персональную стратегию роста</p>
               </div>
               <div className="p-6 space-y-4 flex-1 bg-white">
                 <div className="space-y-2">
@@ -490,18 +548,24 @@ const ImpulsPro = () => {
                     "Доступ к записям — 30 дней",
                     "Доступ к нейропомощникам — 30 дней",
                   ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2">
-                      <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
-                      <p className="text-base text-foreground">{item}</p>
-                    </div>
+                    <CheckItem key={i} text={item} />
                   ))}
                 </div>
-                <Button
-                  className="w-full bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white font-bold py-6 text-lg mt-2"
-                  onClick={() => navigate("/form")}
-                >
-                  Записаться на VIP
-                </Button>
+                <div className="flex flex-col gap-3 pt-2">
+                  <Button
+                    className="w-full bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white font-bold py-6 text-lg"
+                    onClick={() => navigate("/form")}
+                  >
+                    Оплатить VIP
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="w-full border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/5 font-bold py-6 text-lg"
+                    onClick={() => navigate("/form")}
+                  >
+                    Оплатить в рассрочку
+                  </Button>
+                </div>
               </div>
             </div>
 
@@ -510,8 +574,10 @@ const ImpulsPro = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-10 px-4 bg-[#9A1E14]">
-        <div className="max-w-5xl mx-auto text-center space-y-6">
+      <section className="py-10 px-4 bg-[#9A1E14] relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-40 h-40 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+        <div className="max-w-5xl mx-auto text-center space-y-6 relative">
           <h2 className="text-2xl md:text-4xl font-bold text-white">
             Готовы получить заявки уже через 14 дней?
           </h2>
