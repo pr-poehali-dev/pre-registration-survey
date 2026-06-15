@@ -536,7 +536,7 @@ const ImpulsPro = () => {
             <div className="border-2 border-[#9A1E15] rounded-2xl overflow-hidden flex flex-col">
               <div className="bg-[#9A1E14] px-6 py-5 text-center">
                 <p className="text-white/70 text-sm font-semibold uppercase tracking-widest mb-1">Групповой тариф</p>
-                <p className="text-white font-black text-4xl">9.990 <span className="text-2xl">руб.</span></p>
+                <p className="text-white font-black text-4xl">8.990 <span className="text-2xl">руб.</span></p>
                 <p className="text-yellow-300 font-semibold text-sm mt-1">До 21 июня</p>
                 <p className="text-white/60 text-sm line-through">Затем 14.990 руб.</p>
               </div>
@@ -554,17 +554,6 @@ const ImpulsPro = () => {
                     "Доступ к нейропомощникам — 14 дней",
                   ].map((item, i) => (
                     <CheckItem key={i} text={item} />
-                  ))}
-                </div>
-                <div className="space-y-2 border-t border-[#9A1E15]/20 pt-3">
-                  <p className="font-bold text-base text-foreground">Бонусы:</p>
-                  {[
-                    "🧬 Нейро-Распаковщик аудитории",
-                    "🧬 Нейро-Методолог",
-                    "🧬 Нейро-Продажник",
-                    "🎁 Мастер-класс «Диагностики, после которых покупают»",
-                  ].map((item, i) => (
-                    <p key={i} className="text-base text-foreground pl-2">{item}</p>
                   ))}
                 </div>
                 <div className="flex flex-col gap-2 pt-2">
@@ -591,6 +580,7 @@ const ImpulsPro = () => {
                   {[
                     "Персональная адаптация всей стратегии под вашу ситуацию",
                     "2 личных встречи со Светланой",
+                    "Создание лид-магнита, который приносит заявки",
                     "Персональный аудит канала и продаж",
                     "Личная докрутка продукта и оффера",
                     "Индивидуальная стратегия роста на 90 дней",
@@ -631,13 +621,20 @@ const ImpulsPro = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
             <a href="https://t.me/m/dRBjZM3ENGEy" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-white text-[#9A1E14] hover:bg-white/90 px-8 py-6 text-lg font-bold shadow-xl w-full sm:w-auto">
-                ✈️ Написать в TG
+              <Button size="lg" className="bg-white text-[#9A1E14] hover:bg-white/90 px-8 py-6 text-lg font-bold shadow-xl w-full sm:w-auto flex items-center gap-2">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.26 13.49l-2.956-.924c-.642-.204-.657-.642.136-.953l11.57-4.461c.537-.194 1.006.131.884.069z" fill="#9A1E14"/>
+                </svg>
+                Написать в TG
               </Button>
             </a>
             <a href="https://max.ru/u/f9LHodD0cOK6Z21Vn71NOwb_F8aXEEf6NPElRpoc1JvjKPBFGF-VlDNHu6k" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-bold w-full sm:w-auto">
-                💬 Написать в MAX
+              <Button size="lg" className="bg-white text-[#9A1E14] hover:bg-white/90 px-8 py-6 text-lg font-bold shadow-xl w-full sm:w-auto flex items-center gap-2">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="12" fill="#9A1E14"/>
+                  <text x="50%" y="50%" dominantBaseline="central" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold" fontFamily="Arial">MAX</text>
+                </svg>
+                Написать в MAX
               </Button>
             </a>
           </div>
