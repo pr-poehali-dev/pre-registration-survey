@@ -1,11 +1,25 @@
-import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Footer from "@/components/Footer";
 
-const ImpulsPro = () => {
-  const navigate = useNavigate();
+const reviewImages = [
+  "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/cdb221d0-67c4-4fee-96cc-606c25d3c806.png",
+  "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/6a4f83c8-ab33-476a-a284-edc51c36803f.png",
+  "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/79cab33d-8313-4f5a-8ad0-d2567ffc709a.png",
+  "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/8418ef70-f647-4baa-b55a-377fff350855.png",
+  "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/05c26f4c-ce0d-4808-92aa-d9bea67003e0.png",
+  "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/7fc652c5-9dd0-4690-b1a5-71621dcb08e8.png",
+  "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/f8a739f2-bf16-4608-8ad3-102a74276ca6.png",
+  "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/b4db252e-6e82-4b40-8a85-242a0ae88bad.png",
+  "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/4124a46d-3cd7-4805-8bf4-625d981679d2.png",
+  "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/33eec339-67cf-413e-b894-399b97fe8527.png",
+  "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/9f43954e-3e82-4af7-9454-069deb33e8d1.png",
+  "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/75928077-bd48-4bf5-a742-e546c0ed4414.png",
+  "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/68cad181-e2ce-4db2-8933-03d9651660cb.png",
+  "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/353e4b65-fbba-4b3e-8007-52f1e1046476.png",
+];
 
+const ImpulsPro = () => {
   const results = [
     "Поставите реалистичную финансовую цель на ближайшие 14 дней и получите план действий под неё",
     "Чёткое позиционирование и понимание своей ценности",
@@ -20,9 +34,9 @@ const ImpulsPro = () => {
   ];
 
   const format = [
-    { icon: "🎯", text: "3 групповых созвона" },
+    { icon: "🎯", text: "3 групповых встречи" },
     { icon: "🗺️", text: "Персональная дорожная xmind-карта действий" },
-    { icon: "📋", text: "Простые задания между созвонами, которые ведут к результату" },
+    { icon: "📋", text: "Простые задания между встречами, которые ведут к результату" },
     { icon: "💬", text: "Проверка и обратная связь от меня" },
     { icon: "⚡", text: "7-дневный контент-челлендж" },
     { icon: "📝", text: "Шаблоны продающих постов и продающих переписок" },
@@ -65,12 +79,16 @@ const ImpulsPro = () => {
     </div>
   );
 
+  const scrollCarousel = (dir: number) => {
+    const el = document.getElementById("impuls-reviews-carousel");
+    if (el) el.scrollBy({ left: dir * 290, behavior: "smooth" });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
 
       {/* HERO */}
       <section className="relative px-4 py-8 md:py-14 overflow-hidden bg-white">
-        {/* Декоративный элемент */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-[#9A1E14]/5 rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#9A1E14]/5 rounded-full translate-y-1/2 -translate-x-1/2 pointer-events-none" />
         <div className="max-w-5xl mx-auto relative">
@@ -102,9 +120,11 @@ const ImpulsPro = () => {
               <Button
                 size="lg"
                 className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse mx-auto md:mx-0"
-                onClick={() => navigate("/form")}
+                onClick={() => {
+                  document.getElementById("tariffs")?.scrollIntoView({ behavior: "smooth" });
+                }}
               >
-                Хочу заявки уже через 14 дней
+                Хочу заявки и продажи через 14 дней
               </Button>
               <p className="text-sm md:text-base text-muted-foreground font-medium">
                 Без сложных запусков, бесконечного обучения и долгой подготовки.
@@ -224,22 +244,22 @@ const ImpulsPro = () => {
       <section className="py-8 px-4 bg-white">
         <div className="max-w-5xl mx-auto space-y-4">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">Программа</h2>
-          <p className="text-center text-base md:text-lg text-muted-foreground">14 дней — 3 созвона — конкретный результат</p>
+          <p className="text-center text-base md:text-lg text-muted-foreground">14 дней — 3 встречи — конкретный результат</p>
 
           <div className="space-y-4">
 
-            {/* СОЗВОН 1 */}
+            {/* ВСТРЕЧА 1 */}
             <div className="border-2 border-[#9A1E15] rounded-2xl overflow-hidden">
               <div className="bg-[#9A1E14] px-6 py-4 flex items-center gap-4">
                 <span className="text-white/30 font-black text-5xl leading-none select-none">01</span>
                 <div>
-                  <p className="text-white/70 font-semibold text-sm uppercase tracking-widest">Созвон №1</p>
+                  <p className="text-white/70 font-semibold text-sm uppercase tracking-widest">Встреча №1</p>
                   <p className="text-white font-bold text-xl md:text-2xl">Создаём ваш план заявок и продаж</p>
                 </div>
               </div>
               <div className="p-6 space-y-5">
                 <p className="text-base md:text-lg text-foreground leading-relaxed">
-                  На первом созвоне мы разберём вашу текущую ситуацию и создадим персональную дорожную карту действий на ближайшие 14 дней.
+                  На первой встрече мы разберём вашу текущую ситуацию и создадим персональную дорожную карту действий на ближайшие 14 дней.
                 </p>
 
                 <div className="space-y-2">
@@ -279,8 +299,8 @@ const ImpulsPro = () => {
                 </div>
 
                 <div className="bg-[#9A1E14]/5 border border-[#9A1E14]/30 rounded-xl p-4 space-y-2">
-                  <p className="font-bold text-base text-[#9A1E14]">Результат первого созвона:</p>
-                  <p className="text-sm text-muted-foreground">После первого созвона у вас будет:</p>
+                  <p className="font-bold text-base text-[#9A1E14]">Результат первой встречи:</p>
+                  <p className="text-sm text-muted-foreground">После первой встречи у вас будет:</p>
                   {["персональная дорожная карта на 14 дней", "понимание своей аудитории", "готовый летний продукт для продажи", "понятное предложение для клиентов", "стратегия получения заявок под вашу финансовую цель"].map((item, i) => (
                     <CheckItem key={i} text={item} />
                   ))}
@@ -288,18 +308,18 @@ const ImpulsPro = () => {
               </div>
             </div>
 
-            {/* СОЗВОН 2 */}
+            {/* ВСТРЕЧА 2 */}
             <div className="border-2 border-[#9A1E15] rounded-2xl overflow-hidden">
               <div className="bg-[#9A1E14] px-6 py-4 flex items-center gap-4">
                 <span className="text-white/30 font-black text-5xl leading-none select-none">02</span>
                 <div>
-                  <p className="text-white/70 font-semibold text-sm uppercase tracking-widest">Созвон №2</p>
+                  <p className="text-white/70 font-semibold text-sm uppercase tracking-widest">Встреча №2</p>
                   <p className="text-white font-bold text-xl md:text-2xl">Превращаем интерес в заявки</p>
                 </div>
               </div>
               <div className="p-6 space-y-5">
                 <p className="text-base md:text-lg text-foreground leading-relaxed">
-                  На втором созвоне мы переходим от подготовки к реальным продажам. Именно здесь начинается работа с заявками, диалогами и интересом аудитории.
+                  На второй встрече мы переходим от подготовки к реальным продажам. Именно здесь начинается работа с заявками, диалогами и интересом аудитории.
                 </p>
 
                 <div className="space-y-2">
@@ -330,7 +350,7 @@ const ImpulsPro = () => {
                 </div>
 
                 <div className="bg-[#9A1E14]/5 border border-[#9A1E14]/30 rounded-xl p-4 space-y-2">
-                  <p className="font-bold text-base text-[#9A1E14]">Результат второго созвона:</p>
+                  <p className="font-bold text-base text-[#9A1E14]">Результат второй встречи:</p>
                   {["понятная система общения с клиентами", "уверенность в продажах без давления", "первые заявки или активные диалоги с потенциальными клиентами", "понимание, как вызывать интерес у аудитории и превращать его в продажи"].map((item, i) => (
                     <CheckItem key={i} text={item} />
                   ))}
@@ -342,7 +362,7 @@ const ImpulsPro = () => {
                     <span className="text-2xl">⚡</span>
                     <div>
                       <p className="font-black text-base text-[#9A1E14] uppercase tracking-wide">7-дневный контент-челлендж</p>
-                      <p className="text-sm text-muted-foreground">Стартует после второго созвона</p>
+                      <p className="text-sm text-muted-foreground">Стартует после второй встречи</p>
                     </div>
                   </div>
                   <div className="p-5 space-y-4">
@@ -369,18 +389,18 @@ const ImpulsPro = () => {
               </div>
             </div>
 
-            {/* СОЗВОН 3 */}
+            {/* ВСТРЕЧА 3 */}
             <div className="border-2 border-[#9A1E15] rounded-2xl overflow-hidden">
               <div className="bg-[#9A1E14] px-6 py-4 flex items-center gap-4">
                 <span className="text-white/30 font-black text-5xl leading-none select-none">03</span>
                 <div>
-                  <p className="text-white/70 font-semibold text-sm uppercase tracking-widest">Созвон №3</p>
+                  <p className="text-white/70 font-semibold text-sm uppercase tracking-widest">Встреча №3</p>
                   <p className="text-white font-bold text-xl md:text-2xl">Докручиваем результат и создаём план на лето</p>
                 </div>
               </div>
               <div className="p-6 space-y-5">
                 <p className="text-base md:text-lg text-foreground leading-relaxed">
-                  На финальном созвоне мы подведём итоги и посмотрим, что уже сработало именно у вас.
+                  На финальной встрече мы подведём итоги и посмотрим, что уже сработало именно у вас.
                 </p>
 
                 <div className="space-y-2">
@@ -402,7 +422,7 @@ const ImpulsPro = () => {
                 </div>
 
                 <div className="bg-[#9A1E14]/5 border border-[#9A1E14]/30 rounded-xl p-4 space-y-2">
-                  <p className="font-bold text-base text-[#9A1E14]">Результат третьего созвона:</p>
+                  <p className="font-bold text-base text-[#9A1E14]">Результат третьей встречи:</p>
                   {["персональная стратегия на лето", "понимание дальнейших шагов", "рабочая система продаж", "ясность и уверенность в своих действиях"].map((item, i) => (
                     <CheckItem key={i} text={item} />
                   ))}
@@ -465,8 +485,49 @@ const ImpulsPro = () => {
         </div>
       </section>
 
-      {/* ТАРИФЫ */}
+      {/* ОТЗЫВЫ */}
       <section className="py-8 px-4 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-5xl mx-auto space-y-5">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
+            Вот что говорят эксперты, после работы со мной:
+          </h2>
+          <div className="relative">
+            <div
+              id="impuls-reviews-carousel"
+              className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x snap-mandatory"
+            >
+              {reviewImages.map((src, i) => (
+                <div key={i} className="flex-shrink-0 snap-start border-2 border-[#9A1E15] rounded-2xl overflow-hidden w-72">
+                  <img src={src} alt={`Отзыв ${i + 1}`} className="w-full h-auto object-contain" />
+                </div>
+              ))}
+            </div>
+            <button
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-9 h-9 rounded-full bg-[#9A1E15] text-white flex items-center justify-center shadow-lg hover:bg-[#9A1E15]/80 transition-all z-10 text-xl"
+              onClick={() => scrollCarousel(-1)}
+            >‹</button>
+            <button
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-9 h-9 rounded-full bg-[#9A1E15] text-white flex items-center justify-center shadow-lg hover:bg-[#9A1E15]/80 transition-all z-10 text-xl"
+              onClick={() => scrollCarousel(1)}
+            >›</button>
+          </div>
+          <p className="text-center text-sm text-muted-foreground">← листайте →</p>
+          <div className="flex justify-center">
+            <a
+              href="https://t.me/+VO1vp0S0b4g4YzAy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" className="border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/5 font-semibold px-6 py-5">
+                📣 Все отзывы в Telegram
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ТАРИФЫ */}
+      <section id="tariffs" className="py-8 px-4 bg-white">
         <div className="max-w-5xl mx-auto space-y-5">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">Тарифы Импульс PRO</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -484,7 +545,7 @@ const ImpulsPro = () => {
                   <p className="font-bold text-base text-foreground">В тариф входит:</p>
                   {[
                     "14 дней работы в группе внедрения",
-                    "3 групповых созвона со Светланой",
+                    "3 групповых встречи со Светланой",
                     "Персональная дорожная карта действий",
                     "Проверка заданий и обратная связь",
                     "7-дневный контент-челлендж",
@@ -506,20 +567,13 @@ const ImpulsPro = () => {
                     <p key={i} className="text-base text-foreground pl-2">{item}</p>
                   ))}
                 </div>
-                <div className="flex flex-col gap-3 pt-2">
-                  <Button
-                    className="w-full bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white font-bold py-6 text-lg"
-                    onClick={() => navigate("/form")}
-                  >
-                    Оплатить
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="w-full border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/5 font-bold py-6 text-lg"
-                    onClick={() => navigate("/form")}
-                  >
-                    Оплатить в рассрочку
-                  </Button>
+                <div className="flex flex-col gap-2 pt-2">
+                  <a href="https://payform.ru/58bLOrJ/" target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white font-bold py-6 text-lg">
+                      Оплатить
+                    </Button>
+                  </a>
+                  <p className="text-center text-sm text-muted-foreground">Картой любой страны, в рассрочку или кредиткой без %</p>
                 </div>
               </div>
             </div>
@@ -536,7 +590,7 @@ const ImpulsPro = () => {
                   <p className="font-bold text-base text-foreground">Всё из группового тарифа +</p>
                   {[
                     "Персональная адаптация всей стратегии под вашу ситуацию",
-                    "2 личных созвона со Светланой",
+                    "2 личных встречи со Светланой",
                     "Персональный аудит канала и продаж",
                     "Личная докрутка продукта и оффера",
                     "Индивидуальная стратегия роста на 90 дней",
@@ -549,20 +603,13 @@ const ImpulsPro = () => {
                     <CheckItem key={i} text={item} />
                   ))}
                 </div>
-                <div className="flex flex-col gap-3 pt-2">
-                  <Button
-                    className="w-full bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white font-bold py-6 text-lg"
-                    onClick={() => navigate("/form")}
-                  >
-                    Оплатить VIP
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="w-full border-2 border-[#9A1E14] text-[#9A1E14] hover:bg-[#9A1E14]/5 font-bold py-6 text-lg"
-                    onClick={() => navigate("/form")}
-                  >
-                    Оплатить в рассрочку
-                  </Button>
+                <div className="flex flex-col gap-2 pt-2">
+                  <a href="https://payform.ru/o6bLOE6/" target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white font-bold py-6 text-lg">
+                      Оплатить VIP
+                    </Button>
+                  </a>
+                  <p className="text-center text-sm text-muted-foreground">Картой любой страны, в рассрочку или кредиткой без %</p>
                 </div>
               </div>
             </div>
@@ -575,20 +622,25 @@ const ImpulsPro = () => {
       <section className="py-10 px-4 bg-[#9A1E14] relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-40 h-40 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2 pointer-events-none" />
-        <div className="max-w-5xl mx-auto text-center space-y-6 relative">
+        <div className="max-w-5xl mx-auto text-center space-y-4 relative">
           <h2 className="text-2xl md:text-4xl font-bold text-white">
-            Готовы получить заявки уже через 14 дней?
+            Остался вопрос?
           </h2>
-          <Button
-            size="lg"
-            className="bg-white text-[#9A1E14] hover:bg-white/90 px-12 py-7 text-xl font-bold shadow-2xl transition-all"
-            onClick={() => navigate("/form")}
-          >
-            Записаться на Импульс PRO
-          </Button>
-          <p className="text-white/70 text-sm">
-            Без сложных запусков и долгой подготовки — только действия и результат
+          <p className="text-base md:text-lg text-white/80">
+            Задай мне лично в удобном мессенджере
           </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+            <a href="https://t.me/m/dRBjZM3ENGEy" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-white text-[#9A1E14] hover:bg-white/90 px-8 py-6 text-lg font-bold shadow-xl w-full sm:w-auto">
+                ✈️ Написать в TG
+              </Button>
+            </a>
+            <a href="https://max.ru/u/f9LHodD0cOK6Z21Vn71NOwb_F8aXEEf6NPElRpoc1JvjKPBFGF-VlDNHu6k" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-bold w-full sm:w-auto">
+                💬 Написать в MAX
+              </Button>
+            </a>
+          </div>
         </div>
       </section>
 
