@@ -1,6 +1,28 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Footer from "@/components/Footer";
+import { useEffect, useState } from "react";
+
+const DEADLINE = new Date("2026-06-17T23:59:00");
+
+function useCountdown(target: Date) {
+  const calc = () => {
+    const diff = Math.max(0, target.getTime() - Date.now());
+    return {
+      days: Math.floor(diff / 86400000),
+      hours: Math.floor((diff % 86400000) / 3600000),
+      minutes: Math.floor((diff % 3600000) / 60000),
+      seconds: Math.floor((diff % 60000) / 1000),
+      expired: diff === 0,
+    };
+  };
+  const [t, setT] = useState(calc);
+  useEffect(() => {
+    const id = setInterval(() => setT(calc()), 1000);
+    return () => clearInterval(id);
+  }, []);
+  return t;
+}
 
 const reviewImages = [
   "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/cdb221d0-67c4-4fee-96cc-606c25d3c806.png",
@@ -20,6 +42,8 @@ const reviewImages = [
 ];
 
 const ImpulsPro = () => {
+  const countdown = useCountdown(DEADLINE);
+
   const results = [
     "Поставите реалистичную финансовую цель на ближайшие 14 дней и получите план действий под неё",
     "Чёткое позиционирование и понимание своей ценности",
@@ -557,6 +581,28 @@ const ImpulsPro = () => {
                   ))}
                 </div>
                 <div className="flex flex-col gap-2 pt-2">
+                  {countdown.expired ? (
+                    <p className="text-center text-sm font-semibold text-[#9A1E14]">Акция завершена</p>
+                  ) : (
+                    <div className="bg-[#9A1E14]/5 border border-[#9A1E14]/20 rounded-xl p-3 text-center space-y-1">
+                      <p className="text-xs text-muted-foreground uppercase tracking-wide font-semibold">Цена 8.990 руб. действует ещё:</p>
+                      <div className="flex justify-center gap-2">
+                        {[
+                          { v: countdown.days, l: "дней" },
+                          { v: countdown.hours, l: "часов" },
+                          { v: countdown.minutes, l: "минут" },
+                          { v: countdown.seconds, l: "секунд" },
+                        ].map(({ v, l }) => (
+                          <div key={l} className="flex flex-col items-center">
+                            <span className="bg-[#9A1E14] text-white font-black text-xl w-12 h-10 flex items-center justify-center rounded-lg leading-none">
+                              {String(v).padStart(2, "0")}
+                            </span>
+                            <span className="text-[10px] text-muted-foreground mt-0.5">{l}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                   <a href="https://payform.ru/58bLOrJ/" target="_blank" rel="noopener noreferrer">
                     <Button className="w-full bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white font-bold py-6 text-lg">
                       Оплатить
