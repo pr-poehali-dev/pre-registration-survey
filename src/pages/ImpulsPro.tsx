@@ -81,7 +81,7 @@ function FaqSection() {
                 className="w-full flex items-center gap-3 px-5 py-4 text-left"
                 onClick={() => setOpen(open === i ? null : i)}
               >
-                <span className="text-xl shrink-0">👆</span>
+                <span className="w-2 h-2 rounded-full bg-[#9A1E14] shrink-0 mt-0.5" />
                 <span className="flex-1 font-semibold text-[#1a1a1a] text-sm md:text-base leading-snug">{faq.q}</span>
                 <span className={`text-[#9A1E14] shrink-0 transition-transform duration-200 ${open === i ? "rotate-180" : ""}`}>▾</span>
               </button>
