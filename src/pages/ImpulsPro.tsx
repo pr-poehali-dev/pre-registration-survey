@@ -444,7 +444,7 @@ const ImpulsPro = () => {
                   <div className="bg-[#9A1E14]/10 px-5 py-3 flex items-center gap-3">
                     <span className="text-2xl">⚡</span>
                     <div>
-                      <p className="font-black text-base text-[#9A1E14] uppercase tracking-wide">7-дневный контент-челлендж</p>
+                      <p className="font-black text-base text-[#9A1E14] uppercase tracking-wide">7-дневный спринт-контент</p>
                       <p className="text-sm text-muted-foreground">Стартует после второй встречи</p>
                     </div>
                   </div>
@@ -462,7 +462,7 @@ const ImpulsPro = () => {
                       ))}
                     </div>
                     <div className="bg-[#9A1E14]/5 border border-[#9A1E14]/20 rounded-lg p-3 space-y-1">
-                      <p className="font-bold text-sm text-[#9A1E14]">Результат челленджа:</p>
+                      <p className="font-bold text-sm text-[#9A1E14]">Результат спринта:</p>
                       {["понимание, как через контент вызывать доверие и получать заявки без постоянных продаж в лоб", "7 постов, которые последовательно ведут подписчиков от интереса к заявке", "активная и вовлечённая аудитория", "система создания контента без мучений и ступора", "заявки из контента"].map((item, i) => (
                         <CheckItem key={i} text={item} />
                       ))}
