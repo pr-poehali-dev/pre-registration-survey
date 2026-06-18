@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 
-const DEADLINE = new Date("2026-06-17T23:59:00");
+const DEADLINE = new Date("2026-06-28T23:59:00");
 
 function useCountdown(target: Date) {
   const calc = () => {
@@ -619,8 +619,8 @@ const ImpulsPro = () => {
             <div className="border-2 border-[#9A1E15] rounded-2xl overflow-hidden flex flex-col">
               <div className="bg-[#9A1E14] px-6 py-5 text-center">
                 <p className="text-white/70 text-sm font-semibold uppercase tracking-widest mb-1">Групповой тариф</p>
-                <p className="text-white font-black text-4xl">8.990 <span className="text-2xl">руб.</span></p>
-                <p className="text-yellow-300 font-semibold text-sm mt-1">только 16 и 17 июня</p>
+                <p className="text-white font-black text-4xl">9.990 <span className="text-2xl">руб.</span></p>
+                <p className="text-yellow-300 font-semibold text-sm mt-1">только до 28 июня</p>
                 <p className="text-white/60 text-sm line-through">Затем 14.990 руб.</p>
               </div>
               <div className="p-6 space-y-4 flex-1 bg-white">
@@ -644,7 +644,7 @@ const ImpulsPro = () => {
                     <p className="text-center text-sm font-semibold text-[#9A1E14]">Акция завершена</p>
                   ) : (
                     <div className="bg-[#9A1E14]/5 border border-[#9A1E14]/20 rounded-xl p-3 text-center space-y-1">
-                      <p className="text-xs text-muted-foreground uppercase tracking-wide font-semibold">Цена 8.990 руб. действует ещё:</p>
+                      <p className="text-xs text-muted-foreground uppercase tracking-wide font-semibold">Цена 9.990 руб. действует ещё:</p>
                       <div className="flex justify-center gap-2">
                         {[
                           { v: countdown.days, l: "дней" },
@@ -662,7 +662,7 @@ const ImpulsPro = () => {
                       </div>
                     </div>
                   )}
-                  <a href="https://payform.ru/58bLOrJ/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://payform.ru/mcbNfl8/" target="_blank" rel="noopener noreferrer">
                     <Button className="w-full bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white font-bold py-6 text-lg">
                       Оплатить
                     </Button>
