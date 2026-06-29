@@ -640,7 +640,7 @@ const ImpulsPro = () => {
                 </div>
                 <div className="flex flex-col gap-2 pt-2">
                   {countdown.expired ? (
-                    <p className="text-center text-sm font-semibold text-[#9A1E14]">Акция завершена</p>
+                    <p className="text-center text-sm font-semibold text-[#9A1E14]">осталось 1 место</p>
                   ) : (
                     <div className="bg-[#9A1E14]/5 border border-[#9A1E14]/20 rounded-xl p-3 text-center space-y-1">
                       <p className="text-xs text-muted-foreground uppercase tracking-wide font-semibold">Цена 9.990 руб. действует ещё:</p>
