@@ -185,7 +185,7 @@ const ImpulsPro = () => {
               />
             </div>
             <div className="space-y-5 text-center md:text-left">
-              <p className="text-base font-semibold text-muted-foreground">📅 29 июня — 12 июля</p>
+              <p className="text-base font-semibold text-muted-foreground">Интенсив завершён</p>
               <div>
                 <span
                   className="text-4xl md:text-6xl font-black tracking-tight text-[#9A1E14]"
@@ -661,12 +661,7 @@ const ImpulsPro = () => {
                       </div>
                     </div>
                   )}
-                  <a href="https://payform.ru/mcbNfl8/" target="_blank" rel="noopener noreferrer">
-                    <Button className="w-full bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white font-bold py-6 text-lg">
-                      Оплатить
-                    </Button>
-                  </a>
-                  <p className="text-center text-sm text-muted-foreground">Картой любой страны, в рассрочку или кредиткой без %</p>
+                  <p className="text-center text-sm font-semibold text-[#9A1E14]">Интенсив завершён</p>
                 </div>
               </div>
             </div>
@@ -698,12 +693,7 @@ const ImpulsPro = () => {
                   ))}
                 </div>
                 <div className="flex flex-col gap-2 pt-2">
-                  <a href="https://payform.ru/o6bLOE6/" target="_blank" rel="noopener noreferrer">
-                    <Button className="w-full bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white font-bold py-6 text-lg">
-                      Оплатить VIP
-                    </Button>
-                  </a>
-                  <p className="text-center text-sm text-muted-foreground">Картой любой страны, в рассрочку или кредиткой без %</p>
+                  <p className="text-center text-sm font-semibold text-[#9A1E14]">Интенсив завершён</p>
                 </div>
               </div>
             </div>
