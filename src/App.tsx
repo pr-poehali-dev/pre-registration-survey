@@ -13,6 +13,7 @@ import Tracking from "./pages/Tracking";
 import Razbor from "./pages/Razbor";
 import Usloviya from "./pages/Usloviya";
 import EfirZapis from "./pages/EfirZapis";
+import PlanProdag from "./pages/PlanProdag";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/razbor" element={<Razbor />} />
           <Route path="/usloviya" element={<Usloviya />} />
           <Route path="/impuls-pro" element={<EfirZapis />} />
+          <Route path="/plan_prodag" element={<PlanProdag />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
