@@ -117,7 +117,7 @@ const Tracking = () => {
               <Button
                 size="lg"
                 className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all animate-pulse flex items-center gap-2 mx-auto md:mx-0"
-                onClick={() => navigate('/usloviya')}
+                onClick={() => document.getElementById('tariffs')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Хочу продажи и клиентов
               </Button>
@@ -584,7 +584,7 @@ const Tracking = () => {
         </div>
       </section>
 
-      <section className="py-4 px-4 bg-gradient-to-br from-gray-50 to-white">
+      <section id="tariffs" className="py-4 px-4 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-6xl mx-auto space-y-6">
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
