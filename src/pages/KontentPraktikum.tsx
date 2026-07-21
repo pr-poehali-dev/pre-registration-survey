@@ -38,10 +38,6 @@ const KontentPraktikum = () => {
 
             {/* Текст */}
             <div className="space-y-6 text-center md:text-left">
-              <span className="inline-block border-2 border-[#C99A4A] text-[#9A1E14] font-bold text-sm md:text-base tracking-widest px-6 py-2 rounded-full">
-                РАБОЧАЯ ТЕТРАДЬ · ПРАКТИКУМ
-              </span>
-
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight text-foreground leading-tight">
                 «Контент, после которого <span className="text-[#9A1E14]">покупают</span>»
               </h1>
@@ -409,85 +405,38 @@ const KontentPraktikum = () => {
       <section className="py-6 px-4 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-6xl mx-auto space-y-6">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
-            Результаты моих учеников:
+            Отзывы учеников:
           </h2>
           <div className="relative">
             <div id="reviews-carousel" className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x snap-mandatory">
               {[
-                {
-                  photo: "https://cdn.poehali.dev/files/MARINA-GOLOVKO-Nastavnik-dlya-MLM.png",
-                  name: "Марина Головко",
-                  profession: "Наставник для МЛМ",
-                  desc: "+375.000 руб."
-                },
-                {
-                  photo: "https://cdn.poehali.dev/files/MARIYa-ALEJNIKOVA.png",
-                  name: "Мария Алейникова",
-                  profession: "Эксперт по продажам",
-                  desc: "337.000 руб на тесте новой воронки"
-                },
-                {
-                  photo: "https://cdn.poehali.dev/files/NATALYa-SMIRNOVA-Kouch.png",
-                  name: "Наталья Смирнова",
-                  profession: "Коуч",
-                  desc: "300.000₽ в первую неделю запуска"
-                },
-                {
-                  photo: "https://cdn.poehali.dev/files/OLGA-KVARTALNOVA-Brejn-trener-245000-rub.png",
-                  name: "Ольга Кварталнова",
-                  profession: "Брейн-тренер",
-                  desc: "+245.000 руб."
-                },
-                {
-                  photo: "https://cdn.poehali.dev/files/OLGA-MAR-185000-rub-Specialist-po-trafiku.png",
-                  name: "Ольга Мар",
-                  profession: "Специалист по трафику",
-                  desc: "+185.000 руб."
-                },
-                {
-                  photo: "https://cdn.poehali.dev/files/Zulfiya-Nastavnik-mentor-dlya-ekspertov.png",
-                  name: "Зульфия",
-                  profession: "Наставник, ментор для экспертов",
-                  desc: "858.000 руб. за 2 месяца"
-                },
-                {
-                  photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/b0abbb1a-b9a5-48e4-b02a-b3c39f5eb520.png",
-                  name: "Светлана Пичугина",
-                  profession: "Эксперт по работе с бессознательным",
-                  desc: "185.000₽ за 12 дней"
-                },
-                {
-                  photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/8b3a46f4-13ce-4cab-b762-34c4ed933338.png",
-                  name: "Ольга Никонова",
-                  profession: "Психолог",
-                  desc: "+162.000₽ за 3 недели"
-                },
-                {
-                  photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/21bbbeb7-dd17-4e18-9642-e07d89e0245e.png",
-                  name: "Светлана Даниленко",
-                  profession: "Нумеролог, эзотерик",
-                  desc: "64.000₽ за 4 недели с нуля"
-                }
-              ].map((client, i) => (
-                <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64 bg-[#9A1E15]/5 flex-shrink-0 snap-start">
-                  <div className="w-28 h-28 rounded-full border-4 border-[#9A1E15] overflow-hidden flex-shrink-0 bg-[#9A1E15]/10 flex items-center justify-center">
-                    <img src={client.photo} alt={client.name} className="w-full h-full object-cover" />
-                  </div>
-                  <div className="text-center space-y-1">
-                    <p className="font-bold text-base text-[#9A1E15]">{client.name}</p>
-                    <p className="text-sm font-bold text-foreground">{client.profession}</p>
-                    <p className="text-sm text-muted-foreground leading-snug">{client.desc}</p>
-                  </div>
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/cdb221d0-67c4-4fee-96cc-606c25d3c806.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/6a4f83c8-ab33-476a-a284-edc51c36803f.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/79cab33d-8313-4f5a-8ad0-d2567ffc709a.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/8418ef70-f647-4baa-b55a-377fff350855.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/05c26f4c-ce0d-4808-92aa-d9bea67003e0.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/7fc652c5-9dd0-4690-b1a5-71621dcb08e8.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/f8a739f2-bf16-4608-8ad3-102a74276ca6.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/b4db252e-6e82-4b40-8a85-242a0ae88bad.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/4124a46d-3cd7-4805-8bf4-625d981679d2.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/33eec339-67cf-413e-b894-399b97fe8527.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/9f43954e-3e82-4af7-9454-069deb33e8d1.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/75928077-bd48-4bf5-a742-e546c0ed4414.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/68cad181-e2ce-4db2-8933-03d9651660cb.png",
+                "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/353e4b65-fbba-4b3e-8007-52f1e1046476.png",
+              ].map((src, i) => (
+                <div key={i} className="flex-shrink-0 snap-start border-2 border-[#9A1E15] rounded-2xl overflow-hidden w-72">
+                  <img src={src} alt={`Отзыв ${i + 1}`} className="w-full h-auto object-contain" />
                 </div>
               ))}
             </div>
             <button
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-9 h-9 rounded-full bg-[#9A1E15] text-white flex items-center justify-center shadow-lg hover:bg-[#9A1E15]/80 transition-all z-10"
-              onClick={() => { const el = document.getElementById('reviews-carousel'); if (el) el.scrollBy({ left: -280, behavior: 'smooth' }); }}
+              onClick={() => { const el = document.getElementById('reviews-carousel'); if (el) el.scrollBy({ left: -290, behavior: 'smooth' }); }}
             >‹</button>
             <button
               className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-9 h-9 rounded-full bg-[#9A1E15] text-white flex items-center justify-center shadow-lg hover:bg-[#9A1E15]/80 transition-all z-10"
-              onClick={() => { const el = document.getElementById('reviews-carousel'); if (el) el.scrollBy({ left: 280, behavior: 'smooth' }); }}
+              onClick={() => { const el = document.getElementById('reviews-carousel'); if (el) el.scrollBy({ left: 290, behavior: 'smooth' }); }}
             >›</button>
           </div>
           <p className="text-center text-sm text-muted-foreground">← листайте →</p>
@@ -508,7 +457,7 @@ const KontentPraktikum = () => {
                 <p className="text-4xl md:text-5xl font-black text-[#9A1E14]">7 900 ₽</p>
               </div>
               <p className="text-sm md:text-base text-muted-foreground">
-                Старт — 3 августа. Только 10 мест, чтобы я могла качественно сопровождать каждого участника.
+                Старт — 3 августа.
               </p>
               <a href={PAYMENT_URL} target="_blank" rel="noopener noreferrer" className="block">
                 <Button
