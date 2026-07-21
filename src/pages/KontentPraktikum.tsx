@@ -10,36 +10,77 @@ const KontentPraktikum = () => {
     document.getElementById("price")?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white overflow-x-hidden">
       <style>{`
         @keyframes pulse-scale {
           0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(154, 30, 20, 0.4); }
           50% { transform: scale(1.03); box-shadow: 0 0 0 8px rgba(154, 30, 20, 0); }
         }
+        @keyframes float-y {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-14px) rotate(4deg); }
+        }
+        @keyframes float-y-slow {
+          0%, 100% { transform: translateY(0px) rotate(-3deg); }
+          50% { transform: translateY(-10px) rotate(3deg); }
+        }
+        @keyframes blob-move {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(20px, -20px) scale(1.08); }
+          66% { transform: translate(-15px, 15px) scale(0.95); }
+        }
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
         .btn-pulse-red { animation: pulse-scale 2s ease-in-out infinite; }
         .btn-pulse-red:hover { animation: none; opacity: 0.9; }
+        .float-badge { animation: float-y 4s ease-in-out infinite; }
+        .float-badge-slow { animation: float-y-slow 5.5s ease-in-out infinite; }
+        .blob { animation: blob-move 9s ease-in-out infinite; filter: blur(40px); }
+        .spin-slow { animation: spin-slow 12s linear infinite; }
+        .tilt-card { transition: transform 0.35s ease, box-shadow 0.35s ease; }
+        .tilt-card:hover { transform: translateY(-6px) rotate(-0.5deg); }
+        .badge-3d {
+          background: linear-gradient(135deg, #9A1E14 0%, #C84B40 60%, #C99A4A 100%);
+          box-shadow: 0 10px 25px -8px rgba(154,30,20,0.55), inset 0 2px 4px rgba(255,255,255,0.25), inset 0 -3px 6px rgba(0,0,0,0.2);
+        }
       `}</style>
 
       {/* HERO */}
-      <section className="relative px-4 py-6 md:py-10 overflow-hidden bg-white">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative px-4 py-10 md:py-14 overflow-hidden bg-white">
+        {/* decorative blobs */}
+        <div className="blob absolute -top-10 -left-10 w-56 h-56 rounded-full bg-[#C99A4A]/25 pointer-events-none" />
+        <div className="blob absolute top-1/3 -right-16 w-72 h-72 rounded-full bg-[#9A1E14]/15 pointer-events-none" style={{ animationDelay: '2s' }} />
+        <span className="float-badge absolute top-10 right-8 md:right-24 text-4xl md:text-5xl select-none pointer-events-none drop-shadow-lg">✨</span>
+        <span className="float-badge-slow absolute bottom-8 left-4 md:left-16 text-3xl md:text-4xl select-none pointer-events-none drop-shadow-lg">🚀</span>
+
+        <div className="max-w-6xl mx-auto relative">
           <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
             {/* Фото */}
-            <div className="flex-shrink-0 flex justify-center md:justify-start">
+            <div className="flex-shrink-0 flex justify-center md:justify-start relative">
+              <div className="absolute -inset-6 rounded-full bg-gradient-to-br from-[#C99A4A]/30 via-[#9A1E14]/10 to-transparent blur-2xl" />
               <div className="relative">
                 <img
                   src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/d8b25a80-a37d-42fa-98a6-a37e9f697b0d.png"
                   alt="Светлана Скорнякова"
-                  className="w-64 md:w-80 lg:w-96 h-auto object-contain drop-shadow-2xl"
+                  className="w-64 md:w-80 lg:w-96 h-auto object-contain drop-shadow-2xl relative z-10"
                   style={{ mixBlendMode: 'multiply' }}
                 />
               </div>
             </div>
 
             {/* Текст */}
-            <div className="space-y-6 text-center md:text-left">
+            <div className="space-y-6 text-center md:text-left relative z-10">
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight text-foreground leading-tight">
-                «Контент, после которого <span className="text-[#9A1E14]">покупают</span>»
+                «Контент, после которого{" "}
+                <span className="relative inline-block text-[#9A1E14]">
+                  покупают
+                  <svg className="absolute -bottom-2 left-0 w-full" height="10" viewBox="0 0 200 10" preserveAspectRatio="none">
+                    <path d="M0 6 Q50 0 100 5 T200 4" stroke="#C99A4A" strokeWidth="4" fill="none" strokeLinecap="round" />
+                  </svg>
+                </span>
+                »
               </h1>
 
               <p className="text-lg md:text-xl text-[#9A1E14] font-bold">
@@ -63,8 +104,9 @@ const KontentPraktikum = () => {
       </section>
 
       {/* БОЛЬ / ПРОБЛЕМА */}
-      <section className="py-4 px-4 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-3xl mx-auto space-y-4 text-foreground text-base md:text-lg leading-relaxed">
+      <section className="relative py-6 px-4 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+        <div className="blob absolute top-10 right-0 w-64 h-64 rounded-full bg-[#9A1E14]/10 pointer-events-none" />
+        <div className="max-w-3xl mx-auto space-y-4 text-foreground text-base md:text-lg leading-relaxed relative">
           <p>
             Вы ведете канал, пишете полезные посты, стараетесь быть активными и даже выкладываете продающие публикации.
           </p>
@@ -74,7 +116,8 @@ const KontentPraktikum = () => {
           </p>
           <p className="font-semibold">А заявок и продаж снова нет.</p>
 
-          <Card className="border-2 border-[#C99A4A] bg-white shadow-md">
+          <Card className="relative border-2 border-[#C99A4A] bg-white shadow-md tilt-card overflow-visible">
+            <span className="float-badge absolute -top-6 -left-4 text-4xl select-none drop-shadow-md">💭</span>
             <CardContent className="pt-6 pb-6 text-center">
               <p className="text-xl md:text-2xl font-bold text-[#9A1E14]">
                 « Наверное, сейчас никто не покупает. »
@@ -88,7 +131,7 @@ const KontentPraktikum = () => {
           <p>
             Проблема в том, что ваши посты не работают друг с другом. Они не складываются в единую систему, которая постепенно помогает человеку:
           </p>
-          <ul className="space-y-1 pl-2">
+          <ul className="space-y-2 pl-2">
             {[
               "сначала узнать себя",
               "затем осознать проблему",
@@ -96,8 +139,10 @@ const KontentPraktikum = () => {
               "довериться вам",
               "и только после этого принять решение купить",
             ].map((item, i) => (
-              <li key={i} className="flex items-start gap-2">
-                <span className="text-[#9A1E14] font-bold flex-shrink-0">—</span>
+              <li key={i} className="flex items-center gap-3">
+                <span className="w-7 h-7 rounded-full badge-3d text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
+                  {i + 1}
+                </span>
                 <span>{item}</span>
               </li>
             ))}
@@ -109,8 +154,9 @@ const KontentPraktikum = () => {
       </section>
 
       {/* ЧТО ВЫ ПОЛУЧИТЕ */}
-      <section className="py-6 px-4 bg-white">
-        <div className="max-w-3xl mx-auto space-y-4">
+      <section className="relative py-6 px-4 bg-white overflow-hidden">
+        <span className="float-badge-slow absolute top-6 right-6 md:right-16 text-4xl select-none pointer-events-none drop-shadow-md">💡</span>
+        <div className="max-w-3xl mx-auto space-y-4 relative">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             Что вы получите
           </h2>
@@ -120,12 +166,14 @@ const KontentPraktikum = () => {
           <p className="text-base md:text-lg text-foreground leading-relaxed">
             Не шаблон, не контент-план «на месяц» и не список идей, а работающую систему, которую сразу начнете внедрять.
           </p>
-          <Card className="border-2 border-[#9A1E15]/30 shadow-md bg-gray-50">
-            <CardContent className="pt-6 space-y-2">
+          <Card className="border-2 border-[#9A1E15]/30 shadow-md bg-gray-50 tilt-card">
+            <CardContent className="pt-6 space-y-3">
               <p className="font-medium">Пока другие продолжают думать: «Что бы сегодня написать?», вы будете точно понимать:</p>
               {["какой пост публиковать сегодня", "зачем он нужен", "какую задачу он решает", "как он будет подводить подписчика к покупке"].map((item, i) => (
-                <div key={i} className="flex items-start gap-2">
-                  <span className="text-[#9A1E14] font-bold flex-shrink-0">✔️</span>
+                <div key={i} className="flex items-center gap-3">
+                  <span className="w-7 h-7 rounded-lg badge-3d text-white flex items-center justify-center flex-shrink-0">
+                    <Icon name="Check" size={14} />
+                  </span>
                   <span>{item}</span>
                 </div>
               ))}
@@ -134,7 +182,8 @@ const KontentPraktikum = () => {
           <p className="text-base md:text-lg text-foreground leading-relaxed">
             В результате ваш блог перестанет быть набором отдельных публикаций и превратится в понятный маршрут для клиента — от первого интереса до заявки или покупки.
           </p>
-          <Card className="border-2 border-[#9A1E15] bg-[#9A1E15]/5 shadow-md">
+          <Card className="relative border-2 border-[#9A1E15] bg-[#9A1E15]/5 shadow-md overflow-visible">
+            <span className="float-badge absolute -top-5 right-6 text-3xl select-none drop-shadow-md">🎯</span>
             <CardContent className="pt-6">
               <p className="font-medium text-center">
                 Мы не будем писать тексты «в стол» — уже с первых дней вы начнете публиковать новые посты в своем блоге, увидите активность аудитории и выстроите систему, которая начинает работать на продажи.
@@ -145,12 +194,13 @@ const KontentPraktikum = () => {
       </section>
 
       {/* ДЛЯ КОГО */}
-      <section className="py-6 px-4 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-3xl mx-auto space-y-3">
+      <section className="relative py-6 px-4 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+        <div className="blob absolute bottom-0 left-0 w-60 h-60 rounded-full bg-[#C99A4A]/20 pointer-events-none" />
+        <div className="max-w-3xl mx-auto space-y-3 relative">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             Этот практикум для вас, если...
           </h2>
-          <Card className="border-2 border-[#9A1E15]/30 shadow-lg bg-white">
+          <Card className="border-2 border-[#9A1E15]/30 shadow-lg bg-white tilt-card">
             <CardContent className="pt-6 space-y-3">
               {[
                 "Вы регулярно ведете блог, но продажи появляются от случая к случаю",
@@ -161,7 +211,9 @@ const KontentPraktikum = () => {
                 "Вы понимаете, что даже маленький блог может приносить клиентов, если контент выстроен правильно",
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <span className="text-[#9A1E14] font-bold text-lg flex-shrink-0">—</span>
+                  <span className="w-6 h-6 rounded-full badge-3d text-white text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Icon name="ArrowRight" size={12} />
+                  </span>
                   <p className="text-base md:text-lg text-foreground">{item}</p>
                 </div>
               ))}
@@ -171,8 +223,9 @@ const KontentPraktikum = () => {
       </section>
 
       {/* РЕЗУЛЬТАТ */}
-      <section className="py-6 px-4 bg-white">
-        <div className="max-w-3xl mx-auto space-y-3">
+      <section className="relative py-6 px-4 bg-white overflow-hidden">
+        <span className="float-badge absolute top-4 left-4 md:left-12 text-4xl select-none pointer-events-none drop-shadow-md">🏆</span>
+        <div className="max-w-3xl mx-auto space-y-3 relative">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             В результате через 14 дней у вас будет
           </h2>
@@ -187,8 +240,10 @@ const KontentPraktikum = () => {
               "Первые заявки или продажи",
               "Пошаговый план действий на следующие 30 дней",
             ].map((item, i) => (
-              <div key={i} className="flex items-start gap-2 bg-gray-50 rounded-xl p-4">
-                <span className="text-[#9A1E14] font-bold flex-shrink-0">✔️</span>
+              <div key={i} className="tilt-card flex items-start gap-3 bg-gray-50 rounded-xl p-4 shadow-sm">
+                <span className="w-8 h-8 rounded-xl badge-3d text-white flex items-center justify-center flex-shrink-0">
+                  <Icon name="Star" size={16} />
+                </span>
                 <p className="text-base text-foreground">{item}</p>
               </div>
             ))}
@@ -197,12 +252,12 @@ const KontentPraktikum = () => {
       </section>
 
       {/* ЧТО НЕ ПОЛУЧИТЕ */}
-      <section className="py-6 px-4 bg-gradient-to-br from-gray-50 to-white">
+      <section className="relative py-6 px-4 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
         <div className="max-w-3xl mx-auto space-y-3">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             Что вы НЕ получите
           </h2>
-          <Card className="border-2 border-gray-300 bg-white shadow-sm">
+          <Card className="border-2 border-gray-300 bg-white shadow-sm tilt-card">
             <CardContent className="pt-6 space-y-3">
               {[
                 "Еще один курс по копирайтингу",
@@ -212,7 +267,9 @@ const KontentPraktikum = () => {
                 "Волшебную кнопку «один пост = сто продаж»",
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <span className="text-gray-400 flex-shrink-0">❌</span>
+                  <span className="w-6 h-6 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Icon name="X" size={12} />
+                  </span>
                   <p className="text-base md:text-lg text-foreground">{item}</p>
                 </div>
               ))}
@@ -225,8 +282,9 @@ const KontentPraktikum = () => {
       </section>
 
       {/* ПРОГРАММА 4 ШАГА */}
-      <section className="py-6 px-4 bg-white">
-        <div className="max-w-3xl mx-auto space-y-5">
+      <section className="relative py-6 px-4 bg-white overflow-hidden">
+        <div className="blob absolute top-1/2 -right-10 w-72 h-72 rounded-full bg-[#9A1E14]/10 pointer-events-none" />
+        <div className="max-w-3xl mx-auto space-y-5 relative">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             Что мы сделаем за 14 дней
           </h2>
@@ -235,6 +293,7 @@ const KontentPraktikum = () => {
             {
               num: "1",
               icon: "Users",
+              emoji: "🔍",
               title: "Поймем, кто действительно покупает ваш продукт",
               text: "Чтобы писать контент, который приводит к продажам, сначала нужно понять, кому именно вы продаете.",
               points: [
@@ -249,6 +308,7 @@ const KontentPraktikum = () => {
             {
               num: "2",
               icon: "Package",
+              emoji: "🎁",
               title: "Упакуем продукт так, чтобы его хотелось купить",
               text: "Контент начинает продавать только тогда, когда вы точно понимаете, что именно хотите продать и к какому действию хотите привести человека.",
               points: [
@@ -262,6 +322,7 @@ const KontentPraktikum = () => {
             {
               num: "3",
               icon: "Sparkles",
+              emoji: "🪄",
               title: "Сделаем так, чтобы контент звучал как вы, а не как нейросеть",
               text: "Чтобы контент не выглядел шаблонным или написанным нейросетью, мы сохраним вашу индивидуальность.",
               points: [
@@ -275,6 +336,7 @@ const KontentPraktikum = () => {
             {
               num: "4",
               icon: "Link",
+              emoji: "⛓️",
               title: "Создадим цепочку контента, после которого покупают",
               text: "Каждый день вы будете создавать один элемент системы контента, которая постепенно приводит подписчиков к покупке.",
               points: [
@@ -286,13 +348,17 @@ const KontentPraktikum = () => {
               note: "На каждом этапе вам будет помогать мой авторский AI-ассистент, который адаптирует структуру под вашу нишу, поможет сохранить ваш стиль и значительно ускорит создание контента.",
             },
           ].map((step) => (
-            <Card key={step.num} className="border-2 border-[#9A1E15]/30 shadow-md bg-gray-50">
+            <Card key={step.num} className="relative border-2 border-[#9A1E15]/30 shadow-md bg-gray-50 tilt-card overflow-visible">
+              <span className="absolute -top-4 -right-3 text-3xl select-none drop-shadow-md rotate-6">{step.emoji}</span>
               <CardContent className="pt-6 space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#9A1E14] text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
+                  <div className="w-12 h-12 rounded-2xl badge-3d text-white flex items-center justify-center font-black text-xl flex-shrink-0 rotate-3">
                     {step.num}
                   </div>
-                  <h3 className="text-lg md:text-xl font-bold text-foreground">{step.title}</h3>
+                  <div className="flex items-center gap-2">
+                    <Icon name={step.icon} size={18} className="text-[#9A1E14] flex-shrink-0" />
+                    <h3 className="text-lg md:text-xl font-bold text-foreground">{step.title}</h3>
+                  </div>
                 </div>
                 <p className="text-base text-foreground">{step.text}</p>
                 <div className="space-y-1 pl-2">
@@ -313,11 +379,11 @@ const KontentPraktikum = () => {
       </section>
 
       {/* БОНУС */}
-      <section className="py-6 px-4 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-3xl mx-auto">
-          <Card className="border-2 border-[#C99A4A] bg-white shadow-lg">
-            <CardContent className="pt-6 space-y-3">
-              <p className="text-center text-2xl">🎁</p>
+      <section className="relative py-6 px-4 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+        <div className="max-w-3xl mx-auto relative">
+          <Card className="relative border-2 border-[#C99A4A] bg-white shadow-lg overflow-visible">
+            <span className="float-badge absolute -top-8 left-1/2 -translate-x-1/2 text-5xl select-none drop-shadow-lg">🎁</span>
+            <CardContent className="pt-10 space-y-3">
               <h2 className="text-xl md:text-2xl font-bold text-[#9A1E14] text-center">
                 Специальный бонус: индивидуальная стратегия продаж на 30 дней
               </h2>
@@ -343,8 +409,9 @@ const KontentPraktikum = () => {
       </section>
 
       {/* ФОРМАТ */}
-      <section className="py-6 px-4 bg-white">
-        <div className="max-w-3xl mx-auto space-y-4">
+      <section className="relative py-6 px-4 bg-white overflow-hidden">
+        <div className="blob absolute bottom-10 -left-16 w-64 h-64 rounded-full bg-[#C99A4A]/15 pointer-events-none" />
+        <div className="max-w-3xl mx-auto space-y-4 relative">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             Формат участия
           </h2>
@@ -385,10 +452,10 @@ const KontentPraktikum = () => {
                 text: "В завершение практикума каждый участник получит персональную стратегическую сессию и готовый план дальнейших действий.",
               },
             ].map((item, i) => (
-              <Card key={i} className="border-2 border-[#9A1E15]/20 shadow-sm bg-gray-50">
+              <Card key={i} className="tilt-card border-2 border-[#9A1E15]/20 shadow-sm bg-gray-50">
                 <CardContent className="pt-5 pb-5 flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#9A1E14]/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name={item.icon} size={20} className="text-[#9A1E14]" />
+                  <div className="w-11 h-11 rounded-2xl badge-3d flex items-center justify-center flex-shrink-0 rotate-3">
+                    <Icon name={item.icon} size={20} className="text-white" />
                   </div>
                   <div>
                     <p className="font-bold text-foreground">{item.title}</p>
@@ -402,7 +469,7 @@ const KontentPraktikum = () => {
       </section>
 
       {/* ОТЗЫВЫ */}
-      <section className="py-6 px-4 bg-gradient-to-br from-gray-50 to-white">
+      <section className="relative py-6 px-4 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
         <div className="max-w-6xl mx-auto space-y-6">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
             Отзывы учеников:
@@ -426,7 +493,7 @@ const KontentPraktikum = () => {
                 "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/68cad181-e2ce-4db2-8933-03d9651660cb.png",
                 "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/353e4b65-fbba-4b3e-8007-52f1e1046476.png",
               ].map((src, i) => (
-                <div key={i} className="flex-shrink-0 snap-start border-2 border-[#9A1E15] rounded-2xl overflow-hidden w-72">
+                <div key={i} className="flex-shrink-0 snap-start border-2 border-[#9A1E15] rounded-2xl overflow-hidden w-72 shadow-md">
                   <img src={src} alt={`Отзыв ${i + 1}`} className="w-full h-auto object-contain" />
                 </div>
               ))}
@@ -445,8 +512,13 @@ const KontentPraktikum = () => {
       </section>
 
       {/* ЦЕНА / CTA */}
-      <section id="price" className="py-10 px-4 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-2xl mx-auto text-center space-y-6">
+      <section id="price" className="relative py-10 px-4 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+        <div className="blob absolute top-0 left-1/4 w-72 h-72 rounded-full bg-[#9A1E14]/10 pointer-events-none" />
+        <div className="blob absolute bottom-0 right-1/4 w-64 h-64 rounded-full bg-[#C99A4A]/15 pointer-events-none" style={{ animationDelay: '3s' }} />
+        <span className="float-badge absolute top-6 left-6 md:left-20 text-4xl select-none pointer-events-none drop-shadow-md">🔥</span>
+        <span className="float-badge-slow absolute bottom-10 right-6 md:right-20 text-4xl select-none pointer-events-none drop-shadow-md">💸</span>
+
+        <div className="max-w-2xl mx-auto text-center space-y-6 relative">
           <Card className="border-2 border-[#9A1E15] shadow-xl bg-white">
             <CardContent className="pt-8 pb-8 space-y-4">
               <span className="inline-block bg-[#9A1E14] text-white font-bold text-xs md:text-sm tracking-wide px-4 py-1.5 rounded-full">
