@@ -326,6 +326,20 @@ const KontentPraktikum = () => {
         </div>
       </section>
 
+      {/* CTA-1 */}
+      <section className="py-6 px-4 bg-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <a href={PAYMENT_URL} target="_blank" rel="noopener noreferrer">
+            <Button
+              size="lg"
+              className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all btn-pulse-red"
+            >
+              Иду на практикум
+            </Button>
+          </a>
+        </div>
+      </section>
+
       {/* ПРОГРАММА 4 ШАГА */}
       <section className="relative py-6 px-4 bg-white overflow-hidden">
         <div className="blob absolute top-1/2 -right-10 w-72 h-72 rounded-full bg-[#9A1E14]/10 pointer-events-none" />
@@ -536,6 +550,20 @@ const KontentPraktikum = () => {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA-2 */}
+      <section className="py-6 px-4 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <a href={PAYMENT_URL} target="_blank" rel="noopener noreferrer">
+            <Button
+              size="lg"
+              className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all btn-pulse-red"
+            >
+              Вписаться в контент-практикум
+            </Button>
+          </a>
         </div>
       </section>
 
