@@ -69,12 +69,6 @@ const KontentPraktikum = () => {
           mask-composite: exclude;
           z-index: 1;
         }
-        .gift-ribbon-v {
-          background: linear-gradient(90deg, #7a1610, #C99A4A, #7a1610);
-        }
-        .gift-ribbon-h {
-          background: linear-gradient(180deg, #7a1610, #C99A4A, #7a1610);
-        }
         .sparkle { animation: sparkle-twinkle 2.4s ease-in-out infinite; }
         .shine-text {
           background: linear-gradient(90deg, #f5d98f 0%, #C99A4A 25%, #fff5db 50%, #C99A4A 75%, #f5d98f 100%);
@@ -451,14 +445,6 @@ const KontentPraktikum = () => {
 
           <div className="gift-card rounded-3xl p-[3px] shadow-2xl" style={{ animation: 'ribbon-glow 3s ease-in-out infinite' }}>
             <div className="relative rounded-3xl overflow-hidden">
-              {/* ribbon cross */}
-              <div className="gift-ribbon-v absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-8 md:w-10 opacity-90 z-10" />
-              <div className="gift-ribbon-h absolute left-0 right-0 top-8 md:top-9 h-8 md:h-10 opacity-90 z-10" />
-              {/* ribbon bow center */}
-              <div className="absolute left-1/2 top-8 md:top-9 -translate-x-1/2 -translate-y-1/2 z-20 text-3xl md:text-4xl drop-shadow-lg">
-                🎀
-              </div>
-
               <div className="relative pt-16 pb-8 px-6 md:px-10 space-y-5 text-center">
                 <span className="inline-block bg-gradient-to-r from-[#C99A4A] to-[#f5d98f] text-[#2b0e0a] font-bold text-xs md:text-sm tracking-widest px-4 py-1.5 rounded-full shadow-md">
                   СПЕЦИАЛЬНЫЙ ПОДАРОК КАЖДОМУ УЧАСТНИКУ
