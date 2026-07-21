@@ -11,6 +11,9 @@ const KontentPraktikum = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white overflow-x-hidden">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
       <style>{`
         @keyframes pulse-scale {
           0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(154, 30, 20, 0.4); }
@@ -32,6 +35,54 @@ const KontentPraktikum = () => {
         @keyframes spin-slow {
           from { transform: rotate(0deg); }
           to { transform: rotate(360deg); }
+        }
+        @keyframes shimmer {
+          0% { background-position: -200% 0; }
+          100% { background-position: 200% 0; }
+        }
+        @keyframes sparkle-twinkle {
+          0%, 100% { opacity: 0.3; transform: scale(0.8) rotate(0deg); }
+          50% { opacity: 1; transform: scale(1.2) rotate(15deg); }
+        }
+        @keyframes ribbon-glow {
+          0%, 100% { box-shadow: 0 0 15px rgba(201,154,74,0.5), 0 0 30px rgba(201,154,74,0.2); }
+          50% { box-shadow: 0 0 25px rgba(201,154,74,0.8), 0 0 45px rgba(201,154,74,0.4); }
+        }
+        .font-handwritten { font-family: 'Caveat', cursive; }
+        .gift-card {
+          background: linear-gradient(135deg, #2b0e0a 0%, #4a140d 35%, #6b1810 65%, #2b0e0a 100%);
+          border: 2px solid transparent;
+          background-clip: padding-box;
+          position: relative;
+        }
+        .gift-card::before {
+          content: '';
+          position: absolute;
+          inset: -2px;
+          border-radius: inherit;
+          padding: 2px;
+          background: linear-gradient(120deg, #C99A4A, #f5d98f, #C99A4A, #8a6423, #C99A4A);
+          background-size: 300% 300%;
+          animation: shimmer 4s linear infinite;
+          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          z-index: 1;
+        }
+        .gift-ribbon-v {
+          background: linear-gradient(90deg, #7a1610, #C99A4A, #7a1610);
+        }
+        .gift-ribbon-h {
+          background: linear-gradient(180deg, #7a1610, #C99A4A, #7a1610);
+        }
+        .sparkle { animation: sparkle-twinkle 2.4s ease-in-out infinite; }
+        .shine-text {
+          background: linear-gradient(90deg, #f5d98f 0%, #C99A4A 25%, #fff5db 50%, #C99A4A 75%, #f5d98f 100%);
+          background-size: 200% auto;
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          animation: shimmer 3.5s linear infinite;
         }
         .btn-pulse-red { animation: pulse-scale 2s ease-in-out infinite; }
         .btn-pulse-red:hover { animation: none; opacity: 0.9; }
@@ -379,32 +430,66 @@ const KontentPraktikum = () => {
       </section>
 
       {/* БОНУС */}
-      <section className="relative py-6 px-4 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+      <section className="relative py-10 px-4 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+        {/* decorative sparkles around section */}
+        <span className="sparkle absolute top-8 left-6 md:left-20 text-2xl select-none pointer-events-none">✨</span>
+        <span className="sparkle absolute top-20 right-8 md:right-24 text-xl select-none pointer-events-none" style={{ animationDelay: '0.8s' }}>✨</span>
+        <span className="sparkle absolute bottom-10 left-1/4 text-lg select-none pointer-events-none" style={{ animationDelay: '1.5s' }}>✨</span>
+        <span className="sparkle absolute bottom-16 right-1/4 text-2xl select-none pointer-events-none" style={{ animationDelay: '0.4s' }}>✨</span>
+
         <div className="max-w-3xl mx-auto relative">
-          <Card className="relative border-2 border-[#C99A4A] bg-white shadow-lg overflow-visible">
-            <span className="float-badge absolute -top-8 left-1/2 -translate-x-1/2 text-5xl select-none drop-shadow-lg">🎁</span>
-            <CardContent className="pt-10 space-y-3">
-              <h2 className="text-xl md:text-2xl font-bold text-[#9A1E14] text-center">
-                Специальный бонус: индивидуальная стратегия продаж на 30 дней
-              </h2>
-              <p className="text-base text-foreground text-center">
-                Каждый участник практикума получит персональную стратегическую сессию со мной, на которой мы разработаем индивидуальный план развития вашего проекта с учетом вашей текущей ситуации, продукта и финансовой цели.
-              </p>
-              <div className="space-y-2 pl-2">
-                {[
-                  "проанализируем результаты практикума и определим точки роста",
-                  "разложим вашу финансовую цель на конкретные показатели и действия",
-                  "составим пошаговый план продаж на ближайшие 30 дней",
-                  "определим, какой контент, действия и каналы привлечения помогут регулярно получать заявки и клиентов",
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <span className="text-[#9A1E14] flex-shrink-0">✔️</span>
-                    <span className="text-sm md:text-base text-foreground">{item}</span>
-                  </div>
-                ))}
+          {/* floating gift badge */}
+          <div
+            className="float-badge absolute -top-9 left-1/2 -translate-x-1/2 z-20 w-16 h-16 rounded-full flex items-center justify-center text-4xl"
+            style={{
+              background: 'radial-gradient(circle at 35% 30%, #fff5db, #C99A4A 60%, #8a6423 100%)',
+              boxShadow: '0 10px 25px -5px rgba(154,30,20,0.5), 0 0 0 4px rgba(255,255,255,0.6)',
+            }}
+          >
+            🎁
+          </div>
+
+          <div className="gift-card rounded-3xl p-[3px] shadow-2xl" style={{ animation: 'ribbon-glow 3s ease-in-out infinite' }}>
+            <div className="relative rounded-3xl overflow-hidden">
+              {/* ribbon cross */}
+              <div className="gift-ribbon-v absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-8 md:w-10 opacity-90 z-10" />
+              <div className="gift-ribbon-h absolute left-0 right-0 top-8 md:top-9 h-8 md:h-10 opacity-90 z-10" />
+              {/* ribbon bow center */}
+              <div className="absolute left-1/2 top-8 md:top-9 -translate-x-1/2 -translate-y-1/2 z-20 text-3xl md:text-4xl drop-shadow-lg">
+                🎀
               </div>
-            </CardContent>
-          </Card>
+
+              <div className="relative pt-16 pb-8 px-6 md:px-10 space-y-5 text-center">
+                <span className="inline-block bg-gradient-to-r from-[#C99A4A] to-[#f5d98f] text-[#2b0e0a] font-bold text-xs md:text-sm tracking-widest px-4 py-1.5 rounded-full shadow-md">
+                  СПЕЦИАЛЬНЫЙ ПОДАРОК КАЖДОМУ УЧАСТНИКУ
+                </span>
+
+                <h2 className="text-2xl md:text-3xl font-black text-white leading-snug">
+                  <span className="shine-text font-handwritten text-4xl md:text-5xl block mb-1">
+                    Индивидуальная стратегия продаж на 30 дней
+                  </span>
+                </h2>
+
+                <p className="text-sm md:text-base text-white/85 max-w-xl mx-auto leading-relaxed">
+                  Каждый участник практикума получит персональную стратегическую сессию со мной, на которой мы разработаем индивидуальный план развития вашего проекта с учетом вашей текущей ситуации, продукта и финансовой цели.
+                </p>
+
+                <div className="grid sm:grid-cols-2 gap-3 text-left max-w-xl mx-auto pt-2">
+                  {[
+                    "проанализируем результаты практикума и определим точки роста",
+                    "разложим вашу финансовую цель на конкретные показатели и действия",
+                    "составим пошаговый план продаж на ближайшие 30 дней",
+                    "определим, какой контент, действия и каналы привлечения помогут регулярно получать заявки и клиентов",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-2 bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/10">
+                      <span className="text-[#f5d98f] flex-shrink-0">✦</span>
+                      <span className="text-xs md:text-sm text-white/90">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
