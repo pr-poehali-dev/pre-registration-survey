@@ -21,31 +21,48 @@ const KontentPraktikum = () => {
       `}</style>
 
       {/* HERO */}
-      <section className="relative px-4 py-10 md:py-14 overflow-hidden bg-white">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <span className="inline-block border-2 border-[#C99A4A] text-[#9A1E14] font-bold text-sm md:text-base tracking-widest px-6 py-2 rounded-full">
-            РАБОЧАЯ ТЕТРАДЬ · ПРАКТИКУМ
-          </span>
+      <section className="relative px-4 py-6 md:py-10 overflow-hidden bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+            {/* Фото */}
+            <div className="flex-shrink-0 flex justify-center md:justify-start">
+              <div className="relative">
+                <img
+                  src="https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/d8b25a80-a37d-42fa-98a6-a37e9f697b0d.png"
+                  alt="Светлана Скорнякова"
+                  className="w-64 md:w-80 lg:w-96 h-auto object-contain drop-shadow-2xl"
+                  style={{ mixBlendMode: 'multiply' }}
+                />
+              </div>
+            </div>
 
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight text-foreground leading-tight">
-            «Контент, после которого <span className="text-[#9A1E14]">покупают</span>»
-          </h1>
+            {/* Текст */}
+            <div className="space-y-6 text-center md:text-left">
+              <span className="inline-block border-2 border-[#C99A4A] text-[#9A1E14] font-bold text-sm md:text-base tracking-widest px-6 py-2 rounded-full">
+                РАБОЧАЯ ТЕТРАДЬ · ПРАКТИКУМ
+              </span>
 
-          <p className="text-lg md:text-xl text-[#9A1E14] font-bold">
-            14-дневный практикум
-          </p>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight text-foreground leading-tight">
+                «Контент, после которого <span className="text-[#9A1E14]">покупают</span>»
+              </h1>
 
-          <p className="text-lg md:text-xl text-foreground font-medium leading-relaxed max-w-2xl mx-auto">
-            Как превратить посты в систему, которая приводит к продажам даже в маленьком блоге
-          </p>
+              <p className="text-lg md:text-xl text-[#9A1E14] font-bold">
+                14-дневный практикум
+              </p>
 
-          <Button
-            size="lg"
-            className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all btn-pulse-red"
-            onClick={scrollToPrice}
-          >
-            Хочу на практикум
-          </Button>
+              <p className="text-lg md:text-xl text-foreground font-medium leading-relaxed">
+                Как превратить посты в систему, которая приводит к продажам даже в маленьком блоге
+              </p>
+
+              <Button
+                size="lg"
+                className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all btn-pulse-red mx-auto md:mx-0"
+                onClick={scrollToPrice}
+              >
+                Хочу на практикум
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -388,13 +405,108 @@ const KontentPraktikum = () => {
         </div>
       </section>
 
+      {/* ОТЗЫВЫ */}
+      <section className="py-6 px-4 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-6xl mx-auto space-y-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
+            Результаты моих учеников:
+          </h2>
+          <div className="relative">
+            <div id="reviews-carousel" className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x snap-mandatory">
+              {[
+                {
+                  photo: "https://cdn.poehali.dev/files/MARINA-GOLOVKO-Nastavnik-dlya-MLM.png",
+                  name: "Марина Головко",
+                  profession: "Наставник для МЛМ",
+                  desc: "+375.000 руб."
+                },
+                {
+                  photo: "https://cdn.poehali.dev/files/MARIYa-ALEJNIKOVA.png",
+                  name: "Мария Алейникова",
+                  profession: "Эксперт по продажам",
+                  desc: "337.000 руб на тесте новой воронки"
+                },
+                {
+                  photo: "https://cdn.poehali.dev/files/NATALYa-SMIRNOVA-Kouch.png",
+                  name: "Наталья Смирнова",
+                  profession: "Коуч",
+                  desc: "300.000₽ в первую неделю запуска"
+                },
+                {
+                  photo: "https://cdn.poehali.dev/files/OLGA-KVARTALNOVA-Brejn-trener-245000-rub.png",
+                  name: "Ольга Кварталнова",
+                  profession: "Брейн-тренер",
+                  desc: "+245.000 руб."
+                },
+                {
+                  photo: "https://cdn.poehali.dev/files/OLGA-MAR-185000-rub-Specialist-po-trafiku.png",
+                  name: "Ольга Мар",
+                  profession: "Специалист по трафику",
+                  desc: "+185.000 руб."
+                },
+                {
+                  photo: "https://cdn.poehali.dev/files/Zulfiya-Nastavnik-mentor-dlya-ekspertov.png",
+                  name: "Зульфия",
+                  profession: "Наставник, ментор для экспертов",
+                  desc: "858.000 руб. за 2 месяца"
+                },
+                {
+                  photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/b0abbb1a-b9a5-48e4-b02a-b3c39f5eb520.png",
+                  name: "Светлана Пичугина",
+                  profession: "Эксперт по работе с бессознательным",
+                  desc: "185.000₽ за 12 дней"
+                },
+                {
+                  photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/8b3a46f4-13ce-4cab-b762-34c4ed933338.png",
+                  name: "Ольга Никонова",
+                  profession: "Психолог",
+                  desc: "+162.000₽ за 3 недели"
+                },
+                {
+                  photo: "https://cdn.poehali.dev/projects/f8116922-d831-47a6-b444-7483fbdc7c3e/bucket/21bbbeb7-dd17-4e18-9642-e07d89e0245e.png",
+                  name: "Светлана Даниленко",
+                  profession: "Нумеролог, эзотерик",
+                  desc: "64.000₽ за 4 недели с нуля"
+                }
+              ].map((client, i) => (
+                <div key={i} className="border-2 border-[#9A1E15] rounded-2xl p-5 flex flex-col items-center gap-3 w-64 bg-[#9A1E15]/5 flex-shrink-0 snap-start">
+                  <div className="w-28 h-28 rounded-full border-4 border-[#9A1E15] overflow-hidden flex-shrink-0 bg-[#9A1E15]/10 flex items-center justify-center">
+                    <img src={client.photo} alt={client.name} className="w-full h-full object-cover" />
+                  </div>
+                  <div className="text-center space-y-1">
+                    <p className="font-bold text-base text-[#9A1E15]">{client.name}</p>
+                    <p className="text-sm font-bold text-foreground">{client.profession}</p>
+                    <p className="text-sm text-muted-foreground leading-snug">{client.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <button
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-9 h-9 rounded-full bg-[#9A1E15] text-white flex items-center justify-center shadow-lg hover:bg-[#9A1E15]/80 transition-all z-10"
+              onClick={() => { const el = document.getElementById('reviews-carousel'); if (el) el.scrollBy({ left: -280, behavior: 'smooth' }); }}
+            >‹</button>
+            <button
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-9 h-9 rounded-full bg-[#9A1E15] text-white flex items-center justify-center shadow-lg hover:bg-[#9A1E15]/80 transition-all z-10"
+              onClick={() => { const el = document.getElementById('reviews-carousel'); if (el) el.scrollBy({ left: 280, behavior: 'smooth' }); }}
+            >›</button>
+          </div>
+          <p className="text-center text-sm text-muted-foreground">← листайте →</p>
+        </div>
+      </section>
+
       {/* ЦЕНА / CTA */}
       <section id="price" className="py-10 px-4 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-2xl mx-auto text-center space-y-6">
           <Card className="border-2 border-[#9A1E15] shadow-xl bg-white">
             <CardContent className="pt-8 pb-8 space-y-4">
+              <span className="inline-block bg-[#9A1E14] text-white font-bold text-xs md:text-sm tracking-wide px-4 py-1.5 rounded-full">
+                СПЕЦЦЕНА ТОЛЬКО ДО 26 ИЮЛЯ · 3 МЕСТА
+              </span>
               <p className="text-base md:text-lg text-foreground">Стоимость участия</p>
-              <p className="text-4xl md:text-5xl font-black text-[#9A1E14]">10 000 ₽</p>
+              <div className="flex items-center justify-center gap-3">
+                <p className="text-2xl md:text-3xl font-bold text-gray-400 line-through">9 900 ₽</p>
+                <p className="text-4xl md:text-5xl font-black text-[#9A1E14]">7 900 ₽</p>
+              </div>
               <p className="text-sm md:text-base text-muted-foreground">
                 Старт — 3 августа. Только 10 мест, чтобы я могла качественно сопровождать каждого участника.
               </p>
