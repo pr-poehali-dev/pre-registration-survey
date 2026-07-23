@@ -23,31 +23,31 @@ const EfirZapis = () => {
           className="text-center py-5 px-6 rounded-2xl border-2 font-bold text-2xl md:text-3xl leading-tight"
           style={{ borderColor: '#9A1E14', color: '#9A1E14' }}
         >
-          Почему продажи до сих пор нестабильны?
+          Что именно вашему блогу поможет начать привлекать клиентов и приносить продажи?
         </div>
 
         <div className="text-gray-700 text-base md:text-lg leading-relaxed text-left md:text-center space-y-4">
-          <p>Именно это мы и разберем на нашей встрече.</p>
-          <p className="font-semibold text-gray-900">За 30–40 минут вы поймете:</p>
+          <p className="font-semibold text-gray-900">На разборе мы вместе:</p>
           <ul className="space-y-2 pl-2 text-left inline-block">
             <li className="flex items-start gap-2">
-              <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
-              <span>почему клиенты приходят нерегулярно</span>
+              <span className="text-[#9A1E14] font-bold flex-shrink-0">✔️</span>
+              <span>разберем, что сегодня мешает вашему блогу стабильно приносить заявки</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
-              <span>что сейчас мешает вам расти</span>
+              <span className="text-[#9A1E14] font-bold flex-shrink-0">✔️</span>
+              <span>посмотрим, на каком этапе вы теряете потенциальных клиентов</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
-              <span>какие действия дадут результат именно в вашей ситуации</span>
+              <span className="text-[#9A1E14] font-bold flex-shrink-0">✔️</span>
+              <span>определим точки роста именно для вашей ситуации — от привлечения новой аудитории до контента, прогрева и продаж</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-[#9A1E14] font-bold flex-shrink-0">✔</span>
-              <span>что делать дальше, чтобы начать получать клиентов стабильно</span>
+              <span className="text-[#9A1E14] font-bold flex-shrink-0">✔️</span>
+              <span>составим понятный план действий, который поможет превратить блог в работающую систему привлечения клиентов</span>
             </li>
           </ul>
-          <p>В конце встречи у вас будет готовый план действий на ближайшие 30–60 дней и понимание, куда направить свои усилия в первую очередь.</p>
+          <p>После встречи у вас будет не набор общих рекомендаций, а персональная стратегия развития блога с конкретными шагами, которые вы сможете начать внедрять сразу после встречи.</p>
+          <p>Если вы готовы превратить блог в инструмент, который регулярно приводит клиентов и продажи, — выберите удобный способ записи и напишите мне «Хочу разбор».</p>
         </div>
 
         <p className="text-left md:text-center text-gray-800 text-base md:text-lg font-medium">
