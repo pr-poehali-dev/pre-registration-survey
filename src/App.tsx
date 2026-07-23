@@ -8,6 +8,7 @@ import Webinar from "./pages/Webinar";
 import Tracking from "./pages/Tracking";
 import Usloviya from "./pages/Usloviya";
 import EfirZapis from "./pages/EfirZapis";
+import RazborBloga from "./pages/RazborBloga";
 import PlanProdag from "./pages/PlanProdag";
 import KontentPraktikum from "./pages/KontentPraktikum";
 import NotFound from "./pages/NotFound";
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/webinar" element={<Webinar />} />
           <Route path="/usloviya" element={<Usloviya />} />
           <Route path="/impuls-pro" element={<EfirZapis />} />
+          <Route path="/razbor-bloga" element={<RazborBloga />} />
           <Route path="/plan_prodag" element={<PlanProdag />} />
           <Route path="/kontent-praktikum" element={<KontentPraktikum />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
