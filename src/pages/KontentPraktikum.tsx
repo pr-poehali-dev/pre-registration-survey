@@ -621,7 +621,7 @@ const KontentPraktikum = () => {
           <Card className="border-2 border-[#9A1E15] shadow-xl bg-white">
             <CardContent className="pt-8 pb-8 space-y-4">
               <span className="inline-block bg-[#9A1E14] text-white font-bold text-xs md:text-sm tracking-wide px-4 py-1.5 rounded-full">
-                СПЕЦЦЕНА ТОЛЬКО ДО 26 ИЮЛЯ · 3 МЕСТА
+                СПЕЦЦЕНА ТОЛЬКО ДО 26 ИЮЛЯ · ОСТАЛОСЬ 1 МЕСТО ИЗ 3
               </span>
               <p className="text-base md:text-lg text-foreground">Стоимость участия</p>
               <div className="flex items-center justify-center gap-3">
