@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import Footer from "@/components/Footer";
 
-const PAYMENT_URL = "https://payform.ru/q8c46DE/";
+const PAYMENT_URL = "https://payform.ru/noc7iAv/";
 
 const KontentPraktikum = () => {
   const scrollToPrice = () =>
@@ -621,12 +621,11 @@ const KontentPraktikum = () => {
           <Card className="border-2 border-[#9A1E15] shadow-xl bg-white">
             <CardContent className="pt-8 pb-8 space-y-4">
               <span className="inline-block bg-[#9A1E14] text-white font-bold text-xs md:text-sm tracking-wide px-4 py-1.5 rounded-full">
-                СПЕЦЦЕНА ТОЛЬКО ДО 26 ИЮЛЯ · ОСТАЛОСЬ 1 МЕСТО ИЗ 3
+                ОСТАЛОСЬ 4 МЕСТА ИЗ 10
               </span>
               <p className="text-base md:text-lg text-foreground">Стоимость участия</p>
               <div className="flex items-center justify-center gap-3">
-                <p className="text-2xl md:text-3xl font-bold text-gray-400 line-through">9 900 ₽</p>
-                <p className="text-4xl md:text-5xl font-black text-[#9A1E14]">7 900 ₽</p>
+                <p className="text-4xl md:text-5xl font-black text-[#9A1E14]">9 900 ₽</p>
               </div>
               <p className="text-sm md:text-base text-muted-foreground">
                 Старт — 3 августа.
