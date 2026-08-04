@@ -1,13 +1,33 @@
+import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import Footer from "@/components/Footer";
 
-const PAYMENT_URL = "https://payform.ru/noc7iAv/";
+const PAYMENT_URL = "https://payform.ru/jdcc9xu/";
+const DEADLINE = new Date("2026-08-04T23:59:00");
+
+const getTimeLeft = () => {
+  const diff = DEADLINE.getTime() - Date.now();
+  if (diff <= 0) return { d: 0, h: 0, m: 0, s: 0 };
+  return {
+    d: Math.floor(diff / (1000 * 60 * 60 * 24)),
+    h: Math.floor((diff / (1000 * 60 * 60)) % 24),
+    m: Math.floor((diff / (1000 * 60)) % 60),
+    s: Math.floor((diff / 1000) % 60),
+  };
+};
 
 const KontentPraktikum = () => {
   const scrollToPrice = () =>
     document.getElementById("price")?.scrollIntoView({ behavior: "smooth" });
+
+  const [timeLeft, setTimeLeft] = useState(getTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => setTimeLeft(getTimeLeft()), 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white overflow-x-hidden">
@@ -611,34 +631,58 @@ const KontentPraktikum = () => {
       </section>
 
       {/* ЦЕНА / CTA */}
-      <section id="price" className="relative py-10 px-4 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+      <section id="price" className="relative py-10 px-4 bg-gradient-to-br from-[#fff8ec] to-white overflow-hidden">
         <div className="blob absolute top-0 left-1/4 w-72 h-72 rounded-full bg-[#9A1E14]/10 pointer-events-none" />
-        <div className="blob absolute bottom-0 right-1/4 w-64 h-64 rounded-full bg-[#C99A4A]/15 pointer-events-none" style={{ animationDelay: '3s' }} />
-        <span className="float-badge absolute top-6 left-6 md:left-20 text-4xl select-none pointer-events-none drop-shadow-md">🔥</span>
-        <span className="float-badge-slow absolute bottom-10 right-6 md:right-20 text-4xl select-none pointer-events-none drop-shadow-md">💸</span>
+        <div className="blob absolute bottom-0 right-1/4 w-64 h-64 rounded-full bg-[#C99A4A]/20 pointer-events-none" style={{ animationDelay: '3s' }} />
+        <span className="float-badge absolute top-6 left-6 md:left-20 text-4xl select-none pointer-events-none drop-shadow-md">🎉</span>
+        <span className="float-badge-slow absolute bottom-10 right-6 md:right-20 text-4xl select-none pointer-events-none drop-shadow-md">🎂</span>
+        <span className="float-badge absolute top-16 right-10 md:right-32 text-3xl select-none pointer-events-none drop-shadow-md" style={{ animationDelay: '1s' }}>🎈</span>
+        <span className="float-badge-slow absolute bottom-24 left-8 md:left-32 text-3xl select-none pointer-events-none drop-shadow-md" style={{ animationDelay: '2s' }}>✨</span>
 
         <div className="max-w-2xl mx-auto text-center space-y-6 relative">
-          <Card className="border-2 border-[#9A1E15] shadow-xl bg-white">
-            <CardContent className="pt-8 pb-8 space-y-4">
-              <span className="inline-block bg-[#9A1E14] text-white font-bold text-xs md:text-sm tracking-wide px-4 py-1.5 rounded-full">
-                ОСТАЛОСЬ 4 МЕСТА ИЗ 10
-              </span>
-              <p className="text-base md:text-lg text-foreground">Стоимость участия</p>
-              <div className="flex items-center justify-center gap-3">
-                <p className="text-4xl md:text-5xl font-black text-[#9A1E14]">9 900 ₽</p>
-              </div>
-              <p className="text-sm md:text-base text-muted-foreground">
-                Старт — 3 августа.
-              </p>
-              <a href={PAYMENT_URL} target="_blank" rel="noopener noreferrer" className="block">
-                <Button
-                  size="lg"
-                  className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all btn-pulse-red w-full sm:w-auto"
-                >
-                  Записаться и оплатить участие
-                </Button>
-              </a>
-            </CardContent>
+          <span className="inline-block shine-text font-handwritten text-3xl md:text-4xl">
+            Дарю скидку в честь своего дня рождения 🎁
+          </span>
+
+          <Card className="gift-card rounded-3xl p-[3px]" style={{ animation: 'ribbon-glow 3s ease-in-out infinite' }}>
+            <div className="relative rounded-3xl overflow-hidden bg-white">
+              <CardContent className="pt-8 pb-8 space-y-4">
+                <span className="inline-block bg-[#9A1E14] text-white font-bold text-xs md:text-sm tracking-wide px-4 py-1.5 rounded-full">
+                  ПОСЛЕДНИЙ ШАНС ЗАЙТИ НА ПРАКТИКУМ И ПОЛУЧИТЬ 12 GPT-АССИСТЕНТОВ НАВЕЧНО
+                </span>
+
+                <div className="flex items-center justify-center gap-3">
+                  {[
+                    { v: timeLeft.d, l: "дней" },
+                    { v: timeLeft.h, l: "часов" },
+                    { v: timeLeft.m, l: "минут" },
+                    { v: timeLeft.s, l: "секунд" },
+                  ].map((t, i) => (
+                    <div key={i} className="badge-3d rounded-xl px-3 py-2 min-w-[60px]">
+                      <p className="text-xl md:text-2xl font-black text-white leading-none">{String(t.v).padStart(2, "0")}</p>
+                      <p className="text-[10px] md:text-xs text-white/80 uppercase tracking-wide">{t.l}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="text-base md:text-lg text-foreground">Стоимость участия</p>
+                <div className="flex items-center justify-center gap-3">
+                  <p className="text-2xl md:text-3xl font-bold text-gray-400 line-through">9 900 ₽</p>
+                  <p className="text-4xl md:text-5xl font-black text-[#9A1E14]">5 490 ₽</p>
+                </div>
+                <p className="text-sm md:text-base text-muted-foreground">
+                  Старт — 3 августа.
+                </p>
+                <a href={PAYMENT_URL} target="_blank" rel="noopener noreferrer" className="block">
+                  <Button
+                    size="lg"
+                    className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all btn-pulse-red w-full sm:w-auto"
+                  >
+                    Записаться и оплатить участие
+                  </Button>
+                </a>
+              </CardContent>
+            </div>
           </Card>
 
           <p className="text-base md:text-lg text-foreground font-medium leading-relaxed">
