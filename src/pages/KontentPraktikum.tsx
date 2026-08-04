@@ -137,6 +137,18 @@ const KontentPraktikum = () => {
 
             {/* Текст */}
             <div className="space-y-6 text-center md:text-left relative z-10">
+              <button
+                onClick={scrollToPrice}
+                className="gift-card inline-flex items-center gap-2 rounded-full px-5 py-2.5 mx-auto md:mx-0 hover:scale-105 transition-transform cursor-pointer"
+                style={{ animation: 'ribbon-glow 3s ease-in-out infinite' }}
+              >
+                <span className="text-xl">🎂</span>
+                <span className="shine-text font-bold text-sm md:text-base tracking-wide">
+                  Скидка в честь дня рождения — 5 490 ₽ вместо 9 900 ₽
+                </span>
+                <span className="text-xl">🎁</span>
+              </button>
+
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight text-foreground leading-tight">
                 «Контент, после которого{" "}
                 <span className="relative inline-block text-[#9A1E14]">
@@ -161,7 +173,7 @@ const KontentPraktikum = () => {
                 className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all btn-pulse-red mx-auto md:mx-0"
                 onClick={scrollToPrice}
               >
-                Хочу на практикум
+                Хочу на практикум по акции
               </Button>
             </div>
           </div>
