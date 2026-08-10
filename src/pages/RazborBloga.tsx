@@ -90,7 +90,7 @@ const RazborBloga = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://t.me/m/6Qcyi9BBY2Ey"
+            href="https://t.me/m/wcpuigGZYWUy"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-pulse-tg flex items-center justify-center gap-3 px-6 py-4 rounded-xl text-white font-semibold text-base"
