@@ -1,33 +1,11 @@
-import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import Footer from "@/components/Footer";
 
-const PAYMENT_URL = "https://payform.ru/jdcc9xu/";
-const DEADLINE = new Date("2026-08-04T23:59:00");
-
-const getTimeLeft = () => {
-  const diff = DEADLINE.getTime() - Date.now();
-  if (diff <= 0) return { d: 0, h: 0, m: 0, s: 0 };
-  return {
-    d: Math.floor(diff / (1000 * 60 * 60 * 24)),
-    h: Math.floor((diff / (1000 * 60 * 60)) % 24),
-    m: Math.floor((diff / (1000 * 60)) % 60),
-    s: Math.floor((diff / 1000) % 60),
-  };
-};
-
 const KontentPraktikum = () => {
   const scrollToPrice = () =>
     document.getElementById("price")?.scrollIntoView({ behavior: "smooth" });
-
-  const [timeLeft, setTimeLeft] = useState(getTimeLeft());
-
-  useEffect(() => {
-    const timer = setInterval(() => setTimeLeft(getTimeLeft()), 1000);
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white overflow-x-hidden">
@@ -137,18 +115,6 @@ const KontentPraktikum = () => {
 
             {/* Текст */}
             <div className="space-y-6 text-center md:text-left relative z-10">
-              <button
-                onClick={scrollToPrice}
-                className="gift-card inline-flex items-center gap-2 rounded-full px-5 py-2.5 mx-auto md:mx-0 hover:scale-105 transition-transform cursor-pointer"
-                style={{ animation: 'ribbon-glow 3s ease-in-out infinite' }}
-              >
-                <span className="text-xl">🎂</span>
-                <span className="shine-text font-bold text-sm md:text-base tracking-wide">
-                  Скидка в честь дня рождения — 5 490 ₽ вместо 9 900 ₽
-                </span>
-                <span className="text-xl">🎁</span>
-              </button>
-
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight text-foreground leading-tight">
                 «Контент, после которого{" "}
                 <span className="relative inline-block text-[#9A1E14]">
@@ -170,10 +136,11 @@ const KontentPraktikum = () => {
 
               <Button
                 size="lg"
-                className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all btn-pulse-red mx-auto md:mx-0"
+                className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all mx-auto md:mx-0"
                 onClick={scrollToPrice}
+                disabled
               >
-                Хочу на практикум по акции
+                Практикум завершён
               </Button>
             </div>
           </div>
@@ -361,14 +328,13 @@ const KontentPraktikum = () => {
       {/* CTA-1 */}
       <section className="py-6 px-4 bg-white">
         <div className="max-w-3xl mx-auto text-center">
-          <a href={PAYMENT_URL} target="_blank" rel="noopener noreferrer">
-            <Button
-              size="lg"
-              className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all btn-pulse-red"
-            >
-              Иду на практикум
-            </Button>
-          </a>
+          <Button
+            size="lg"
+            className="bg-gray-400 text-white px-10 py-7 text-lg font-bold shadow-lg cursor-not-allowed"
+            disabled
+          >
+            Практикум завершён
+          </Button>
         </div>
       </section>
 
@@ -588,14 +554,13 @@ const KontentPraktikum = () => {
       {/* CTA-2 */}
       <section className="py-6 px-4 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-3xl mx-auto text-center">
-          <a href={PAYMENT_URL} target="_blank" rel="noopener noreferrer">
-            <Button
-              size="lg"
-              className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all btn-pulse-red"
-            >
-              Вписаться в контент-практикум
-            </Button>
-          </a>
+          <Button
+            size="lg"
+            className="bg-gray-400 text-white px-10 py-7 text-lg font-bold shadow-lg cursor-not-allowed"
+            disabled
+          >
+            Практикум завершён
+          </Button>
         </div>
       </section>
 
@@ -643,63 +608,25 @@ const KontentPraktikum = () => {
       </section>
 
       {/* ЦЕНА / CTA */}
-      <section id="price" className="relative py-10 px-4 bg-gradient-to-br from-[#fff8ec] to-white overflow-hidden">
+      <section id="price" className="relative py-10 px-4 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
         <div className="blob absolute top-0 left-1/4 w-72 h-72 rounded-full bg-[#9A1E14]/10 pointer-events-none" />
-        <div className="blob absolute bottom-0 right-1/4 w-64 h-64 rounded-full bg-[#C99A4A]/20 pointer-events-none" style={{ animationDelay: '3s' }} />
-        <span className="float-badge absolute top-6 left-6 md:left-20 text-4xl select-none pointer-events-none drop-shadow-md">🎉</span>
-        <span className="float-badge-slow absolute bottom-10 right-6 md:right-20 text-4xl select-none pointer-events-none drop-shadow-md">🎂</span>
-        <span className="float-badge absolute top-16 right-10 md:right-32 text-3xl select-none pointer-events-none drop-shadow-md" style={{ animationDelay: '1s' }}>🎈</span>
-        <span className="float-badge-slow absolute bottom-24 left-8 md:left-32 text-3xl select-none pointer-events-none drop-shadow-md" style={{ animationDelay: '2s' }}>✨</span>
+        <div className="blob absolute bottom-0 right-1/4 w-64 h-64 rounded-full bg-[#C99A4A]/15 pointer-events-none" style={{ animationDelay: '3s' }} />
 
         <div className="max-w-2xl mx-auto text-center space-y-6 relative">
-          <span className="inline-block shine-text font-handwritten text-3xl md:text-4xl">
-            Дарю скидку в честь своего дня рождения 🎁
-          </span>
-
-          <Card className="gift-card rounded-3xl p-[3px]" style={{ animation: 'ribbon-glow 3s ease-in-out infinite' }}>
-            <div className="relative rounded-3xl overflow-hidden bg-white">
-              <CardContent className="pt-8 pb-8 space-y-4">
-                <span className="inline-block bg-[#9A1E14] text-white font-bold text-xs md:text-sm tracking-wide px-4 py-1.5 rounded-full">
-                  ПОСЛЕДНИЙ ШАНС ЗАЙТИ НА ПРАКТИКУМ И ПОЛУЧИТЬ 12 GPT-АССИСТЕНТОВ НАВЕЧНО
-                </span>
-
-                <div className="flex items-center justify-center gap-3">
-                  {[
-                    { v: timeLeft.d, l: "дней" },
-                    { v: timeLeft.h, l: "часов" },
-                    { v: timeLeft.m, l: "минут" },
-                    { v: timeLeft.s, l: "секунд" },
-                  ].map((t, i) => (
-                    <div key={i} className="badge-3d rounded-xl px-3 py-2 min-w-[60px]">
-                      <p className="text-xl md:text-2xl font-black text-white leading-none">{String(t.v).padStart(2, "0")}</p>
-                      <p className="text-[10px] md:text-xs text-white/80 uppercase tracking-wide">{t.l}</p>
-                    </div>
-                  ))}
-                </div>
-
-                <p className="text-base md:text-lg text-foreground">Стоимость участия</p>
-                <div className="flex items-center justify-center gap-3">
-                  <p className="text-2xl md:text-3xl font-bold text-gray-400 line-through">9 900 ₽</p>
-                  <p className="text-4xl md:text-5xl font-black text-[#9A1E14]">5 490 ₽</p>
-                </div>
-                <p className="text-sm md:text-base text-muted-foreground">
-                  Старт — 3 августа.
-                </p>
-                <a href={PAYMENT_URL} target="_blank" rel="noopener noreferrer" className="block">
-                  <Button
-                    size="lg"
-                    className="bg-[#9A1E14] hover:bg-[#9A1E14]/90 text-white px-10 py-7 text-lg font-bold shadow-lg hover:shadow-xl transition-all btn-pulse-red w-full sm:w-auto"
-                  >
-                    Записаться и оплатить участие
-                  </Button>
-                </a>
-              </CardContent>
-            </div>
+          <Card className="border-2 border-gray-300 shadow-xl bg-white">
+            <CardContent className="pt-8 pb-8 space-y-4">
+              <span className="inline-flex items-center gap-2 bg-gray-200 text-gray-700 font-bold text-xs md:text-sm tracking-wide px-4 py-1.5 rounded-full">
+                <Icon name="Lock" size={14} />
+                НАБОР ЗАКРЫТ
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                Практикум завершён
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground">
+                Приём заявок на этот поток закрыт. Следите за обновлениями — новый набор откроется позже.
+              </p>
+            </CardContent>
           </Card>
-
-          <p className="text-base md:text-lg text-foreground font-medium leading-relaxed">
-            Если вы устали каждый день начинать продажи с нуля, этот практикум поможет превратить ваш блог в систему, которая постепенно приводит подписчиков к покупке.
-          </p>
         </div>
       </section>
 
