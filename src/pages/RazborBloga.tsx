@@ -59,7 +59,7 @@ const RazborBloga = () => {
           <span className="absolute -top-5 left-1/2 -translate-x-1/2 w-11 h-11 rounded-full badge-3d flex items-center justify-center">
             <Icon name="Sparkles" size={20} className="text-white" />
           </span>
-          Что именно вашему блогу поможет начать привлекать клиентов и приносить продажи?
+          Что именно вашему каналу поможет начать привлекать клиентов и приносить продажи?
         </div>
 
         <div className="text-gray-700 text-base md:text-lg leading-relaxed text-left md:text-center space-y-5">
@@ -67,10 +67,10 @@ const RazborBloga = () => {
 
           <div className="grid gap-3">
             {[
-              { icon: "SearchX", text: "разберем, что сегодня мешает вашему блогу стабильно приносить заявки" },
+              { icon: "SearchX", text: "разберем, что сегодня мешает вашему каналу стабильно приносить заявки" },
               { icon: "Filter", text: "посмотрим, на каком этапе вы теряете потенциальных клиентов" },
               { icon: "Target", text: "определим точки роста именно для вашей ситуации — от привлечения новой аудитории до контента, прогрева и продаж" },
-              { icon: "ListChecks", text: "составим понятный план действий, который поможет превратить блог в работающую систему привлечения клиентов" },
+              { icon: "ListChecks", text: "составим понятный план действий, который поможет превратить канал в работающую систему привлечения клиентов" },
             ].map((item, i) => (
               <div key={i} className="tilt-card flex items-start gap-3 text-left bg-white rounded-2xl p-4 shadow-md border border-[#9A1E15]/10">
                 <span className="w-9 h-9 rounded-xl badge-3d flex items-center justify-center flex-shrink-0">
@@ -82,10 +82,10 @@ const RazborBloga = () => {
           </div>
 
           <div className="relative bg-gradient-to-br from-[#9A1E15]/5 to-[#C99A4A]/10 border-2 border-[#9A1E15]/20 rounded-2xl p-5 text-center">
-            <p>После встречи у вас будет не набор общих рекомендаций, а персональная стратегия развития блога с конкретными шагами, которые вы сможете начать внедрять сразу после встречи.</p>
+            <p>После встречи у вас будет не набор общих рекомендаций, а персональная стратегия развития канала с конкретными шагами, которые вы сможете начать внедрять сразу после встречи.</p>
           </div>
 
-          <p className="text-center font-medium text-gray-900">Если вы готовы превратить блог в инструмент, который регулярно приводит клиентов и продажи, — выберите удобный способ записи.</p>
+          <p className="text-center font-medium text-gray-900">Если вы готовы превратить канал в инструмент, который регулярно приводит клиентов и продажи, — выберите удобный способ записи.</p>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

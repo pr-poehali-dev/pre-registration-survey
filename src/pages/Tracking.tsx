@@ -122,7 +122,7 @@ const Tracking = () => {
                 Хочу продажи и клиентов
               </Button>
               <p className="text-base md:text-lg text-muted-foreground font-medium">
-                Без огромного блога, сложных запусков и выгорания.
+                Без огромного канала, сложных запусков и выгорания.
               </p>
             </div>
           </div>
@@ -206,7 +206,7 @@ const Tracking = () => {
             ))}
           </div>
           <p className="text-center text-base md:text-lg text-muted-foreground">
-            И хотите не просто вести блог, а начать стабильно зарабатывать на своей экспертности.
+            И хотите не просто вести канал, а начать стабильно зарабатывать на своей экспертности.
           </p>
         </div>
       </section>
@@ -409,7 +409,7 @@ const Tracking = () => {
               <CardContent className="pt-6 space-y-3">
                 <p className="font-bold text-lg text-foreground mb-2">Большинство экспертов:</p>
                 {[
-                  "хаотично ведут блог",
+                  "хаотично ведут канал",
                   "выкладывают контент «обо всем»",
                   "не понимают, как продавать экологично",
                   "пытаются копировать других",
