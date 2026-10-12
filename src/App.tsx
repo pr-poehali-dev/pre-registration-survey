@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
 import Webinar from "./pages/Webinar";
 import Tracking from "./pages/Tracking";
 import Usloviya from "./pages/Usloviya";
@@ -22,7 +23,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Tracking />} />
+          <Route path="/" element={<Index />} />
+          <Route path="/tracking" element={<Tracking />} />
           <Route path="/webinar" element={<Webinar />} />
           <Route path="/usloviya" element={<Usloviya />} />
           <Route path="/impuls-pro" element={<EfirZapis />} />
