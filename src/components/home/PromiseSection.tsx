@@ -1,25 +1,66 @@
 import { useEffect, useRef, useState } from "react";
 
 const BORDEAUX = "#800012";
-const GOLD = "#C9974B";
-const INK = "#181818";
-const GRAPHITE = "#3A3A3A";
+const MILK = "#FAF7F2";
+const INK = "#191919";
+const GOLD = "#D3A052";
+const GOLD_SOFT = "#F1E1C8";
 
-const ADVANTAGES = [
+const Arrow = () => (
+  <svg width="64" height="14" viewBox="0 0 64 14" fill="none" aria-hidden="true">
+    <path d="M0 7H62M62 7L56 1M62 7L56 13" stroke={GOLD} strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+const BubblesIcon = () => (
+  <svg width="92" height="56" viewBox="0 0 92 56" fill="none" aria-hidden="true">
+    <path
+      d="M6 6H46a4 4 0 0 1 4 4v20a4 4 0 0 1-4 4H22l-9 8v-8H6a4 4 0 0 1-4-4V10a4 4 0 0 1 4-4Z"
+      stroke={GOLD}
+      strokeWidth="1.4"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M86 18H50.5M86 18a4 4 0 0 1 4 4v20a4 4 0 0 1-4 4h-6v8l-9-8H46a4 4 0 0 1-4-4v-6"
+      stroke={GOLD}
+      strokeWidth="1.4"
+      strokeLinejoin="round"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
+const CARDS = [
   {
     num: "01",
-    title: "Без бесконечной подготовки",
-    text: "Не ждёшь идеального продукта и красивого канала. Начинаешь с действий, которые могут принести заявки уже сейчас.",
+    title: "Клиенты, а не вечная подготовка",
+    text: "Не нужно сначала переделывать весь блог. Начинаешь работать с тем, что у тебя уже есть: продуктом, контактами и аудиторией.",
+    bg: MILK,
+    layout: "lg:-translate-y-5 lg:-rotate-1",
+    footer: <Arrow />,
   },
   {
     num: "02",
-    title: "Без контента ради контента",
-    text: "Понимаешь, что публиковать, чтобы люди не просто читали, а интересовались твоим продуктом.",
+    title: "Контент, после которого спрашивают «Как к тебе попасть?»",
+    text: "Вместо публикаций ради охватов — понятные смыслы, предложения и поводы обратиться к тебе.",
+    bg: GOLD_SOFT,
+    layout: "lg:rotate-1",
+    footer: (
+      <div
+        className="relative inline-block rounded-2xl rounded-bl-sm px-4 py-2 text-sm font-semibold text-white"
+        style={{ backgroundColor: BORDEAUX }}
+      >
+        Как записаться?
+      </div>
+    ),
   },
   {
     num: "03",
-    title: "Без страха перед продажами",
-    text: "Знаешь, как начать диалог, провести консультацию и предложить работу без давления и неловкости.",
+    title: "Продажи, после которых не хочется провалиться сквозь землю",
+    text: "Учишься вести диалог, приглашать на консультацию и называть стоимость уверенно, без навязывания.",
+    bg: MILK,
+    layout: "lg:translate-y-6 lg:-rotate-1",
+    footer: <BubblesIcon />,
   },
 ];
 
@@ -37,7 +78,7 @@ const PromiseSection = () => {
           observer.disconnect();
         }
       },
-      { threshold: 0.12 }
+      { threshold: 0.1 }
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -46,108 +87,126 @@ const PromiseSection = () => {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden px-4 sm:px-8 lg:px-16 py-12 md:py-20"
-      style={{ backgroundColor: "#FAF8F3", fontFamily: "'Montserrat', sans-serif" }}
+      className="relative overflow-hidden px-5 sm:px-8 lg:px-16 py-16 md:py-24 lg:py-28"
+      style={{ backgroundColor: BORDEAUX, fontFamily: "'Montserrat', sans-serif" }}
     >
+      <svg
+        className="absolute -top-28 -right-28 w-[260px] h-[260px] md:w-[460px] md:h-[460px] pointer-events-none"
+        viewBox="0 0 460 460"
+        fill="none"
+      >
+        {[120, 160, 200, 240, 280].map((r) => (
+          <circle key={r} cx="460" cy="0" r={r} stroke={GOLD} strokeWidth="1" opacity="0.45" />
+        ))}
+      </svg>
+      <svg
+        className="absolute -bottom-28 -left-28 w-[260px] h-[260px] md:w-[460px] md:h-[460px] pointer-events-none"
+        viewBox="0 0 460 460"
+        fill="none"
+      >
+        {[120, 160, 200, 240, 280].map((r) => (
+          <circle key={r} cx="0" cy="460" r={r} stroke={GOLD} strokeWidth="1" opacity="0.45" />
+        ))}
+      </svg>
+      <svg
+        className="absolute top-6 left-4 md:top-10 md:left-10 w-[90px] h-[70px] md:w-[200px] md:h-[140px] pointer-events-none"
+        viewBox="0 0 200 140"
+        fill={GOLD}
+        opacity="0.55"
+      >
+        {Array.from({ length: 7 }).map((_, row) =>
+          Array.from({ length: 10 }).map((_, col) => (
+            <circle key={`${row}-${col}`} cx={10 + col * 20} cy={10 + row * 20} r="1.8" />
+          ))
+        )}
+      </svg>
+      <svg
+        className="absolute bottom-6 right-4 md:bottom-10 md:right-10 w-[90px] h-[70px] md:w-[200px] md:h-[140px] pointer-events-none"
+        viewBox="0 0 200 140"
+        fill={GOLD}
+        opacity="0.55"
+      >
+        {Array.from({ length: 7 }).map((_, row) =>
+          Array.from({ length: 10 }).map((_, col) => (
+            <circle key={`${row}-${col}`} cx={10 + col * 20} cy={10 + row * 20} r="1.8" />
+          ))
+        )}
+      </svg>
+
       <div
-        className="max-w-[1280px] mx-auto transition-all duration-700 ease-out"
+        className="relative max-w-[1280px] mx-auto transition-all duration-700 ease-out"
         style={{
           opacity: visible ? 1 : 0,
           transform: visible ? "translateY(0)" : "translateY(24px)",
         }}
       >
-        <div
-          className="relative overflow-hidden text-center rounded-2xl md:rounded-[20px] px-6 py-10 sm:px-10 md:px-14 md:py-14"
+        <span
+          className="inline-block rounded-full px-4 py-2 md:px-5 md:py-2.5 font-semibold uppercase tracking-wider"
           style={{
-            backgroundColor: "#FDFBF6",
-            border: `1.5px solid ${BORDEAUX}`,
+            color: MILK,
+            border: `1px solid ${GOLD}`,
+            fontSize: "clamp(11px, 1.3vw, 16px)",
           }}
         >
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(201,151,75,0.16) 0%, rgba(201,151,75,0.05) 55%, rgba(253,251,246,0) 100%)",
-            }}
-          />
+          Не ещё один курс про продажи
+        </span>
 
-          <div className="relative">
-            <p
-              className="mx-auto max-w-[760px] font-normal leading-relaxed"
-              style={{ color: INK, fontSize: "clamp(16px, 2.1vw, 23px)" }}
-            >
-              Ты уже знаешь, что умеешь помогать людям, но клиенты почему-то приходят не так регулярно, как хотелось бы.
-            </p>
+        <h2
+          className="mt-6 md:mt-9 font-extrabold uppercase leading-[1.06] tracking-tight"
+          style={{ fontSize: "clamp(30px, 5.4vw, 74px)" }}
+        >
+          <span className="block" style={{ color: MILK }}>
+            Хватит знать, как надо.
+          </span>
+          <span className="block mt-2 md:mt-4" style={{ color: MILK }}>
+            Пора{" "}
+            <span style={{ color: GOLD }}>видеть заявки</span>
+            <br className="hidden sm:block" /> в своих сообщениях.
+          </span>
+        </h2>
 
-            <div className="flex items-center justify-center gap-3 my-6 md:my-9">
-              <span className="h-px w-10 md:w-20" style={{ background: `linear-gradient(90deg, transparent, ${GOLD})` }} />
-              <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: GOLD }} />
-              <span className="h-px w-10 md:w-20" style={{ background: `linear-gradient(270deg, transparent, ${GOLD})` }} />
-            </div>
-
-            <h2
-              className="mx-auto max-w-[980px] font-extrabold uppercase leading-[1.15]"
-              style={{ color: INK, fontSize: "clamp(24px, 3.5vw, 42px)" }}
-            >
-              <span style={{ color: BORDEAUX }}>«Трекинг»</span> — программа, в которой ты не просто учишься продажам, а собираешь их в своём проекте.
-            </h2>
-
-            <p
-              className="mx-auto mt-6 md:mt-9 max-w-[760px] font-medium leading-relaxed"
-              style={{ color: GRAPHITE, fontSize: "clamp(15px, 1.8vw, 21px)" }}
-            >
-              Чтобы не зависеть от вдохновения, удачного запуска или случайного клиента.
-            </p>
-          </div>
+        <div className="mt-7 md:mt-10 max-w-[850px]">
+          <p
+            className="leading-relaxed"
+            style={{ color: "rgba(250,247,242,0.82)", fontSize: "clamp(16px, 1.8vw, 23px)" }}
+          >
+            Ты уже достаточно училась, сохраняла полезные посты и собиралась «вот-вот начать».
+          </p>
+          <p
+            className="mt-4 md:mt-6 font-semibold leading-relaxed"
+            style={{ color: MILK, fontSize: "clamp(17px, 1.9vw, 24px)" }}
+          >
+            На «Трекинге» мы превращаем знания в конкретные действия, которые помогают привлекать клиентов и продавать свой продукт.
+          </p>
         </div>
 
-        <div className="mt-14 md:mt-[62px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-0 md:gap-y-12 lg:gap-y-0">
-          {ADVANTAGES.map((item, i) => (
-            <div key={item.num} className="relative">
-              {i > 0 && (
-                <span
-                  className="md:hidden block h-px w-14 my-7"
-                  style={{ background: `linear-gradient(90deg, ${GOLD}, rgba(201,151,75,0))` }}
-                />
-              )}
-              {i > 0 && (
-                <span
-                  className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-px h-[150px]"
-                  style={{ background: `linear-gradient(180deg, rgba(201,151,75,0), ${GOLD}, rgba(201,151,75,0))` }}
-                />
-              )}
-              <div className="flex items-start gap-4 md:gap-5 lg:px-8 xl:px-10">
-                <div className="flex-shrink-0 flex flex-col items-center gap-2">
-                  <div
-                    className="w-[56px] h-[56px] md:w-[62px] md:h-[62px] rounded-lg flex items-center justify-center text-white font-extrabold text-xl md:text-2xl"
-                    style={{
-                      background: "linear-gradient(135deg, #9a0a1e 0%, #800012 50%, #5c000d 100%)",
-                      boxShadow: "0 10px 22px -12px rgba(128,0,18,0.7)",
-                    }}
-                  >
-                    {item.num}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <span className="w-1 h-1 rounded-full" style={{ backgroundColor: GOLD }} />
-                    <span className="h-px w-4" style={{ backgroundColor: GOLD }} />
-                  </div>
-                </div>
-                <div className="min-w-0">
-                  <h3
-                    className="font-bold uppercase leading-snug"
-                    style={{ color: BORDEAUX, fontSize: "clamp(16px, 1.6vw, 21px)" }}
-                  >
-                    {item.title}
-                  </h3>
-                  <p
-                    className="mt-2.5 md:mt-3 leading-relaxed"
-                    style={{ color: GRAPHITE, fontSize: "clamp(15px, 1.4vw, 18px)" }}
-                  >
-                    {item.text}
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div className="mt-12 md:mt-20 lg:mt-24 grid grid-cols-1 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7 lg:pb-8">
+          {CARDS.map((card) => (
+            <article
+              key={card.num}
+              className={`flex flex-col rounded-[20px] lg:rounded-[24px] p-6 md:p-7 lg:p-8 lg:min-h-[310px] shadow-[0_24px_50px_-24px_rgba(0,0,0,0.55)] ${card.layout}`}
+              style={{ backgroundColor: card.bg }}
+            >
+              <span
+                className="font-extrabold leading-none"
+                style={{ color: BORDEAUX, fontSize: "clamp(48px, 5vw, 68px)" }}
+              >
+                {card.num}
+              </span>
+              <h3
+                className="mt-4 font-bold uppercase leading-snug"
+                style={{ color: INK, fontSize: "clamp(15px, 1.4vw, 18px)" }}
+              >
+                {card.title}
+              </h3>
+              <p
+                className="mt-3 leading-relaxed"
+                style={{ color: "#3A3A3A", fontSize: "clamp(15px, 1.2vw, 16px)" }}
+              >
+                {card.text}
+              </p>
+              <div className="mt-auto pt-5">{card.footer}</div>
+            </article>
           ))}
         </div>
       </div>
