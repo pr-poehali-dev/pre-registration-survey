@@ -33,16 +33,24 @@ const BubblesIcon = () => (
 const CARDS = [
   {
     num: "01",
-    title: "Клиенты, а не вечная подготовка",
-    text: "Не нужно сначала переделывать весь блог. Начинаешь работать с тем, что у тебя уже есть: продуктом, контактами и аудиторией.",
+    title: "Твой продукт наконец хочется купить",
+    paragraphs: [
+      "Не просто «консультация», «сопровождение» или «авторская программа».",
+      "А предложение, в котором человек узнаёт свою ситуацию, видит желаемый результат и понимает, почему ему стоит обратиться к тебе.",
+    ],
+    accent: "Чтобы вместо «А что у вас входит?» чаще звучало «Как начать с вами работать?»",
     bg: MILK,
     layout: "lg:-translate-y-5 lg:-rotate-1",
     footer: <Arrow />,
   },
   {
     num: "02",
-    title: "Контент, после которого спрашивают «Как к тебе попасть?»",
-    text: "Вместо публикаций ради охватов — понятные смыслы, предложения и поводы обратиться к тебе.",
+    title: "Твоя аудитория перестаёт быть просто цифрой в канале",
+    paragraphs: [
+      "Подписчики, бывшие клиенты, знакомые, люди, которые давно читают и молчат, — это не обязательно холодная аудитория, которую нужно месяцами прогревать.",
+      "Ты начинаешь видеть, кому уже сейчас может быть нужен твой продукт, как выйти на разговор и предложить помощь уместно.",
+    ],
+    accent: "Чтобы не ждать, пока кто-то сам догадается тебе написать.",
     bg: GOLD_SOFT,
     layout: "lg:rotate-1",
     footer: (
@@ -56,8 +64,12 @@ const CARDS = [
   },
   {
     num: "03",
-    title: "Продажи, после которых не хочется провалиться сквозь землю",
-    text: "Учишься вести диалог, приглашать на консультацию и называть стоимость уверенно, без навязывания.",
+    title: "Продажи больше не зависят от твоей смелости в конкретный день",
+    paragraphs: [
+      "Ты понимаешь, что делать, когда человек заинтересовался. Как перевести реакцию в диалог, диалог — в консультацию, а консультацию — в предложение о работе.",
+      "Без заученных манипулятивных скриптов, неловкого «ну что, будете брать?» и ощущения, что ты кому-то навязываешься.",
+    ],
+    accent: "Чтобы продажи стали частью твоей работы, а не событием, к которому нужно морально готовиться.",
     bg: MILK,
     layout: "lg:translate-y-6 lg:-rotate-1",
     footer: <BubblesIcon />,
@@ -148,20 +160,18 @@ const PromiseSection = () => {
             fontSize: "clamp(11px, 1.3vw, 16px)",
           }}
         >
-          Не ещё один курс про продажи
+          Не просто обучение. Работа над твоим проектом.
         </span>
 
         <h2
-          className="mt-6 md:mt-9 font-extrabold uppercase leading-[1.06] tracking-tight"
-          style={{ fontSize: "clamp(30px, 5.4vw, 74px)" }}
+          className="mt-6 md:mt-9 font-extrabold uppercase leading-[1.08] tracking-tight"
+          style={{ fontSize: "clamp(26px, 4.4vw, 60px)" }}
         >
           <span className="block" style={{ color: MILK }}>
-            Хватит знать, как надо.
+            Перестань быть экспертом, который всё знает о продажах.
           </span>
-          <span className="block mt-2 md:mt-4" style={{ color: MILK }}>
-            Пора{" "}
-            <span style={{ color: GOLD }}>видеть заявки</span>
-            <br className="hidden sm:block" /> в своих сообщениях.
+          <span className="block mt-3 md:mt-5" style={{ color: MILK }}>
+            Стань экспертом, <span style={{ color: GOLD }}>которому пишут:</span> «Как с вами поработать?»
           </span>
         </h2>
 
@@ -170,13 +180,19 @@ const PromiseSection = () => {
             className="leading-relaxed"
             style={{ color: "rgba(250,247,242,0.82)", fontSize: "clamp(16px, 1.8vw, 23px)" }}
           >
-            Ты уже достаточно училась, сохраняла полезные посты и собиралась «вот-вот начать».
+            Ты можешь быть сильным специалистом, искренне любить своё дело и действительно помогать людям.
+          </p>
+          <p
+            className="mt-3 md:mt-4 leading-relaxed"
+            style={{ color: "rgba(250,247,242,0.82)", fontSize: "clamp(16px, 1.8vw, 23px)" }}
+          >
+            Но это ещё не значит, что потенциальные клиенты понимают, зачем им идти именно к тебе, почему сейчас и за что они платят.
           </p>
           <p
             className="mt-4 md:mt-6 font-semibold leading-relaxed"
             style={{ color: MILK, fontSize: "clamp(17px, 1.9vw, 24px)" }}
           >
-            На «Трекинге» мы превращаем знания в конкретные действия, которые помогают привлекать клиентов и продавать свой продукт.
+            На «Трекинге» мы работаем над тем, чтобы между твоей экспертностью и деньгами появилась понятная дорога.
           </p>
         </div>
 
@@ -199,15 +215,46 @@ const PromiseSection = () => {
               >
                 {card.title}
               </h3>
+              <div className="mt-3 space-y-3">
+                {card.paragraphs.map((para) => (
+                  <p
+                    key={para}
+                    className="leading-relaxed"
+                    style={{ color: "#3A3A3A", fontSize: "clamp(14px, 1.1vw, 15px)" }}
+                  >
+                    {para}
+                  </p>
+                ))}
+              </div>
               <p
-                className="mt-3 leading-relaxed"
-                style={{ color: "#3A3A3A", fontSize: "clamp(15px, 1.2vw, 16px)" }}
+                className="mt-4 font-bold leading-snug"
+                style={{ color: BORDEAUX, fontSize: "clamp(14px, 1.1vw, 15px)" }}
               >
-                {card.text}
+                {card.accent}
               </p>
               <div className="mt-auto pt-5">{card.footer}</div>
             </article>
           ))}
+        </div>
+
+        <div className="mt-14 md:mt-20 lg:mt-24 max-w-[900px] mx-auto text-center">
+          <div className="flex items-center justify-center gap-3 mb-6 md:mb-8">
+            <span className="h-px w-10 md:w-20" style={{ background: `linear-gradient(90deg, transparent, ${GOLD})` }} />
+            <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: GOLD }} />
+            <span className="h-px w-10 md:w-20" style={{ background: `linear-gradient(270deg, transparent, ${GOLD})` }} />
+          </div>
+          <p
+            className="leading-relaxed"
+            style={{ color: "rgba(250,247,242,0.82)", fontSize: "clamp(16px, 1.8vw, 23px)" }}
+          >
+            Тебе не нужно становиться другим человеком, чтобы начать продавать.
+          </p>
+          <p
+            className="mt-3 md:mt-4 font-extrabold leading-snug"
+            style={{ color: GOLD, fontSize: "clamp(20px, 2.6vw, 34px)" }}
+          >
+            Тебе нужна система, в которой твоя экспертность начинает работать на твой доход.
+          </p>
         </div>
       </div>
     </section>
