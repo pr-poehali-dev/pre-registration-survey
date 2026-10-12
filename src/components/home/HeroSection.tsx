@@ -126,14 +126,14 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="relative mx-auto w-[88%] max-w-[440px] aspect-[3/4] lg:absolute lg:bottom-0 lg:right-[2vw] lg:mx-0 lg:h-full lg:w-auto lg:max-w-none lg:aspect-[3/4] pointer-events-none">
+        <div className="relative mx-auto w-[88%] max-w-[440px] aspect-[3/4] lg:absolute lg:bottom-0 lg:right-[2vw] lg:mx-0 lg:h-[84%] xl:h-full lg:w-auto lg:max-w-none lg:aspect-[3/4] pointer-events-none">
           <img
             src={PORTRAIT_URL}
             alt="Светлана Скорнякова"
             className="relative z-10 w-full h-full object-contain object-bottom"
           />
           <div
-            className="absolute z-20 left-[2%] lg:left-[6%] bottom-[8%] lg:bottom-[22%] w-[116px] h-[116px] md:w-[148px] md:h-[148px] rounded-full flex items-center justify-center text-center p-3.5"
+            className="absolute z-20 left-[2%] lg:left-auto lg:right-[-1vw] bottom-[8%] lg:bottom-[20%] w-[116px] h-[116px] md:w-[148px] md:h-[148px] rounded-full flex items-center justify-center text-center p-3.5"
             style={{
               backgroundColor: "#FAF8F3",
               border: "1px solid #C9974B",
