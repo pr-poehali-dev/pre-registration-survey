@@ -62,31 +62,31 @@ const HeroSection = () => {
 
         <div className="relative max-w-7xl mx-auto px-5 md:px-10 pt-8 pb-8 lg:pt-14 lg:pb-14 lg:min-h-[860px] flex items-center">
           <div className="relative z-10 w-[56%] lg:w-[55%]">
-            <div className="flex flex-wrap items-center gap-1.5 md:gap-2.5 mb-3 md:mb-4">
+            <div
+              className="inline-flex items-stretch overflow-hidden rounded-full mb-4 md:mb-8"
+              style={{ border: "1px solid #C9974B" }}
+            >
               <span
-                className="rounded-md px-2 py-1.5 md:px-3.5 md:py-2 text-[9px] md:text-xs font-bold tracking-wider text-white"
-                style={{ backgroundColor: "#800012" }}
+                className="px-3 py-1.5 md:px-5 md:py-2.5 font-bold uppercase text-white"
+                style={{
+                  backgroundColor: "#800012",
+                  fontSize: "clamp(8px, 1.1vw, 13px)",
+                  letterSpacing: "0.2em",
+                }}
               >
-                3 МЕСЯЦА
+                Трекинг
               </span>
               <span
-                className="rounded-md px-2 py-1.5 md:px-3.5 md:py-2 text-[9px] md:text-xs font-bold tracking-wider"
-                style={{ backgroundColor: "#FAF8F3", border: "1px solid #C9974B", color: "#181818" }}
+                className="px-3 py-1.5 md:px-5 md:py-2.5 font-semibold uppercase"
+                style={{
+                  color: "#181818",
+                  fontSize: "clamp(8px, 1.1vw, 13px)",
+                  letterSpacing: "0.14em",
+                }}
               >
-                СТРАТЕГИЯ + ВНЕДРЕНИЕ
+                3 месяца сопровождения
               </span>
             </div>
-
-            <p
-              className="mb-3 md:mb-6 font-semibold uppercase"
-              style={{
-                color: "#C9974B",
-                fontSize: "clamp(8px, 1.2vw, 13px)",
-                letterSpacing: "0.32em",
-              }}
-            >
-              Программа сопровождения
-            </p>
 
             <h1
               className="font-black uppercase leading-[1.04] tracking-tight"
@@ -100,30 +100,35 @@ const HeroSection = () => {
               </span>
             </h1>
 
+            <div className="mt-5 md:mt-8 flex items-center gap-3">
+              <span className="h-px w-8 md:w-14" style={{ background: "linear-gradient(90deg, #C9974B, rgba(201,151,75,0))" }} />
+              <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "#C9974B" }} />
+            </div>
+
             <p
-              className="mt-4 md:mt-7 max-w-[560px] leading-relaxed"
-              style={{ color: "#181818", fontSize: "clamp(12px, 1.9vw, 18px)" }}
+              className="mt-3 md:mt-5 max-w-[560px] font-medium leading-snug"
+              style={{ color: "#181818", fontSize: "clamp(13px, 2.1vw, 23px)" }}
             >
-              Преврати свои знания, продукт и аудиторию в понятную систему привлечения клиентов и продаж.
+              Твои знания и опыт могут приносить больше денег.
             </p>
 
-            <div className="mt-3 md:mt-5 max-w-[560px] pl-2.5 md:pl-4 border-l-2" style={{ borderColor: "#C9974B" }}>
+            <div className="mt-3 md:mt-5 max-w-[580px] pl-2.5 md:pl-4 border-l-2" style={{ borderColor: "#C9974B" }}>
               <p
-                className="font-semibold leading-relaxed"
-                style={{ color: "#181818", fontSize: "clamp(11px, 1.6vw, 16px)" }}
+                className="font-bold leading-relaxed"
+                style={{ color: "#181818", fontSize: "clamp(11px, 1.6vw, 17px)" }}
               >
-                Без бесконечных прогревов, хаотичных запусков и ожидания, когда канал наконец станет идеальным.
+                За 90 дней выстроишь понятную систему привлечения клиентов и продаж, которую сможешь использовать и после программы.
               </p>
             </div>
 
             <p
-              className="mt-3 md:mt-5 font-extrabold tracking-wide md:tracking-wider uppercase leading-snug"
-              style={{ color: "#800012", fontSize: "clamp(9px, 1.4vw, 14px)" }}
+              className="mt-3 md:mt-5 max-w-[560px] leading-relaxed"
+              style={{ color: "#3A3A3A", fontSize: "clamp(10px, 1.4vw, 15px)" }}
             >
-              Первые действия на продажи — уже в начале программы.
+              С поддержкой, конкретными действиями и разбором твоего проекта на каждом этапе.
             </p>
 
-            <div className="mt-5 md:mt-7 flex flex-col items-stretch sm:items-start">
+            <div className="mt-5 md:mt-8 flex flex-col items-stretch sm:items-start">
               <button
                 onClick={scrollToTariffs}
                 className="group inline-flex items-center justify-center gap-2 md:gap-3 min-h-[48px] md:h-16 lg:h-[72px] px-3 md:px-8 lg:px-10 py-2 rounded-lg text-white font-extrabold tracking-wide md:tracking-wider shadow-lg transition-colors hover:brightness-75 w-full sm:w-auto text-center"
@@ -134,21 +139,8 @@ const HeroSection = () => {
                   fontSize: "clamp(10px, 1.5vw, 16px)",
                 }}
               >
-                ХОЧУ ПРОДАВАТЬ СИСТЕМНО
+                ХОЧУ КЛИЕНТОВ И ПРОДАЖИ
                 <Icon name="ArrowRight" size={18} className="flex-shrink-0 transition-transform group-hover:translate-x-1.5" />
-              </button>
-              <button
-                onClick={scrollToTariffs}
-                className="group mt-3 md:mt-4 flex items-center gap-2.5 text-left transition-colors hover:text-[#800012]"
-                style={{ color: "#181818", fontSize: "clamp(10px, 1.4vw, 14px)" }}
-              >
-                <span
-                  className="flex-shrink-0 w-7 h-7 md:w-9 md:h-9 rounded-full flex items-center justify-center transition-transform group-hover:translate-y-0.5"
-                  style={{ border: "1px solid #C9974B", color: "#C9974B" }}
-                >
-                  <Icon name="ArrowDown" size={14} />
-                </span>
-                <span className="opacity-75">Посмотреть программу и выбрать формат участия</span>
               </button>
             </div>
           </div>
